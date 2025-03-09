@@ -28,3 +28,4 @@ Esta calculadora está diseñada para:
 - Instalar los siguientes paquetes en R si aún no los tienes:
   ```r
   install.packages(c("shiny", "ggplot2", "dplyr", "plotly", "latex2exp", "RColorBrewer", "shinyWidgets"))
+  ```
