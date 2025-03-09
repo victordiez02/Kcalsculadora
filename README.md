@@ -1,4 +1,4 @@
-# 🏋️🔥 Calsculadora - Calculadora Fitness de Calorías 🥩💪
+# 🔥 Calsculadora - CalCuladora Fitness de Calorías 🥩
 
 Bienvenido a **Calsculadora**, una aplicación interactiva diseñada para ayudarte a calcular de manera precisa tu gasto calórico diario y establecer un plan nutricional personalizado según tus objetivos fitness.
 
