@@ -2,6 +2,16 @@
 
 Bienvenido a **Calsculadora**, una aplicación interactiva diseñada para ayudarte a calcular de manera precisa tu gasto calórico diario y establecer un plan nutricional personalizado según tus objetivos fitness.
 
+---
+
+## 🌍 **¡Disponible online!**  
+📢 **Accede a la Calsculadora desde cualquier dispositivo:**  
+👉 [**Calsculadora en ShinyApps**](https://victordiez.shinyapps.io/Calsculadora/) 🚀  
+
+¡Sin necesidad de instalar nada, úsala directamente en tu navegador!
+
+---
+
 ## 🚀 **¿Qué hace esta calculadora?**
 Esta calculadora está diseñada para:
 - 📏 **Estimar tu porcentaje de grasa corporal** (si no lo conoces).
@@ -17,13 +27,14 @@ Esta calculadora está diseñada para:
 3. **Elige la agresividad del cambio**: más suave o más drástico.
 4. **Decide si incluir el efecto de la termogénesis inducida por la dieta (TEF)**.
 5. **Presiona "Calcular"** y obtendrás:
-   - Tu gasto calórico total (GET).
-   - Las calorías recomendadas para tu objetivo.
-   - Un plan de macronutrientes adaptado a tus necesidades.
-   - Tiempo estimado para alcanzar tu peso objetivo.
-   - Advertencias y recomendaciones personalizadas según tu situación.
+   - ✅ Tu gasto calórico total (GET).
+   - ✅ Las calorías recomendadas para tu objetivo.
+   - ✅ Un plan de macronutrientes adaptado a tus necesidades.
+   - ✅ Tiempo estimado para alcanzar tu peso objetivo.
+   - ✅ Advertencias y recomendaciones personalizadas según tu situación.
 
-## 🖥️ **Requisitos para ejecutar la aplicación**
+## 🖥️ **¿Quieres ejecutarla localmente?**
+Si prefieres correr la aplicación en tu propio ordenador, necesitas:
 - Tener instalado **R** y **RStudio**.
 - Instalar los siguientes paquetes en R si aún no los tienes:
   ```r
