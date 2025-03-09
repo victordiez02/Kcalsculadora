@@ -1,0 +1,10 @@
+desktop.ini
+
+rsconnect/
+
+*.lnk
+
+# Ignorar historial de R
+.Rhistory
+.RData
+.Rproj.user/
