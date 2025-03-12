@@ -16,7 +16,7 @@ Bienvenido a **Kcalsculadora**, una aplicación interactiva diseñada para ayuda
 Esta calculadora está diseñada para:
 - 🔥 **Calcular tu gasto calórico diario** utilizando la ecuación de Mifflin-St Jeor.
 - 🎯 **Ajustar las calorías** según tu objetivo: mantenimiento, definición o volumen.
-- - 🍎 **Distribuir los macronutrientes** (proteínas, grasas y carbohidratos) según las necesidades de tu plan.
+- 🍎 **Distribuir los macronutrientes** (proteínas, grasas y carbohidratos) según las necesidades de tu plan.
 - 📏 **Estimar tu porcentaje de grasa corporal** (si no lo conoces).
 - 📊 **Proporcionar gráficos y explicaciones detalladas** para entender los cálculos y el impacto en tu composición corporal.
 - 🔄 **Permitir ajustes dinámicos** para asegurar una mejor planificación y sostenibilidad en el tiempo.
