@@ -28,7 +28,7 @@ ui <- fluidPage(
       font-family: 'Fredoka', sans-serif !important;
     }
   ")),
-  tags$title("Calsculadora")
+  tags$title("Kcalsculadora")
   ),
   
   titlePanel(
@@ -78,7 +78,7 @@ ui <- fluidPage(
         style = "display: flex; align-items: center;",  # Alinear elementos en la misma línea
         tags$div(
           style = "flex: 1;",  # Ocupar el espacio disponible
-          checkboxInput("incluir_tef", "🔥 Incluir termogénesis inducida por la dieta", value = TRUE)
+          checkboxInput("incluir_tef", "🔥 Incluir termogénesis inducida por la dieta", value = FALSE)
         ),
         actionLink("info_tef", label = NULL, icon = icon("info-circle"), style = "margin-left: 5px;")
       ),
