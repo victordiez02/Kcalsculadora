@@ -12,6 +12,13 @@ Bienvenido a **Kcalsculadora**, una aplicación interactiva diseñada para ayuda
 
 ---
 
+## 🖼️ **Interfaz de la App**
+Aquí tienes una vista previa de la aplicación:
+
+![Demo de Kcalsculadora](Demo%20Kcalsculadora.png)
+
+---
+
 ## 🚀 **¿Qué hace esta calculadora?**
 Esta calculadora está diseñada para:
 - 🔥 **Calcular tu gasto calórico diario** utilizando la ecuación de Mifflin-St Jeor.
