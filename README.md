@@ -4,9 +4,15 @@ Bienvenido a **Kcalsculadora**, una aplicación interactiva diseñada para ayuda
 
 ---
 
-## 🌍 **¡Disponible online!**  
-📢 **Accede a Kcalsculadora App desde cualquier dispositivo:**  
-👉 [**Kcalsculadora en ShinyApps**](https://victordiez.shinyapps.io/Kcalsculadora/) 🚀  
+## <img src="https://images.icon-icons.com/1381/PNG/512/rstudio_94807.png" alt="Rstudio logo" width="25" style="vertical-align: sub;"/> **¡Disponible online!**
+
+📢 **Accede a Kcalsculadora App desde cualquier dispositivo:**
+
+<div align="center">
+  <a href="https://victordiez.shinyapps.io/Kcalsculadora/" target="_blank">
+    <img src="https://img.shields.io/badge/🌐%20Abrir%20Kcalsculadora%20App-Click%20Aquí-108FDC?style=for-the-badge" alt="Abrir Kcalsculadora App">
+  </a>
+</div>
 
 ¡Sin necesidad de instalar nada, úsala directamente en tu navegador!
 
