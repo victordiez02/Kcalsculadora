@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --sand: 234 224 207;
+  --sand-dark: 220 208 188;
+  --ink: 58 49 40;
+  --surface: 248 240 225;
+  --ember: 210 94 52;
+  --moss: 96 142 108;
+  --ochre: 200 158 88;
+  --clay: 184 88 64;
+  --sky: 92 140 172;
+
+  /* Mobile safe-area */
+  --sai-top: env(safe-area-inset-top);
+  --sai-bottom: env(safe-area-inset-bottom);
+}
+
+.dark {
+  color-scheme: dark;
+  --sand: 36 30 24;
+  --sand-dark: 28 23 18;
+  --ink: 240 230 215;
+  --surface: 58 49 40;
+  --ember: 226 110 64;
+  --moss: 124 172 138;
+  --ochre: 226 184 116;
+  --clay: 204 110 88;
+  --sky: 128 172 200;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-sand text-ink font-body antialiased;
+  background-image: radial-gradient(rgb(var(--ink) / 0.06) 1px, transparent 1px);
+  background-size: 22px 22px;
+  background-position: 0 0;
+  overscroll-behavior-y: contain;
+  padding-top: var(--sai-top);
+  padding-bottom: var(--sai-bottom);
+}
+
+/* Inputs nativos pulidos en móvil */
+input,
+button,
+select,
+textarea {
+  font: inherit;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* iOS Safari hace zoom al focus si la fuente <16px */
+@media (max-width: 640px) {
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}
+
+/* Botones más cómodos a tocar */
+button,
+[role="button"] {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@layer components {
+  /* Componentes UI viven en src/components/ui (shadcn). Aquí solo utilidades globales si hicieran falta. */
+}
+
+/* Scrollbar discreto (adaptado a tema) */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--ink) / 0.25);
+  border-radius: 0;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--ink) / 0.45);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Slider nativo con estética notch (usado para "Ritmo del cambio"). */
+.kcals-range {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  background: rgb(var(--ink) / 0.15);
+  border: 2px solid rgb(var(--ink));
+  border-radius: 0;
+}
+.kcals-range:focus {
+  outline: 2px solid rgb(var(--ember));
+  outline-offset: 2px;
+}
+.kcals-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  background: rgb(var(--ember));
+  border: 2px solid rgb(var(--ink));
+  border-radius: 0;
+  cursor: pointer;
+  margin-top: -10px;
+  box-shadow: 2px 2px 0 0 rgb(var(--ink));
+  transition: transform 0.1s ease;
+}
+.kcals-range::-webkit-slider-thumb:active {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+.kcals-range::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  background: rgb(var(--ember));
+  border: 2px solid rgb(var(--ink));
+  border-radius: 0;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 0 rgb(var(--ink));
+}
+.kcals-range::-moz-range-track {
+  height: 6px;
+  background: rgb(var(--ink) / 0.15);
+  border-radius: 0;
+}

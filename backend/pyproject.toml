@@ -1,0 +1,35 @@
+[project]
+name = "kcalsculadora-backend"
+version = "2.0.0"
+requires-python = ">=3.10"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+extend-exclude = [".venv", "__pycache__"]
+
+[tool.ruff.lint]
+select = [
+  "E",   # pycodestyle errors
+  "F",   # pyflakes
+  "W",   # pycodestyle warnings
+  "I",   # isort
+  "B",   # flake8-bugbear
+  "UP",  # pyupgrade
+  "SIM", # simplifications
+  "RUF", # ruff-specific
+  "N",   # naming
+  "C4",  # comprehensions
+]
+ignore = [
+  "E501",  # line too long (formatter se encarga)
+  "B008",  # FastAPI Depends en argumentos
+  "N812",  # permitimos `import constants as C` (convención del proyecto)
+]
+
+[tool.ruff.lint.per-file-ignores]
+"app/schemas.py" = ["N803"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"

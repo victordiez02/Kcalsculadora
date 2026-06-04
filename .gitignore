@@ -1,0 +1,19 @@
+node_modules
+dist
+.vite
+*.local
+.env
+
+# TypeScript build artifacts (no debe haber .js dentro de src/)
+src/**/*.js
+src/**/*.js.map
+src/**/*.d.ts
+!src/vite-env.d.ts
+
+__pycache__/
+*.pyc
+.venv/
+.env
+.pytest_cache/
+
+.github
