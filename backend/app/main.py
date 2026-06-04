@@ -1,7 +1,7 @@
 """FastAPI entrypoint."""
 
 from __future__ import annotations
-
+import os
 from fastapi import FastAPI
 from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
@@ -22,13 +22,13 @@ app = FastAPI(
     version="2.0.0",
 )
 
+origins_env = os.environ.get("ALLOWED_ORIGINS")
+if not origins_env:
+    raise KeyError("Falta la variable de entorno 'ALLOWED_ORIGINS' requerida para configurar CORS.")
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173",
-        "http://127.0.0.1:5173",
-        "http://localhost:4173",
-    ],
+    allow_origins=[o.strip() for o in origins_env.split(",")],
     allow_methods=["*"],
     allow_headers=["*"],
 )
