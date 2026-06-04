@@ -77,7 +77,7 @@ Necesitas Python 3.10+, Node 18+ y pnpm 9+ (`corepack enable`).
 ```bash
 cd backend
 python3 -m venv .venv
-source .venv/bin/activate
+.venv\Scripts\Activate.ps1
 pip install -r requirements-dev.txt
 uvicorn app.main:app --reload --port 8000
 ```
