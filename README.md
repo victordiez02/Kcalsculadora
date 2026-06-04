@@ -11,9 +11,9 @@
 </p>
 
 <p align="center">
-  <a href="<SUSTITUIR_LINK_DE_LA_PAGINA>"><img src="https://img.shields.io/badge/Abrir%20app-e46c44?style=for-the-badge" alt="Abrir app"></a>
+  <a href="https://kcalsculadora.vercel.app/"><img src="https://img.shields.io/badge/Abrir%20app-e46c44?style=for-the-badge" alt="Abrir app"></a>
   &nbsp;
-  <a href="<SUSTITUIR_LINK_DE_LA_API>/docs"><img src="https://img.shields.io/badge/API%20docs-1f2937?style=for-the-badge" alt="API docs"></a>
+  <a href="https://kcalsculadora.onrender.com/docs"><img src="https://img.shields.io/badge/API%20docs-1f2937?style=for-the-badge" alt="API docs"></a>
 </p>
 
 <p align="center">
