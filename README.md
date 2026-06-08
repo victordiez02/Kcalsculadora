@@ -13,7 +13,7 @@
 <p align="center">
   <a href="https://kcalsculadora.vercel.app/"><img src="https://img.shields.io/badge/Abrir%20app-e46c44?style=for-the-badge" alt="Abrir app"></a>
   &nbsp;
-  <a href="https://kcalsculadora.onrender.com/docs"><img src="https://img.shields.io/badge/API%20docs-1f2937?style=for-the-badge" alt="API docs"></a>
+  <a href="https://kcalsculadora-backend-762078704585.europe-west1.run.app/docs"><img src="https://img.shields.io/badge/API%20docs-1f2937?style=for-the-badge" alt="API docs"></a>
 </p>
 
 <p align="center">

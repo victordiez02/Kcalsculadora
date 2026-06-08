@@ -146,6 +146,11 @@ export default function App() {
 
   useEffect(() => saveJSON(FORM_KEY, form), [form]);
 
+  useEffect(() => {
+    const url = import.meta.env.VITE_API_URL;
+    if (url) {fetch(`${url}/health`)}
+  }, []);
+
   function set<K extends keyof Form>(k: K, v: Form[K]) {
     setForm((f) => ({ ...f, [k]: v }));
   }
