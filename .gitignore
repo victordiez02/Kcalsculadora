@@ -16,4 +16,13 @@ __pycache__/
 .env
 .pytest_cache/
 
-.github
+.venv/
+.env
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+backend-diet/app/rag/chroma/
+
+skills-lock.json
+.claude

@@ -5,15 +5,14 @@
 <h1 align="center">Kcalsculadora</h1>
 
 <p align="center">
-  Calculadora nutricional para definición, recomposición y volumen.<br/>
-  Calorías, macros, peso objetivo y duración de etapa a partir de
-  composición corporal, nivel y objetivo.
+  Nutrition planning platform for cutting, recomposition and bulking phases.<br/>
+  Calculates calories, macronutrients, target weight and estimated phase duration based on body composition, training level and fitness goals.
 </p>
 
 <p align="center">
-  <a href="https://kcalsculadora.vercel.app/"><img src="https://img.shields.io/badge/Abrir%20app-e46c44?style=for-the-badge" alt="Abrir app"></a>
+  <a href="https://kcalsculadora.vercel.app/"><img src="https://img.shields.io/badge/Open%20App-e46c44?style=for-the-badge" alt="Open App"></a>
   &nbsp;
-  <a href="https://kcalsculadora-backend-762078704585.europe-west1.run.app/docs"><img src="https://img.shields.io/badge/API%20docs-1f2937?style=for-the-badge" alt="API docs"></a>
+  <a href="https://kcalsculadora-backend-762078704585.europe-west1.run.app/docs"><img src="https://img.shields.io/badge/API%20Docs-1f2937?style=for-the-badge" alt="API Docs"></a>
 </p>
 
 <p align="center">
@@ -27,52 +26,75 @@
 
 ---
 
-## Qué es esto
+## Overview
 
-Una App en React + TypeScript con una API en FastAPI. Mantiene la misma lógica de cálculo pero separada
-en módulos atómicos y testeables, con un único endpoint agregador (`/plan`)
-que es el que consume el front.
+Kcalsculadora is a full-stack web application built with React, TypeScript and FastAPI.
 
-Calcula, a partir de peso, altura, edad, sexo, nivel y objetivo:
+The project translates established nutrition and body composition formulas into modular and testable backend components exposed through a single aggregation endpoint (`/plan`). The frontend consumes this endpoint and presents a complete nutrition plan based on the user's profile and goals.
 
-- % de grasa corporal (Deurenberg con variante para >36 años) si no se conoce.
-- TMB con Mifflin–St Jeor y GET ajustado por actividad
-  (multiplicadores de Mifflin para principiante/intermedio, Helms para avanzado).
-- Calorías y macros según objetivo y agresividad del plan.
-- Peso objetivo teniendo en cuenta la masa magra y la ganancia muscular
-  esperable por nivel/edad.
-- Semanas estimadas de etapa, con un ajuste suavizado cuando queda por debajo
-  del mínimo recomendado.
-- Avisos cuando la combinación no tiene mucho sentido (p. ej. volumen
-  partiendo de grasa alta o definición con grasa muy baja).
+Given a user's weight, height, age, sex, training level and objective, the application calculates:
 
-Todas las fórmulas, multiplicadores y umbrales están en un solo sitio:
-[`backend/app/constants.py`](backend/app/constants.py).
+- Body fat percentage using the Deurenberg equation (including an adjusted variant for users over 36 years old).
+- Basal Metabolic Rate (Mifflin-St Jeor) and Total Daily Energy Expenditure adjusted by activity level.
+- Daily calorie and macronutrient targets.
+- Target body weight based on lean body mass and expected muscle gain potential.
+- Estimated duration of the planned phase.
+- Contextual warnings when the selected objective may not be appropriate for the user's body composition.
 
-## Estructura
+All formulas, constants and thresholds are centralized in:
 
+```text
+backend/app/constants.py
 ```
+
+---
+
+## Key Features
+
+- Full-stack architecture using React, TypeScript and FastAPI.
+- Modular backend design with atomic calculation services.
+- Centralized business rules and nutrition formulas.
+- Single aggregation endpoint for complete nutrition planning.
+- Input validation through Pydantic schemas.
+- Interactive frontend for data entry and result visualization.
+
+---
+
+## Architecture
+
+```text
 backend/app/
-├── constants.py        # fórmulas, multiplicadores, umbrales
-├── schemas.py          # modelos Pydantic
-├── core/               # un módulo por cálculo + plan.py (orquestador)
-├── routers/            # /calc/* atómicos y /plan agregador
+├── constants.py        # formulas, multipliers and thresholds
+├── schemas.py          # Pydantic models
+├── core/               # calculation modules and plan orchestrator
+├── routers/            # atomic endpoints and aggregated /plan endpoint
 └── main.py
 
 frontend/src/
-├── App.tsx             # formulario + resultados
-├── components/         # tarjetas, banners, primitives shadcn/ui
-├── api.ts · types.ts · constants.ts
+├── App.tsx             # form and results
+├── components/         # UI components
+├── api.ts
+├── types.ts
+└── constants.ts
 ```
 
-La lista completa de endpoints con sus esquemas está en `/docs` (Swagger UI
-que monta FastAPI).
+FastAPI automatically exposes interactive API documentation through Swagger UI at:
 
-## Desarrollo local
+```text
+/docs
+```
 
-Necesitas Python 3.10+, Node 18+ y pnpm 9+ (`corepack enable`).
+---
 
-**Backend**
+## Local Development
+
+Requirements:
+
+- Python 3.10+
+- Node.js 18+
+- pnpm 9+
+
+### Backend
 
 ```bash
 cd backend
@@ -82,7 +104,7 @@ pip install -r requirements-dev.txt
 uvicorn app.main:app --reload --port 8000
 ```
 
-**Frontend** (en otra terminal)
+### Frontend
 
 ```bash
 cd frontend
@@ -90,31 +112,42 @@ pnpm install
 pnpm dev
 ```
 
-El dev server de Vite hace proxy de `/api/*` al backend en `:8000`, así que
-con los dos arrancados ya funciona end-to-end. La app queda en
-<http://localhost:5173> y la API en <http://localhost:8000> (Swagger en
-`/docs`).
+The Vite development server proxies API requests to the FastAPI backend, allowing the application to run end-to-end in a local environment.
+
+---
 
 ## Build
 
 ```bash
 cd frontend
-pnpm build      # dist/
-pnpm preview    # sirve dist/ en :4173
+pnpm build
+pnpm preview
 ```
 
-`frontend/dist/` se puede servir desde cualquier hosting estático. El backend
-se levanta con `uvicorn` (o detrás de gunicorn con workers uvicorn). Hay que
-ajustar el origen permitido por CORS en
-[`backend/app/main.py`](backend/app/main.py) al dominio real del front.
+The frontend generates a static build that can be deployed on any static hosting provider. The backend can be deployed using Uvicorn or behind Gunicorn with Uvicorn workers.
 
-## Lint
+---
+
+## Code Quality
 
 ```bash
 cd backend  && ruff check . && ruff format --check .
-cd frontend && pnpm lint        # --max-warnings=0
+cd frontend && pnpm lint
 ```
 
-## Licencia
+---
 
-[`LICENSE.txt`](LICENSE.txt).
+## Tech Stack
+
+| Layer | Technologies |
+|---------|---------|
+| Frontend | React 18, TypeScript, Vite, Tailwind CSS |
+| Backend | Python 3.11, FastAPI, Pydantic |
+| Validation | Pydantic |
+| Deployment | Static Hosting + FastAPI Backend |
+
+---
+
+## License
+
+See `LICENSE.txt`.
