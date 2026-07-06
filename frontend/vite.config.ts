@@ -19,7 +19,7 @@ export default defineConfig({
         rewrite: (path) => path.replace(/^\/api/, ""),
       },
       "/diet-api": {
-        target: "http://localhost:8001",
+        target: process.env.VITE_DIET_BACKEND_PROXY_TARGET || "http://localhost:8001",
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/diet-api/, ""),
       },

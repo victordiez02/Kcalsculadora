@@ -22,7 +22,6 @@ __pycache__/
 *.pyc
 .pytest_cache/
 .ruff_cache/
-backend-diet/app/rag/chroma/
 
 skills-lock.json
 .claude

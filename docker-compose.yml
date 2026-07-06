@@ -14,6 +14,7 @@ services:
 
   backend-diet:
     build: ./backend-diet
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8001 --reload
     ports:
       - "8001:8001"
     env_file:
@@ -21,6 +22,10 @@ services:
     environment:
       PORT: 8001
       ALLOWED_ORIGINS: http://localhost:5173
+    volumes:
+      # Solo el código: el índice Chroma (versionado en backend-diet/vectorstore/)
+      # entra en la imagen por COPY y vive en /app/vectorstore, fuera del mount
+      - ./backend-diet/app:/app/app
 
   frontend:
     build:
@@ -30,6 +35,7 @@ services:
     command: pnpm dev
     environment:
       VITE_BACKEND_PROXY_TARGET: http://backend:8000
+      VITE_DIET_BACKEND_PROXY_TARGET: http://backend-diet:8001
       VITE_USE_POLLING: "true"
     volumes:
       - ./frontend/src:/app/src
@@ -40,3 +46,4 @@ services:
       - "5173:5173"
     depends_on:
       - backend
+      - backend-diet

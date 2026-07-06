@@ -206,9 +206,15 @@ PRODUCTOS_POR_COMIDA_MAX: Final = 4
 PESO_DESVIACION_KCAL: Final = 2.0
 
 # --- Vector store ---
-CHROMA_DIR: Final = os.environ.get(
-    "CHROMA_DIR", os.path.join(os.path.dirname(__file__), "rag", "chroma")
+# Índice Chroma pre-construido y VERSIONADO en el repo (backend-diet/vectorstore/).
+# Se regenera con scripts/build_vectorstore.py solo cuando cambian los CSVs;
+# el manifiesto guarda los hashes de los CSVs con los que se indexó.
+VECTORSTORE_DIR: Final = os.environ.get(
+    "VECTORSTORE_DIR",
+    os.path.normpath(os.path.join(os.path.dirname(__file__), "..", "vectorstore")),
 )
+CHROMA_DIR: Final = os.path.join(VECTORSTORE_DIR, "chroma")
+VECTORSTORE_MANIFEST: Final = os.path.join(VECTORSTORE_DIR, "manifest.json")
 CHROMA_COLLECTION: Final = "productos"
 
 # --- Limpieza del dataset (scripts/build_dataset.py) ---
