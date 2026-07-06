@@ -23,7 +23,7 @@ export function PlanComidas({
 }) {
   const superLabel = SUPERMERCADOS.find((s) => s.id === supermercado)?.label;
   return (
-    <Card className="p-4 sm:p-6" id="plan-comidas">
+    <Card className="p-4 sm:p-6 scroll-mt-6" id="plan-comidas">
       <div className="flex items-start justify-between gap-3 flex-wrap mb-4">
         <div>
           <h2 className="font-display text-xl sm:text-2xl font-semibold flex items-center gap-2">

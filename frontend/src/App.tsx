@@ -493,6 +493,18 @@ export default function App() {
 
                 <CaloriasHero data={resultado} />
 
+                {dietPlan ? (
+                  <PlanComidas
+                    plan={dietPlan}
+                    supermercado={dietSupermercado}
+                    kcalObjetivo={resultado.calorias_recomendadas}
+                    macrosObjetivo={resultado.macros}
+                    onRegenerar={() => setWizardOpen(true)}
+                  />
+                ) : (
+                  <GenerarPlanCTA onClick={() => setWizardOpen(true)} />
+                )}
+
                 <div className="grid grid-cols-2 gap-4 sm:gap-6">
                   <StatBox
                     label="TMB"
@@ -552,18 +564,6 @@ export default function App() {
                 <ImcBar imc={resultado.imc} imcObjetivo={imcObjetivo} />
 
                 <ResumenPlan data={resultado} pesoActual={baseInputs.peso} />
-
-                {dietPlan ? (
-                  <PlanComidas
-                    plan={dietPlan}
-                    supermercado={dietSupermercado}
-                    kcalObjetivo={resultado.calorias_recomendadas}
-                    macrosObjetivo={resultado.macros}
-                    onRegenerar={() => setWizardOpen(true)}
-                  />
-                ) : (
-                  <GenerarPlanCTA onClick={() => setWizardOpen(true)} />
-                )}
 
                 <Explicacion
                   data={resultado}
