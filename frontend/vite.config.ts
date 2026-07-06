@@ -11,12 +11,14 @@ export default defineConfig({
   },
   server: {
     port: 5173,
+    host: true,
     proxy: {
       "/api": {
-        target: "http://localhost:8000",
+        target: process.env.VITE_BACKEND_PROXY_TARGET || "http://localhost:8000",
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ""),
       },
     },
+    watch: process.env.VITE_USE_POLLING === "true" ? { usePolling: true } : undefined,
   },
 });
