@@ -27,9 +27,7 @@ class CalculoInput(BaseModel):
     altura: float = Field(..., description="cm")
     edad: int
     sexo: Sexo
-    grasa: float | None = Field(
-        None, description="% de grasa corporal. Si es None se estima."
-    )
+    grasa: float | None = Field(None, description="% de grasa corporal. Si es None se estima.")
     nivel: Nivel = "principiante"
     actividad: float = Field(..., description="Factor de actividad (1.2-1.95)")
     objetivo: Objetivo = "mant"

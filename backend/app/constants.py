@@ -170,6 +170,7 @@ AJUSTE_GANANCIA_DEF_AGRESIVIDAD: Final = {
     1.0: 0.4,
 }
 
+
 # Ajuste por nivel de actividad (umbrales sobre el multiplicador de actividad)
 def ajuste_actividad_vol(actividad: float) -> float:
     if actividad <= 1.35:
@@ -251,6 +252,7 @@ AJUSTE_KCAL_POR_AGRESIVIDAD: Final = {
     0.8: -15,
     1.0: -30,
 }
+
 
 # Factor edad sobre ganancia muscular (función a trozos)
 def multiplicador_ganancia_edad(edad: int) -> float:

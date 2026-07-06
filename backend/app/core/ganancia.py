@@ -31,15 +31,11 @@ def ganancia_muscular_semanal(
         aj_act = C.ajuste_actividad_def(actividad)
 
     semanal = (base / 4) * aj_agr * aj_act
-    factor_sexo = (
-        C.FACTOR_GANANCIA_SEXO_HOMBRE if sexo == "M" else C.FACTOR_GANANCIA_SEXO_MUJER
-    )
+    factor_sexo = C.FACTOR_GANANCIA_SEXO_HOMBRE if sexo == "M" else C.FACTOR_GANANCIA_SEXO_MUJER
     return semanal * factor_sexo * C.multiplicador_ganancia_edad(edad)
 
 
-def duracion_minima(
-    objetivo: Objetivo, nivel: Nivel, grasa_pct: float, sexo: Sexo
-) -> int:
+def duracion_minima(objetivo: Objetivo, nivel: Nivel, grasa_pct: float, sexo: Sexo) -> int:
     if objetivo == "mant":
         return C.DURACION_MIN_RECOMP
     if objetivo == "def":

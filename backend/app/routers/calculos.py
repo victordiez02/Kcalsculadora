@@ -90,16 +90,18 @@ def calorias(data: CaloriasInput) -> CaloriasOutput:
 
 @router.post("/macros", response_model=Macros)
 def macros(data: MacrosInput) -> Macros:
-    return calcular_macros(
-        data.peso, data.peso_objetivo, data.calorias, data.objetivo, data.sexo
-    )
+    return calcular_macros(data.peso, data.peso_objetivo, data.calorias, data.objetivo, data.sexo)
 
 
 @router.post("/peso-objetivo", response_model=PesoObjetivoOutput)
 def peso_objetivo(data: PesoObjetivoInput) -> PesoObjetivoOutput:
     po = calcular_peso_objetivo(
-        data.peso, data.masa_magra, data.incremento_masa_magra,
-        data.objetivo, data.sexo, data.grasa,
+        data.peso,
+        data.masa_magra,
+        data.incremento_masa_magra,
+        data.objetivo,
+        data.sexo,
+        data.grasa,
     )
     return PesoObjetivoOutput(
         peso_objetivo=round(po, 2),
@@ -110,8 +112,12 @@ def peso_objetivo(data: PesoObjetivoInput) -> PesoObjetivoOutput:
 @router.post("/semanas", response_model=SemanasOutput)
 def semanas(data: SemanasInput) -> SemanasOutput:
     s = calcular_semanas(
-        data.objetivo, data.agresividad, data.peso, data.peso_objetivo,
-        data.calorias_recomendadas, data.get,
+        data.objetivo,
+        data.agresividad,
+        data.peso,
+        data.peso_objetivo,
+        data.calorias_recomendadas,
+        data.get,
     )
     return SemanasOutput(semanas_necesarias=round(s, 1) if s is not None else None)
 

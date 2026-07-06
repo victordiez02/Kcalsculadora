@@ -38,8 +38,7 @@ app.add_middleware(
 async def _validation_handler(_: Request, exc: RequestValidationError) -> JSONResponse:
     """Devuelve los errores de validación con un mensaje legible."""
     mensajes = [
-        {"campo": ".".join(str(p) for p in e["loc"][1:]), "error": e["msg"]}
-        for e in exc.errors()
+        {"campo": ".".join(str(p) for p in e["loc"][1:]), "error": e["msg"]} for e in exc.errors()
     ]
     return JSONResponse(status_code=422, content={"detalle": mensajes})
 

@@ -40,16 +40,15 @@ export async function calcular(input: CalculoInput, intentos = 3): Promise<Calcu
     }
 
     return (await res.json()) as CalculoOutput;
-
-  } catch (error: any) {
+  } catch (error: unknown) {
     // Si el error es de red (Fetch falló porque la API no responde aún)
     if (intentos > 0) {
-      await sleep(4000); 
+      await sleep(4000);
       return calcular(input, intentos - 1);
     }
-    
+
     // Aquí es donde lanzarías tu Tooltip/Toast en la UI
-    // Ejemplo: toast.error(error.message); 
-    throw error; 
+    // Ejemplo: toast.error(error.message);
+    throw error;
   }
 }

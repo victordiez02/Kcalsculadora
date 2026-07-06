@@ -148,7 +148,9 @@ export default function App() {
 
   useEffect(() => {
     const url = import.meta.env.VITE_API_URL;
-    if (url) {fetch(`${url}/health`)}
+    if (url) {
+      fetch(`${url}/health`);
+    }
   }, []);
 
   function set<K extends keyof Form>(k: K, v: Form[K]) {

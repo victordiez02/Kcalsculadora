@@ -31,9 +31,7 @@ def calcular_semanas(
     cambio_peso = abs(peso_objetivo - peso)
     kcal_totales = cambio_peso * C.KCAL_POR_KG_GRASA
     ajuste_dur = (
-        C.AJUSTE_DURACION_DEF[agr_val]
-        if objetivo == "def"
-        else C.AJUSTE_DURACION_VOL[agr_val]
+        C.AJUSTE_DURACION_DEF[agr_val] if objetivo == "def" else C.AJUSTE_DURACION_VOL[agr_val]
     )
     return (kcal_totales / delta_kcal / (7 * C.SUAVIZADO_SEMANAS)) * ajuste_dur
 

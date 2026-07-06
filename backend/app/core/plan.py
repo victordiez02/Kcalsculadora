@@ -25,9 +25,7 @@ from .semanas import ajuste_recomendado, calcular_semanas
 from .tmb import calcular_tmb
 
 
-def _ganancia_total_periodo(
-    ganancia_sem: float, semanas: float | None, semanas_min: int
-) -> float:
+def _ganancia_total_periodo(ganancia_sem: float, semanas: float | None, semanas_min: int) -> float:
     """Pondera la ganancia muscular del periodo siguiendo el Shiny original:
     +30 % por semana sobre el mínimo, o reducción proporcional (hasta 50 %)
     si el plan dura menos."""
@@ -124,13 +122,18 @@ def construir_plan(data: CalculoInput) -> CalculoOutput:
         semanas = float(semanas_min)
 
     ajuste = ajuste_recomendado(
-        data.objetivo, data.agresividad, semanas, semanas_min, calorias, get_kcal,
-        data.peso, peso_obj, data.sexo,
+        data.objetivo,
+        data.agresividad,
+        semanas,
+        semanas_min,
+        calorias,
+        get_kcal,
+        data.peso,
+        peso_obj,
+        data.sexo,
     )
     ganancia_total = _ganancia_total_periodo(ganancia_sem, semanas, semanas_min)
-    perdida_grasa_kg = _perdida_grasa(
-        data.objetivo, data.sexo, data.peso, peso_obj, grasa, enfoque
-    )
+    perdida_grasa_kg = _perdida_grasa(data.objetivo, data.sexo, data.peso, peso_obj, grasa, enfoque)
     grasa_obj = C.GRASA_OBJ_POR_OBJETIVO[data.objetivo][data.sexo]
 
     detalle = _construir_detalle(data, grasa, ganancia_sem, enfoque)

@@ -48,8 +48,7 @@ def avisos(objetivo: Objetivo, sexo: Sexo, grasa_pct: float) -> list[Aviso]:
             Aviso(
                 nivel="info",
                 mensaje=(
-                    "Tu % de grasa sugiere una fase de definición "
-                    "antes de plantear un volumen."
+                    "Tu % de grasa sugiere una fase de definición antes de plantear un volumen."
                 ),
             )
         )
@@ -57,10 +56,7 @@ def avisos(objetivo: Objetivo, sexo: Sexo, grasa_pct: float) -> list[Aviso]:
         out.append(
             Aviso(
                 nivel="info",
-                mensaje=(
-                    "Tu % de grasa es bajo: una fase de volumen "
-                    "sería buena candidata."
-                ),
+                mensaje=("Tu % de grasa es bajo: una fase de volumen sería buena candidata."),
             )
         )
 
