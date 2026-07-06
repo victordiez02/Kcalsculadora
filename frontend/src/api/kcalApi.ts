@@ -1,4 +1,4 @@
-import type { CalculoInput, CalculoOutput } from "./types";
+import type { CalculoInput, CalculoOutput } from "@/types";
 
 // Usamos la variable de entorno. El fallback es "/api" por si falla la carga del env.
 const BASE_URL = import.meta.env.VITE_API_URL || "/api";

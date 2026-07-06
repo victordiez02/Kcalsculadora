@@ -1,0 +1,36 @@
+[project]
+name = "kcalsculadora-backend-diet"
+version = "0.1.0"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = [".venv", "__pycache__"]
+
+[tool.ruff.lint]
+select = [
+  "E",   # pycodestyle errors
+  "F",   # pyflakes
+  "W",   # pycodestyle warnings
+  "I",   # isort
+  "B",   # flake8-bugbear
+  "UP",  # pyupgrade
+  "SIM", # simplifications
+  "RUF", # ruff-specific
+  "N",   # naming
+  "C4",  # comprehensions
+]
+ignore = [
+  "E501",  # line too long (formatter se encarga)
+  "B008",  # FastAPI Depends en argumentos
+  "N812",  # permitimos `import constants as C` (convención del proyecto)
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"

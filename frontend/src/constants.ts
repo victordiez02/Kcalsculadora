@@ -65,6 +65,87 @@ export const LIMITES = {
   grasa: { min: 5, max: 50, step: 0.1 },
 } as const;
 
+// ---- Generador de dietas (backend-diet) ----
+
+export const SUPERMERCADOS = [
+  { id: "mercadona", label: "Mercadona", color: "#00a650" },
+  { id: "carrefour", label: "Carrefour", color: "#004e9f" },
+  { id: "lidl", label: "Lidl", color: "#0050aa" },
+  { id: "dia", label: "Dia", color: "#d50000" },
+] as const;
+
+export const INTOLERANCIAS = [
+  { id: "gluten", label: "Gluten" },
+  { id: "lactosa", label: "Lácteos" },
+  { id: "frutos_secos", label: "Frutos secos" },
+  { id: "huevo", label: "Huevo" },
+  { id: "pescado", label: "Pescado" },
+  { id: "marisco", label: "Marisco" },
+  { id: "soja", label: "Soja" },
+  { id: "sesamo", label: "Sésamo" },
+] as const;
+
+export const NUM_COMIDAS_OPCIONES = [
+  { id: "3", label: "3 comidas", hint: "desayuno · comida · cena" },
+  { id: "4", label: "4 comidas", hint: "+ merienda" },
+  { id: "5", label: "5 comidas", hint: "+ almuerzo y merienda" },
+] as const;
+
+export const VARIEDADES = [
+  {
+    id: "sin_repetir",
+    label: "Máxima variedad",
+    hint: "sin repetir productos entre comidas",
+  },
+  {
+    id: "repetir_ok",
+    label: "Me da igual repetir",
+    hint: "prioriza cuadrar kcal y macros",
+  },
+] as const;
+
+export const EVITAR_SUGERENCIAS = [
+  "cerdo",
+  "ternera",
+  "pollo",
+  "pavo",
+  "atún",
+  "salmón",
+  "queso",
+  "yogur",
+  "leche",
+  "pan",
+  "pasta",
+  "arroz",
+  "legumbres",
+  "tofu",
+  "champiñones",
+  "tomate",
+  "plátano",
+  "chocolate",
+] as const;
+
+export const FAVORITOS_SUGERENCIAS = [
+  "pollo",
+  "atún",
+  "huevos",
+  "yogur griego",
+  "skyr",
+  "avena",
+  "arroz",
+  "pasta",
+  "pan integral",
+  "aguacate",
+  "plátano",
+  "manzana",
+  "queso fresco",
+  "salmón",
+  "legumbres",
+  "frutos secos",
+  "chocolate negro",
+  "aceite de oliva",
+] as const;
+
 export const IMC_BANDAS = [
   { tope: 18.5, label: "Bajo peso", color: "#A9C3DA" },
   { tope: 25, label: "Normal", color: "#A9C99B" },

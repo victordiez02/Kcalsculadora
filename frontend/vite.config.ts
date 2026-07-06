@@ -18,6 +18,11 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ""),
       },
+      "/diet-api": {
+        target: "http://localhost:8001",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/diet-api/, ""),
+      },
     },
     watch: process.env.VITE_USE_POLLING === "true" ? { usePolling: true } : undefined,
   },

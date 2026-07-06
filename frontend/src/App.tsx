@@ -16,7 +16,7 @@ import {
   Venus,
 } from "lucide-react";
 
-import { calcular } from "@/api";
+import { calcular } from "@/api/kcalApi";
 import {
   ACTIVIDADES_HELMS,
   ACTIVIDADES_MIFFLIN,
@@ -31,11 +31,16 @@ import type {
   Agresividad,
   CalculoInput,
   CalculoOutput,
+  DietOutput,
   EnfoqueRecomp,
   Nivel,
   Objetivo,
   Sexo,
+  Supermercado,
 } from "@/types";
+import { DietWizard } from "@/components/diet/DietWizard";
+import { GenerarPlanCTA } from "@/components/diet/GenerarPlanCTA";
+import { PlanComidas } from "@/components/diet/PlanComidas";
 import { AvisoBanner } from "@/components/AvisoBanner";
 import { Explicacion } from "@/components/Explicacion";
 import { ImcBar } from "@/components/ImcBar";
@@ -130,6 +135,9 @@ export default function App() {
   }));
   const [cargando, setCargando] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [dietPlan, setDietPlan] = useState<DietOutput | null>(null);
+  const [dietSupermercado, setDietSupermercado] = useState<Supermercado | null>(null);
+  const [wizardOpen, setWizardOpen] = useState(false);
 
   const { theme, toggle: toggleTheme } = useTheme();
 
@@ -175,6 +183,7 @@ export default function App() {
       };
       const out = await calcular(payload);
       setResultado(out);
+      setDietPlan(null); // el plan de comidas anterior deja de ser válido
       setBaseInputs({
         peso: form.peso,
         altura: form.altura,
@@ -200,6 +209,7 @@ export default function App() {
     setForm(DEFAULTS);
     setResultado(null);
     setError(null);
+    setDietPlan(null);
     try {
       window.localStorage.removeItem(FORM_KEY);
     } catch {
@@ -543,6 +553,18 @@ export default function App() {
 
                 <ResumenPlan data={resultado} pesoActual={baseInputs.peso} />
 
+                {dietPlan ? (
+                  <PlanComidas
+                    plan={dietPlan}
+                    supermercado={dietSupermercado}
+                    kcalObjetivo={resultado.calorias_recomendadas}
+                    macrosObjetivo={resultado.macros}
+                    onRegenerar={() => setWizardOpen(true)}
+                  />
+                ) : (
+                  <GenerarPlanCTA onClick={() => setWizardOpen(true)} />
+                )}
+
                 <Explicacion
                   data={resultado}
                   peso={baseInputs.peso}
@@ -557,6 +579,26 @@ export default function App() {
           )}
         </section>
       </main>
+
+      {resultado && (
+        <DietWizard
+          open={wizardOpen}
+          onOpenChange={setWizardOpen}
+          kcalObjetivo={resultado.calorias_recomendadas}
+          macrosObjetivo={resultado.macros}
+          objetivo={baseInputs.objetivo}
+          onPlanGenerado={(plan, supermercado) => {
+            setDietPlan(plan);
+            setDietSupermercado(supermercado);
+            setWizardOpen(false);
+            requestAnimationFrame(() => {
+              document
+                .getElementById("plan-comidas")
+                ?.scrollIntoView({ behavior: "smooth", block: "start" });
+            });
+          }}
+        />
+      )}
 
       <Footer />
     </div>

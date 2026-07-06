@@ -12,6 +12,16 @@ services:
     ports:
       - "8000:8000"
 
+  backend-diet:
+    build: ./backend-diet
+    ports:
+      - "8001:8001"
+    env_file:
+      - ./backend-diet/.env # OPENAI_API_KEY (no se versiona)
+    environment:
+      PORT: 8001
+      ALLOWED_ORIGINS: http://localhost:5173
+
   frontend:
     build:
       context: ./frontend

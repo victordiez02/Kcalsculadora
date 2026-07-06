@@ -61,6 +61,67 @@ export interface CalculoOutput {
   detalle: Detalle;
 }
 
+// ---- Generador de dietas (backend-diet) ----
+
+export type Supermercado = "mercadona" | "carrefour" | "lidl" | "dia";
+export type Intolerancia =
+  | "gluten"
+  | "lactosa"
+  | "frutos_secos"
+  | "huevo"
+  | "pescado"
+  | "marisco"
+  | "soja"
+  | "sesamo";
+export type Variedad = "sin_repetir" | "repetir_ok";
+
+export interface DietInput {
+  kcal_objetivo: number;
+  macros_objetivo: Macros;
+  objetivo: Objetivo;
+  supermercado: Supermercado;
+  num_comidas: number;
+  intolerancias: Intolerancia[];
+  evitar: string[];
+  favoritos: string[];
+  variedad: Variedad;
+}
+
+export interface ProductoPlan {
+  nombre: string;
+  marca: string;
+  cantidad_g: number;
+  kcal: number;
+  proteinas: number;
+  grasas: number;
+  carbohidratos: number;
+}
+
+export interface ComidaPlan {
+  nombre: string;
+  productos: ProductoPlan[];
+  kcal: number;
+  macros: Macros;
+}
+
+export interface Desviacion {
+  kcal_pct: number;
+  proteinas_pct: number;
+  grasas_pct: number;
+  carbohidratos_pct: number;
+  dentro_tolerancia: boolean;
+}
+
+export interface DietOutput {
+  comidas: ComidaPlan[];
+  kcal_total: number;
+  macros_totales: Macros;
+  desviacion: Desviacion;
+  intentos_usados: number;
+  aproximado: boolean;
+  pdf_base64: string | null;
+}
+
 export interface Detalle {
   tmb_coef_peso: number;
   tmb_coef_altura: number;

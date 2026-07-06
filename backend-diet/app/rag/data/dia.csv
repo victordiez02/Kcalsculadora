@@ -1,0 +1,777 @@
+code,nombre,marca,categoria,kcal_100g,proteinas_100g,grasas_100g,carbohidratos_100g,alergenos,popularidad
+3245412373039,100% zumo natural de naranja sin pulpa,Carrefour,bebidas,38.0,0.7,0.0,8.7,,24950000057
+8480017211194,4 frutos exóticos,Dia,snacks_dulces,161.0,1.2,5.8,25.6,en:milk,2
+8480017121783,5 brotes,Vegecampo Dia,verdura,16.0,2.0,0.2,0.6,,22900000009
+8410076472946,8 Tortillas - Blé nature,"General Mills, Old el Paso",pan,299.0,9.1,5.2,53.2,en:gluten,24999000247
+8480017279002,8480017088512,Dia,frutos_secos_semillas,513.0,12.0,33.0,40.0,,23900000004
+8480017126689,Aceite de Oliva,Dia,aceites_salsas,824.0,0.0,91.6,0.0,,23900000003
+8480017001047,"Aceite de Oliva, acidez ≤ 0,4°",Dia,aceites_salsas,900.0,0.2,99.9,0.0,,20900000002
+8480017001054,Aceite de oliva intenso,Dia,aceites_salsas,824.0,0.0,91.5,0.0,,21900000002
+8480017052025,Aceite de oliva virgen extra,Dia,aceites_salsas,823.0,0.0,91.4,0.0,,24900000007
+8480017123602,Aceite de oliva virgen extra &quot;Dia&quot;,Dia,aceites_salsas,823.0,0.0,91.4,0.0,,20900000004
+8480017052094,Aceite de oliva virgen extra Frutado,Dia,aceites_salsas,823.5,0.0,91.5,0.0,,18900000002
+8411190101392,Aceite de oliva virgen extra hojiblanca,Coosur,aceites_salsas,822.0,0.0,91.0,0.0,,24950000027
+8480017172327,Aceite de oliva virgen extra picual,"Delicious Dia,Dia",aceites_salsas,820.0,0.0,91.0,0.0,,3
+8480017001016,Aceite refinado de girasol,Dia,aceites_salsas,826.0,0.0,91.8,0.0,,22950000002
+8480017574657,Acelgas,Dia,verdura,14.0,0.8,0.5,1.5,,18900000003
+8480017008527,Aderezo al limón,Dia,aceites_salsas,23.0,0.0,0.0,3.4,,2
+8480017169723,Aguacates,monsieur tropical,fruta,205.0,1.6,20.6,0.8,,21900000004
+8480017258939,Aguacates Sol Málaga,Mesbonsa,fruta,205.0,1.6,20.6,0.8,,21900000003
+8425531110011,Ajo Blanco Extra,Juan de Dios,verdura,111.0,5.3,0.2,18.6,,1
+8435065310115,Ajo molido deshidratado,Casa Femafa,aceites_salsas,111.0,5.3,0.2,18.6,,0
+8480017785411,Ajo picado,Dia,verdura,166.0,6.3,0.5,33.0,,1
+8480017176370,Albóndigas con tomate y patatas,Dia,carne,174.0,7.2,11.5,10.1,en:gluten|en:milk,1
+8480017111937,Alcachofa corazones,Dia,verdura,35.4,1.6,0.2,6.8,,20900000005
+8480017102423,Alcachofa ultracongelada,Dia,verdura,55.0,2.9,0.4,8.2,,2
+8480017120830,Alcaparras en vinagre,Dia,aceites_salsas,32.0,1.0,0.5,6.1,en:sulphur-dioxide-and-sulphites,3
+8410721113040,Almejas blancas al natural,Dani,pescado_marisco,110.0,17.5,3.0,4.0,en:molluscs,19900000002
+8436558283145,Almejones al natural,Galica,pescado_marisco,62.0,9.0,1.5,3.1,en:molluscs,2
+8480017170293,Almendras con piel tostadas,Dia,frutos_secos_semillas,619.0,21.0,52.5,10.1,,22900000007
+8410297161780,Alpro coco,Alpro,lacteos,20.0,0.1,0.9,2.7,,21950000011
+8413295300212,Altramuces encurtidos,Huerta de Carpia,legumbres,104.4,9.6,2.0,10.5,en:lupin,1
+8480017613189,Alubia negra - Frijoles negros - caraotas,Dia,legumbres,390.0,22.3,1.4,61.3,,1
+8410133122425,Alubias,La Asturiana,legumbres,292.0,21.4,1.0,40.0,,1
+8480017012333,Alubias blancas cocidas en conserva,Dia,legumbres,80.0,4.8,0.6,10.4,en:sulphur-dioxide-and-sulphites|fr:metabisulfito,24900000008
+8410133129813,Alubias rojas,"La Asturiana,Selección de Productos Leoneses",legumbres,89.0,6.3,0.4,11.5,,3
+8480017734914,Amanida italiana,Dia,platos_preparados,142.0,8.1,5.8,13.9,,1
+8480017241573,Anacardo al Natural,"Naturmundo,Dia",frutos_secos_semillas,553.0,18.2,43.8,26.9,en:nuts,24950000019
+8480017034540,Anacardos al punto de sal,Dia,frutos_secos_semillas,596.0,21.2,49.5,9.0,en:nuts,20950000001
+8430236031110,Apio,Briska,verdura,20.5,0.7,0.1,4.2,,0
+8480017076489,Aros de maíz &quot;Dia&quot;,Dia,snacks_dulces,516.4,5.6,26.0,62.8,,2
+8480017533975,Arroz Basmati,Dia,pasta_arroz,349.0,7.0,1.0,78.1,,4
+8410184017190,Arroz Brillante Sabroz,Brillante,pasta_arroz,348.0,6.4,1.2,77.0,,1
+8480017001511,Arroz Categoría Extra,Día,pasta_arroz,358.0,6.5,1.3,80.0,,24900000013
+8480017167880,Arroz Integral,Dia,pasta_arroz,344.0,8.0,2.1,71.0,,24900000013
+8480017154439,Arroz Negro con calamar y gambas,Dia,platos_preparados,111.0,6.1,1.6,18.0,en:crustaceans|en:milk|en:molluscs,21900000002
+8480017203335,Arroz Redondo Cocido,Dia,pasta_arroz,203.0,3.7,2.5,41.0,en:soybeans,21900000004
+8410830001214,Arroz SOS Integral,SOS,pasta_arroz,347.0,8.1,2.6,71.0,,24950000023
+8410184138321,Arroz basmati 5 bolsitas caja 500 g,La Cigala,pasta_arroz,351.3,8.1,0.9,77.2,,24950000038
+8480017096814,Arroz blanco Variedad Arborio,Dia,pasta_arroz,354.0,6.7,0.4,80.4,,1
+8480017008862,Arroz blanco Variedad Bomba,Dia,pasta_arroz,343.6,7.5,1.2,75.7,,1
+8480017371997,Arroz inflado sabor chocolate,Dia,cereales_desayuno,386.0,7.2,3.2,80.1,,19900000002
+8480017735867,Arroz integral,Dia,pasta_arroz,338.8,8.4,2.8,70.0,,1
+2000000100281,Arroz integral con Trigueros,Trevijano,pasta_arroz,311.0,6.7,0.4,60.0,,0
+8410184019781,Arroz largo formato XL,brillante,pasta_arroz,149.0,3.2,2.0,29.0,,20900000006
+8410184016520,Arroz redondo sabroz,"Brillante,Herba Ricemills",pasta_arroz,351.0,7.3,1.4,77.0,,24900000012
+8480017134424,Arándano Rojo,Dia,frutos_secos_semillas,355.0,1.0,0.5,83.0,,21900000003
+8436033879283,Atun claro al natural,Montey,pescado_marisco,87.0,19.0,1.2,0.1,en:fish,1
+8480017028440,Atun claro oliva,Dia,pescado_marisco,224.0,22.0,15.0,0.0,en:fish,19950000002
+8480017272973,Atún claro en aceite de oliva,Dia,pescado_marisco,328.0,16.1,29.3,0.0,en:fish|en:fish,2
+8480017075086,Atún claro natural,Dia,pescado_marisco,84.0,20.0,0.6,0.0,en:fish,19950000002
+8480017506603,Atún claro natural,Dia,pescado_marisco,122.0,26.0,2.0,0.0,,19950000013
+8480017269911,Atún claro oliva,Dia,pescado_marisco,172.0,26.0,7.5,0.0,,19900000008
+8480017272935,Atún en aceite de oliva,Dia,pescado_marisco,296.0,17.3,25.2,0.0,,4
+8410090061065,Atún en salsa de tomate,Calvo,pescado_marisco,186.0,18.0,11.0,3.0,en:fish,18900000002
+8480017075109,Atún girasol,Dia,pescado_marisco,196.0,24.0,11.0,0.0,en:fish,19900000002
+8480017072122,Avellanas tostadas,"Dia, Dia - Distribuidora Internacional de Alimentación S.A.",frutos_secos_semillas,675.0,15.0,62.5,8.0,en:nuts,24900000008
+3175681079502,Avena calcio,Gerblé,lacteos,42.0,0.7,0.8,7.8,es:avena,21900000005
+8480017524836,Bacon tiras,Dia,carne,289.0,15.0,25.0,1.0,,20900000008
+8480017144089,Barquillos con Chocolate Negro,Dia,snacks_dulces,540.0,5.8,31.0,58.0,,1
+8480017144072,Barquillos con chocolate con leche,Dia,snacks_dulces,529.0,5.9,29.0,60.0,en:eggs|en:gluten|en:milk,0
+8480017381095,Barra de pan,DIA,pan,267.0,8.1,1.8,53.0,en:gluten,19900000003
+8480017110558,Barre aux fruits des bois,Dia,snacks_dulces,374.0,5.8,3.2,79.0,,1
+3560070941964,Barrita de chocolate con galleta,"Carrefour,Carrefour simpl",snacks_dulces,505.0,5.3,24.0,66.0,en:gluten|en:milk,6
+8480017330765,"Barrita de chocolate, caramelo y galleta",Dia,snacks_dulces,505.0,5.3,24.0,66.0,en:gluten|en:milk|en:nuts|en:peanuts|en:soybeans,1
+8480017439468,"Barritas de cereales con albaricoque, manzana y pasas",Dia,snacks_dulces,378.0,5.0,5.8,74.5,en:gluten,20950000008
+8480017439482,Barritas de cereales con avellanas,Dia,snacks_dulces,438.0,8.5,15.0,64.8,en:gluten|en:nuts|en:peanuts|es:avena|es:avena,24900000008
+8480017439475,Barritas de cereales con chocolate con leche,Dia,snacks_dulces,456.0,8.1,19.3,60.9,en:gluten|en:milk|en:nuts|en:peanuts|en:soybeans|en:sulphur-dioxide-and-sulphites|es:avena,22950000006
+8480017439499,Barritas de cereales con plátano y chocolate con leche,Dia,snacks_dulces,407.0,6.7,11.5,66.5,en:gluten|en:milk|en:soybeans|fr:avoine,24900000008
+8480017319319,Barritas de frutos secos con chocolate negro y sal,Dia,snacks_dulces,535.0,19.7,37.3,24.5,en:milk|en:nuts|en:peanuts|en:soybeans,9
+8480017147479,Base de pizza fina,Dia,platos_preparados,282.0,7.0,5.9,49.2,en:gluten|en:soybeans,2
+8480017057167,Batido de chocolate,Dia,lacteos,72.0,3.5,1.6,10.8,en:milk,22900000005
+8480017046321,Batido de vainilla,Dia,lacteos,64.0,2.9,1.3,10.3,,19900000002
+8480017046314,Batido fresa,Dia,lacteos,39.0,3.4,0.6,4.9,en:milk,22900000006
+8480017172020,Bebida de almendras,Dia,lacteos,29.0,0.5,1.4,3.5,en:nuts,19950000001
+8480017172013,Bebida de arroz,Dia,lacteos,49.0,0.2,1.1,9.5,,19950000001
+8480017151599,Bebida de avena con calcio,Dia,lacteos,56.0,1.1,0.7,11.0,en:gluten|es:avena,24950000022
+8480017061171,Bebida de soja - Pack de 3,Dia,lacteos,47.4,3.1,1.8,4.7,en:soybeans,1
+8480017284235,Bebida de soja 0% azúcares,"Vegedia,Dia",lacteos,22.0,2.0,0.9,1.4,en:soybeans,24950000032
+8410128650315,Bebida de soja Natural,,lacteos,39.0,3.1,1.7,2.4,en:soybeans,21990000021
+8410128660031,Bebida de soja ligera,,lacteos,26.9,2.2,1.1,1.8,en:soybeans,21950000012
+00413419,Bebida de soja light,DIA,lacteos,31.2,2.1,1.2,3.0,,1
+8480017076229,Bebida de soja light con calcio,Dia,lacteos,27.0,2.6,1.4,0.9,en:soybeans,22950000002
+8480017281258,Bebida energética sabor mango El diablo de Dia lata,Dia,bebidas,21.0,0.0,0.0,4.9,,1
+8480017488886,Bebida láctea omega 3,Dia,lacteos,43.0,3.0,0.9,5.6,en:fish,20900000003
+8480017079015,Bebida para deportistas,Dia,bebidas,20.0,0.0,0.0,4.8,,6
+8410184032025,Benefit arroces quinoa y verdura,Brillante,platos_preparados,190.0,5.7,4.4,30.0,,19950000001
+8480017420671,Bifidus con piña,Dia,yogures,50.0,4.6,0.1,7.6,,19900000003
+8480017528681,Bifidus edulcorado 0%,Dia,yogures,39.0,3.9,0.1,5.6,en:milk,19900000001
+3023290401149,Bifidus saveur citron,LNUF,yogures,88.0,3.3,2.9,12.2,,18950000007
+8480017260307,Biscotes el molino de día,El molino de Dia,pan,389.0,11.0,4.8,73.0,en:gluten,12
+8480017011442,Biscotes integrales,Día,pan,384.0,15.0,6.0,63.0,en:gluten,20950000001
+8480017006905,Biscuit fourré goût Chocolat,Dia,snacks_dulces,473.0,5.6,20.0,67.0,en:gluten|en:milk|en:soybeans|en:sulphur-dioxide-and-sulphites,24900000019
+8480017253651,Bizcocho de naranja con chocolate,Dia,snacks_dulces,408.0,4.5,20.6,50.4,en:eggs|en:gluten,1
+3560070370344,Bleu cremoso,Classic',yogures,365.0,16.0,33.0,1.0,en:milk,24950000034
+8480017211224,Bloque de helado 3 sabores,Dia,snacks_dulces,74.0,0.6,2.9,11.2,,1
+8410087060705,Bocaditos de bizcocho sin aceite de palma envasados de,Dulcesol,snacks_dulces,465.0,6.2,27.0,49.0,en:eggs|en:gluten,24900000011
+8480017243041,Bolas Con Chocolate,granDIA,cereales_desayuno,378.0,8.3,2.9,77.0,en:gluten,1
+8480017762238,Bolas con chocolate,Dia,cereales_desayuno,371.0,8.3,2.9,77.0,en:gluten,9
+2000000100265,Boletus Desidratados,Trevijano,verdura,298.0,29.0,3.7,23.0,,0
+8480017019189,Bolleria al cacao,Dia,snacks_dulces,459.0,6.7,29.0,42.0,en:eggs|en:gluten|en:milk|en:soybeans,1
+8480017006301,Bombones rellenos de cereza y licor,Dia,snacks_dulces,410.0,3.2,18.0,50.0,en:soybeans,1
+8480017086198,Bombones rellenos de menta,Dia,snacks_dulces,436.4,3.0,18.0,65.6,en:soybeans,1
+8480017293954,Bonito del norte en aceite de oliva,Dia,pescado_marisco,370.0,16.0,34.0,0.0,en:fish|es:bonito,19900000001
+8480017173041,Bonito del norte en escabeche,Día,pescado_marisco,143.0,20.0,7.0,0.0,en:fish,1
+8480017118776,Brie,Dia,yogures,356.0,17.0,32.0,2.0,,21900000002
+8480017786739,Brioche,Dia,snacks_dulces,344.0,8.5,11.5,50.0,,19900000001
+8436032705255,Brocoli,Vega Tajo,verdura,28.8,2.7,0.3,2.3,,0
+8480017200020,Brocoli,Hortiberia,verdura,36.0,4.0,0.5,1.7,,1
+8410954000278,Brotes germinados,Rioverde,legumbres,34.0,1.7,0.3,5.6,en:sulphur-dioxide-and-sulphites,1
+8437000305019,Brócoli,San Juan del Valle,verdura,36.0,4.0,0.5,1.7,,1
+8480017140333,"Brócoli, coliflor y zanahoria",Dia,verdura,37.0,1.6,0.5,5.0,,1
+8480017329424,Brócolis,Dia,verdura,34.0,2.4,0.5,3.5,,1
+8480017273390,Burger Crunchy Chicken 2uds Selección de DIA,Selección de DIA,carne,225.0,14.1,10.1,19.5,,3
+8411030025307,Burger meat 4UDS Mixta Pavo+Pollo,SERRANO,carne,174.0,16.0,11.5,1.4,en:soybeans,4
+8480017250841,Burger vacuno y cerdo,Dia,carne,210.0,17.5,15.0,1.0,,2
+8424219030085,Burgers de pollo,Roler,carne,100.0,18.0,2.9,0.2,en:soybeans,2
+8434532495140,Burguer XL,Panrico,pan,280.0,9.3,4.9,48.0,en:gluten|en:sesame-seeds,19900000001
+8480017420657,Bífidus cremoso con fresa 0%,Dia,yogures,45.0,4.7,0.0,6.4,en:milk,20950000004
+3560070423941,CORAZÓN de Mousse,"Carrefour, Carrefour Sensation",snacks_dulces,544.0,7.1,35.0,46.0,en:milk|en:nuts|en:soybeans,24900000009
+8480017230669,Cacahuete frito salado,NATURMUND,legumbres,603.0,28.0,52.5,5.9,en:peanuts,24950000015
+8480017063526,Cacahuete tostado sin sal añadida,Dia,legumbres,657.0,30.1,50.5,16.1,en:peanuts,19950000002
+8480017034403,Cacahuetes con miel,Dia,legumbres,595.0,23.0,46.0,19.0,,18900000003
+8412600023617,Cacahuetes dorados a la miel y sal,Eagle,frutos_secos_semillas,611.0,25.0,48.0,17.0,,0
+12330065,Cacao Instantaneo,Dia,bebidas,74.0,3.7,1.8,10.4,,1
+8410100025131,Cacao en polvo Nesquik,"Nestlé, Nesquik",snacks_dulces,386.0,5.1,3.8,79.2,en:soybeans,23900000004
+8480017001979,Cacao instantáneo,Dia,bebidas,74.0,3.7,1.8,10.4,,20900000009
+8480017002389,Cacao soluble,Dia,bebidas,378.0,4.7,2.3,81.0,en:gluten|en:soybeans,22900000001
+0848001714332,Café soluble crema,DIA,bebidas,296.0,19.4,1.1,42.6,,0
+8480017034915,Calabacines,Unión,verdura,16.5,1.2,0.3,1.8,,1
+2402946009051,Calabaza,El Guapo,verdura,14.9,1.1,0.2,1.6,,0
+8480017346094,Calcio Leche semidesnatada UTH,Dia,lacteos,52.0,3.9,1.6,6.0,en:milk,19900000001
+8000920401439,Calippo,Calippo,snacks_dulces,91.5,0.5,0.5,21.0,,18900000001
+8722700231974,Calippo sabor fresa,Frigo,snacks_dulces,91.5,0.5,0.5,21.0,,22900000003
+8480017171399,Camperos,Dia,pan,392.0,11.5,5.3,71.8,en:gluten,6
+8480017171306,Camperos integrales,Dia,pan,369.0,11.8,0.5,76.9,,1
+8410173001018,Cannelloni,El Pavo,pasta_arroz,360.0,12.0,1.4,73.0,en:gluten,21950000002
+8480017039446,Canónigos,Dia,verdura,38.6,3.1,0.7,2.6,,6
+8410000005387,Caramelo Liquido,Royal,snacks_dulces,312.0,0.1,0.1,78.0,en:sulphur-dioxide-and-sulphites,1
+8480017574664,Cardo,Dia,verdura,30.0,0.8,0.5,4.7,,1
+8435065304015,Cayena,Casa Femafa,aceites_salsas,318.0,12.0,17.3,56.6,,0
+8480017517135,Cebolla cortada,Dia,verdura,36.0,1.6,0.4,5.7,,2
+8435065300154,Cebolla deshidratada,Casa Femafa,aceites_salsas,26.0,1.1,0.0,5.3,,0
+8480017578846,Cebolla morada,Deleite de la Huerta,verdura,38.6,1.1,0.6,6.2,,3
+8480017162823,Cebollas,Deleite de la Huerta,verdura,38.6,1.1,0.6,6.2,,1
+8480017371676,Cereales Fibre,Dia,cereales_desayuno,279.0,14.8,5.0,43.6,en:gluten,2
+8480017102843,Cereales copos de arroz y trigo integral con frutos rojos,Dia,cereales_desayuno,373.0,7.8,1.5,79.4,en:gluten,23900000009
+8480017371768,Cereales fruta y fibra,Dia,cereales_desayuno,378.0,8.6,6.4,67.1,en:gluten|en:nuts,24900000011
+8480017372031,Cereales muesli con frutas,Dia,cereales_desayuno,447.0,8.2,17.4,60.7,en:banana,24900000011
+8480017119414,Cereales solubles,Dia,cereales_desayuno,362.0,5.5,0.0,82.0,en:gluten,19900000002
+8480017046307,Cereza,Agrupación de Cooperativas Valle del Jerte,fruta,55.7,0.8,0.2,13.0,,0
+8411327722018,Cerveza rubia sin alcohol,Mahou,bebidas,25.0,0.2,0.0,4.6,en:gluten,24900000009
+8424631100014,Champiñon cultivado,Champiñones Cumar,verdura,21.7,2.4,0.2,1.9,,2
+8480017016669,Champiñones laminados,Dia,verdura,12.0,1.5,0.0,1.0,,21900000003
+8480017017109,Chili con carne,DIA,platos_preparados,115.0,7.1,4.4,9.8,,1
+8480017512628,Chipirones rellenos en salsa americana,Dia,pescado_marisco,158.0,21.3,7.8,0.5,,19900000001
+8410100026824,Chocapic Original,Nestlé,cereales_desayuno,385.0,8.6,4.6,73.0,en:gluten,24950000016
+8434165482845,Choco Flakes,Cuétara,cereales_desayuno,446.0,5.8,14.0,73.0,en:gluten|en:soybeans|en:sulphur-dioxide-and-sulphites,21990000002
+8480017130686,Chocoaros de chocolate blanco,Dia,snacks_dulces,509.0,6.0,25.0,64.0,en:gluten|en:milk|en:soybeans,22900000003
+8480017347190,Chocolat au lait aux amandes entières,Dia,snacks_dulces,565.0,11.0,37.0,45.0,en:milk|en:nuts|en:soybeans,1
+8480017030535,Chocolat cacao,Dia,bebidas,377.0,4.4,2.1,82.0,en:gluten,23900000002
+8480017015532,Chocolate Negro,Dia,snacks_dulces,508.0,5.6,28.0,54.0,en:soybeans,20900000014
+8480017181183,Chocolate Negro con Pepitas de Cacao Caramelizadas,Dia,snacks_dulces,537.0,10.0,37.0,34.0,,13
+8480017516114,Chocolate Negro con pepitas de cacao caramelizadas,Dia,snacks_dulces,541.0,11.0,37.0,34.0,,0
+8480017032669,Chocolate Postres,Dia,snacks_dulces,523.0,6.3,32.0,48.0,en:soybeans,21900000003
+8410109000016,Chocolate Valor Puro,Valor,snacks_dulces,540.0,6.2,33.0,50.0,en:soybeans,21900000003
+8480017828668,Chocolate blanco,Dia,snacks_dulces,539.0,6.0,31.0,59.0,en:milk|en:soybeans,4
+3387390326468,Chocolate con Leche,"Nestlé,Fitness",cereales_desayuno,396.0,8.6,7.2,69.5,en:gluten|en:milk|en:soybeans,24990000078
+8480017828651,Chocolate con leche,Dia,snacks_dulces,529.0,4.9,29.0,62.0,en:milk|en:nuts|en:soybeans,21900000001
+8480017175366,Chocolate con leche Sin Lactosa,Dia,snacks_dulces,549.0,6.6,34.1,54.0,en:milk|en:soybeans,0
+8480017828682,Chocolate con leche almendras,Dia,snacks_dulces,548.0,9.9,30.0,49.0,,22900000002
+8480017347220,Chocolate con leche y avellanas,Dia,snacks_dulces,560.0,8.8,36.0,49.0,en:milk|en:nuts|en:soybeans,1
+8480017148834,Chocolate de Leite e Amêndoas Tostadas Partidas,Dia,snacks_dulces,548.0,9.9,34.0,49.0,,1
+8480017155436,Chocolate mints,Dia,snacks_dulces,455.0,3.5,17.0,70.0,en:soybeans,20900000002
+8480017192592,Chocolate negro 74%,Dia,snacks_dulces,535.0,9.3,40.0,31.0,en:milk|en:soybeans,23900000010
+8480017181176,Chocolate negro 74% con naranja confitada,Dia,snacks_dulces,522.0,8.7,37.0,34.0,,4
+8480017192585,Chocolate negro 85%,Chocolate negro día,snacks_dulces,542.0,11.0,43.0,22.0,en:milk,24950000021
+8480017582379,Chocolate negro con almendras enteras,Dia,snacks_dulces,554.0,10.0,38.0,38.0,en:nuts|en:soybeans,20900000005
+8480017582362,Chocolate negro con avellanas,"Dia, Dia - Distribuidora Internacional de Alimentación S.A.",snacks_dulces,562.0,7.5,39.5,40.0,en:nuts|en:soybeans,21900000004
+8480017172099,Chocolate negro con frambuesa,Dia,snacks_dulces,488.3,5.8,30.3,48.1,en:soybeans,0
+8480017013378,Chocolate negro con piel de naranja confitada 70% cacao,Dia,snacks_dulces,531.0,9.5,35.0,38.0,,1
+8480017113559,Chocolate negro relleno de menta,Dia,snacks_dulces,446.9,3.6,18.5,66.5,,1
+8480017111852,Chocolate negro sin azúcares,Dia,snacks_dulces,462.0,7.3,33.0,49.0,en:milk|en:soybeans,24900000008
+8410109000115,Chocolate puro avellanas enteras 52% cacao,Valor,snacks_dulces,557.6,8.4,40.0,41.0,en:nuts|en:soybeans,22950000001
+8480017169242,Chops Choc Cream,Dia,snacks_dulces,461.0,4.4,20.0,64.2,en:gluten|en:milk|en:peanuts|en:sesame-seeds|en:soybeans,19900000001
+8480017087232,Chops choc duo - Céréales de blé et de riz extrudés,Dia,cereales_desayuno,407.0,7.7,5.0,81.0,en:gluten|en:milk|en:soybeans,2
+8480017142788,Chorizo de pavo,Dia,carne,326.0,22.0,25.6,1.8,en:milk,4
+2500313003029,Chuleta de contramuslo de pavo Selección de Dia,"Dia, Selección de Dia",carne,149.0,20.1,7.6,0.0,,12
+8428775018761,Clementinas,Frutas Tono,fruta,52.8,0.9,0.1,12.0,,1
+8480017496942,Cocido madrileño,Dia,platos_preparados,151.0,6.7,8.9,9.7,,21900000003
+3560070713615,Cocktail de frutos secos tostados y salados,Carrefour,frutos_secos_semillas,657.0,25.0,58.0,5.6,en:nuts|en:peanuts,24950000015
+3560070930036,Comté,Extra,yogures,427.0,26.0,34.0,1.9,en:milk,24995000088
+8480017103079,Cookies,Dia,snacks_dulces,526.0,6.5,32.0,53.0,en:eggs|en:gluten,0
+8480017132932,Cookies,Dia,snacks_dulces,442.0,6.3,20.0,63.0,en:soybeans,21900000005
+3270190114055,Cookies con pepitas de chocolate & avellana,Carrefour,snacks_dulces,501.0,6.5,28.0,55.0,en:eggs|en:gluten|en:milk|en:nuts|en:soybeans,24950000061
+3560070242016,Cookies con pepitas de chocolate & sabor coco,"Carrefour, Carrefour Classic",snacks_dulces,526.0,5.5,32.0,52.0,en:eggs|en:gluten|en:milk|en:soybeans,24950000035
+8480017169297,Cookies rellenas de chocolate negro,Dia,snacks_dulces,494.0,6.4,28.0,51.0,en:gluten|en:milk|en:soybeans,23900000003
+8480017038845,Copos de Avena,gran DIA,cereales_desayuno,372.0,13.5,7.0,58.7,en:gluten,24950000054
+8480017679291,Copos de arroz y trigo integral con chocolate negro,Dia,cereales_desayuno,394.0,7.3,5.5,75.7,en:gluten|en:milk,24900000026
+8480017743053,Copos de arroz y trigo integral original,Dia,cereales_desayuno,368.0,7.5,1.7,78.0,en:gluten,24900000007
+8480017669568,Corn flakes,Dia,cereales_desayuno,365.0,6.0,1.0,80.0,en:gluten,24950000025
+3270190021148,Coulommiers,"Carrefour Classic, Carrefour",yogures,256.0,19.0,20.0,1.0,en:milk,24950000035
+2000000100264,Cous Cous Mediterráneo,Trevijano,platos_preparados,365.0,12.0,3.6,69.0,en:gluten|en:sesame-seeds,0
+8410770800007,Couscous Oriental,Trevijano,platos_preparados,374.0,12.9,2.2,72.7,en:gluten|en:mustard,1
+8410300357537,Crema casera calabaza,Gallina Blanca,platos_preparados,46.0,0.7,2.1,5.7,,24900000008
+8480017029621,Crema de Calabacín,Día,platos_preparados,37.0,0.8,1.0,6.0,en:milk,24900000009
+8480017318688,Crema de Pollo con verduras,Dia,platos_preparados,37.0,1.0,1.2,5.2,,11
+8437002738341,Crema de calabaza,Solfrío,platos_preparados,22.0,0.7,0.5,3.7,,1
+8480017029652,Crema de calabaza,Dia,platos_preparados,36.0,1.0,1.1,5.1,en:milk,24950000016
+8480017029638,Crema de verduras,Dia,platos_preparados,39.0,0.9,1.3,5.5,en:celery|en:milk,24900000022
+8480017052711,Crepes,Dia,snacks_dulces,437.0,7.1,20.0,56.0,,1
+8480017100573,Croissants,Dia,snacks_dulces,470.0,6.9,28.0,47.0,en:eggs|en:gluten|en:milk|en:nuts|en:soybeans,23900000009
+8480017272782,Croissants,Dia,snacks_dulces,458.0,6.6,27.0,46.0,en:eggs|en:gluten|en:milk,2
+8480017007148,Croissants Rellenos de crema de cacao y avellanas,Dia,snacks_dulces,484.0,5.6,29.0,49.0,en:gluten|en:nuts,20900000001
+8480017272799,Croissants rellenos de crema de cacao y avellanas,Dia,snacks_dulces,505.0,5.5,31.0,50.0,,1
+3560070894161,Crusti ' nuts,Carrefour,legumbres,514.0,14.0,30.0,44.0,en:celery|en:gluten|en:milk|en:peanuts,21900000004
+8480017045225,Curado Queso De Mezcla,"Dia,El cencerro",yogures,402.0,23.0,34.0,1.0,en:milk,10
+3270190008606,Cuscús,Carrefour,pasta_arroz,353.0,13.0,1.8,69.0,en:gluten,24950000050
+8480017041647,Céréales Chocolatées Fourrées au Chocolat,Dia,cereales_desayuno,415.0,6.0,12.7,67.0,en:gluten|en:nuts|en:peanuts|en:sesame-seeds|en:soybeans,20900000006
+8480017063533,Cóctel frutos secos,"NATURMUNDO,Dia",frutos_secos_semillas,632.0,16.8,56.1,11.4,en:nuts,24900000021
+8480017109309,DELICIOUS Patatas fritas con aceite de oliva,Dia,snacks_dulces,516.0,7.4,29.0,55.5,,2
+8410500010614,Danet vainilla,Danone,lacteos,109.0,3.1,2.9,17.7,en:milk,24950000037
+8410426350054,Datines deglet nour en rama de tunez,El Monaguillo,fruta,334.0,3.2,0.0,77.0,,5
+8480017017697,Delicious - Crème à base de vinaigre balsamique de Modène,Dia,aceites_salsas,217.0,0.6,0.0,53.6,en:sulphur-dioxide-and-sulphites,24900000008
+8480017153760,Delicious cheesecake con mermelada de fresa y galleta,Dia,lacteos,367.0,3.1,26.4,29.0,en:gluten|en:milk,1
+8480017175311,Delicious chips de hortalizas,Dia,snacks_dulces,528.0,4.8,31.0,56.8,,20900000006
+8480017172938,Delicious delicias de fruta,Dia,snacks_dulces,336.0,0.0,0.0,83.0,,1
+8480017139566,Delicious frutos del Bosque,Dia,bebidas,6.0,0.1,0.2,1.0,,1
+8480017153623,Delicious mini sticks de chocolate negro 62% cacao,Dia,snacks_dulces,495.3,7.5,34.5,38.7,en:soybeans,1
+8480017139313,Delicious tónica ginger cardamomo,Dia,bebidas,38.0,0.0,0.0,9.0,,0
+8480017333865,Dia Ground Black Pepper,Dia,aceites_salsas,330.0,13.3,7.5,39.5,,22900000007
+8480017064066,Dia flash,Dia,snacks_dulces,28.0,0.0,0.0,7.0,,3
+8480017836847,Dianitos sabor maiz,Dia,snacks_dulces,508.0,5.5,24.0,66.0,,16
+8410376001938,Diet-Fibra Chocolate,"Diet-Fibra, Gullón",snacks_dulces,417.0,6.6,13.0,62.0,en:gluten|en:soybeans|es:avena|es:avena,23900000004
+8410376026979,Digestive Muesli,Gullón,snacks_dulces,462.0,7.5,18.0,64.0,en:gluten|en:soybeans,24995000174
+7622210114648,Digestive avena,"Fontaneda,Mondelez",snacks_dulces,465.0,7.0,22.0,56.0,en:gluten|en:soybeans|es:avena|es:avena,24950000027
+8410664201248,Dulce de Membrillo,El Quijote,snacks_dulces,154.0,1.0,0.0,44.0,,21900000004
+8480017223074,Dulce de membrillo,Dia,snacks_dulces,245.0,0.3,0.0,58.6,,20900000001
+6194012401048,Dátiles en rama,Dat'Cha,fruta,290.0,2.7,0.4,65.0,,21950000003
+8480017006516,Edam en Lonchas,Dia,yogures,311.0,26.0,23.0,0.1,en:milk,2
+8480017238955,El Diablo Mojito,Dia,bebidas,19.0,0.0,0.0,4.4,,1
+8480017281265,El Diablo sabor piña-coco,El Diablo,bebidas,21.0,0.0,0.0,4.9,,4
+8480017162960,Emmental,Dia,yogures,368.0,26.7,28.2,1.7,en:milk,19900000006
+8480017333131,Emmentaler Im Stück 250 gr.,Dia,yogures,369.0,27.0,29.0,0.1,,18900000001
+8480017104670,Empanada de carne,Dia,platos_preparados,207.0,5.9,7.9,27.0,en:eggs|en:gluten|en:sulphur-dioxide-and-sulphites,2
+8480017086006,Empiñonadas,"Delicious Dia, Dia",snacks_dulces,551.4,13.7,40.2,33.7,en:nuts,0
+8480017644497,Energy drink,Dia,bebidas,44.0,0.4,0.0,10.5,,3
+8480017016751,Ensaimadas,Dia,snacks_dulces,462.0,7.0,25.0,51.0,en:eggs|en:gluten|en:milk|en:soybeans,21900000014
+8480017531995,Ensalada china,"Dia, Dia - Distribuidora Internacional de Alimentación S.A.",verdura,36.0,1.3,0.2,6.5,en:sulphur-dioxide-and-sulphites,1
+8480017038685,Ensalada gourmet,Dia,verdura,18.0,1.4,0.3,1.1,,2
+8437012681538,Ensalada mixta,Fresquia,verdura,21.0,1.1,0.0,3.4,,19900000002
+8480017038708,Ensalada primavera,Dia,verdura,16.0,1.3,0.2,0.9,,1
+8410770022409,Ensaladilla,Trevijano,platos_preparados,337.0,7.2,1.9,62.0,,1
+8480017141552,Ensaladilla jardinera,"Dia, Dia - Distribuidora Internacional de Alimentación S.A.",verdura,70.0,2.4,0.2,13.6,,1
+2623667033198,Escalopes de dinde Halal (x 3) extra fines,Dia,carne,109.7,22.4,1.9,0.8,,18950000002
+2402146006386,Escalopines de pavo marinados,dia,carne,115.0,17.0,5.2,0.4,,1
+2500321003455,Escalopín adobado de pechuga,dia,carne,112.8,20.4,2.8,1.5,,2
+8480017522085,Espagueti,Dia,pasta_arroz,349.0,12.0,1.5,70.0,en:gluten,22900000005
+8480017005205,Espagueti,Al Diante,pasta_arroz,355.0,12.0,1.8,71.0,en:gluten,19900000009
+8480017041180,Esparragos medianos,Dia,verdura,19.0,1.3,0.7,1.4,,24900000007
+8480017390219,Espetec Extra,Dia,carne,443.0,27.0,35.0,5.0,en:milk,18900000010
+8480017038692,Espinaca,Dia,verdura,25.0,2.9,0.4,1.4,,5
+8480017532961,Espinacas,Dia,verdura,15.0,1.9,0.0,1.0,,0
+8480017013934,Espinacas cortadas ultracongeladas,Dia,verdura,22.0,3.0,0.0,0.3,,1
+8480017331175,Espirales tricolor,Dia,pasta_arroz,350.0,12.0,1.7,70.0,,22900000015
+8480017018328,Espárragos blancos delgados,Dia,verdura,27.0,2.1,0.7,2.5,,1
+8480017290144,Fajitas Al Punto Dia bandeja 275 g,DIA,platos_preparados,252.0,8.8,10.5,30.7,en:gluten|en:milk,4
+8480017029195,Fiambre da perna,Dia,carne,102.0,15.5,4.0,1.0,,0
+8480017068699,Fiambre de Pechuga de Pollo,"Dia, Sabor Charcuteiro",platos_preparados,85.0,11.0,1.7,6.4,,0
+3560070594351,Fibra 5 frutas secas,Carrefour,cereales_desayuno,381.0,8.9,6.6,66.0,en:gluten|en:nuts,21950000010
+8480017532220,Fibra flakes,Dia,cereales_desayuno,371.0,10.6,2.4,71.9,,24950000015
+8480017097651,Fideos chinos de pollo,Dia,pasta_arroz,81.0,1.9,3.3,10.8,en:celery|en:gluten|en:milk,1
+8480017032645,Figuras de mazapán,Dia,snacks_dulces,470.0,8.0,24.0,55.5,en:nuts,1
+8480017045423,Filete de Bacalao,Dia,pescado_marisco,29.5,6.9,0.2,0.1,,19900000003
+8480017512666,Filetes de caballa del Sur en aceite de oliva,Dia,pescado_marisco,197.0,25.2,10.0,1.5,en:fish,1
+8480017266408,Filetes de caballa del sur en aceite de oliva,dia,pescado_marisco,301.0,16.2,25.0,0.5,en:fish|en:fish,3
+8480017033871,Flan de huevo al baño maría,Dia,lacteos,137.0,5.5,2.0,23.1,en:eggs|en:milk,22900000006
+8480017192684,Fletan negro,Dia,pescado_marisco,112.0,8.6,8.4,0.7,,0
+8480017108500,Florida,Dia,bebidas,25.0,0.1,0.1,5.8,,1
+8480017037008,Fresa y Kiwi,Dia,yogures,32.0,3.0,0.1,4.0,en:milk,3
+8480017087799,Frutas Deshidratadas,Dia,frutos_secos_semillas,296.0,2.6,0.8,66.0,,1
+8480017230898,Galleta María,Dia,snacks_dulces,431.0,8.0,9.5,77.0,en:gluten|en:soybeans|en:sulphur-dioxide-and-sulphites,2
+8410376000825,Galleta María Ligera Sin Sal y Sin Azúcares Añadidos,Gullón,snacks_dulces,408.0,9.0,13.0,58.0,en:gluten|en:milk|en:sesame-seeds|en:soybeans|en:sulphur-dioxide-and-sulphites,24950000057
+8480017120083,Galleta Relieve,Dia,snacks_dulces,468.0,6.0,18.0,69.0,en:gluten|en:milk|en:soybeans,24900000014
+8480017092977,Galleta Shortcake,Dia,snacks_dulces,474.0,6.7,19.0,68.0,en:eggs|en:gluten|en:milk,1
+8480017492210,Galleta cubierta de chocolate con leche,Dia,snacks_dulces,534.0,5.0,31.1,57.0,en:gluten|en:milk,0
+8480017099549,Galleta maría dorada,Dia,snacks_dulces,444.0,5.7,15.0,74.0,en:gluten|en:milk|en:peanuts|en:soybeans|en:sulphur-dioxide-and-sulphites,22950000006
+8480017238634,Galleta maría integral,Dia,snacks_dulces,433.0,7.3,11.0,74.0,en:gluten|en:soybeans|en:sulphur-dioxide-and-sulphites,24900000015
+8410196051380,Galletas B-SAN Integral Chocolate sin azúcares añadidos,Virginias,snacks_dulces,489.2,8.2,31.0,51.0,en:gluten|en:sulphur-dioxide-and-sulphites|es:avena,19900000001
+7622210114730,Galletas Digestive,"Fontaneda,Mondelez",snacks_dulces,477.5,7.1,20.5,64.0,en:gluten|en:soybeans,24950000030
+8480017092984,Galletas Digestive Soja & Frutas,Dia,snacks_dulces,466.0,6.7,18.0,67.0,en:gluten|en:soybeans,20900000001
+8480017004697,Galletas María,Dia,snacks_dulces,434.0,7.6,10.0,77.0,en:gluten|en:milk|en:soybeans|en:sulphur-dioxide-and-sulphites|en:milk,24900000015
+3560070932429,Galletas con mantequilla,"Carrefour, Carrefour Discount",snacks_dulces,450.0,7.5,15.0,70.0,en:eggs|en:gluten|en:milk,24950000017
+8480017048813,Galletas cookies con pepitas de chocolate,Dia,snacks_dulces,507.0,5.5,25.5,62.6,en:gluten|en:milk|en:soybeans,24900000009
+8480017036186,Galletas de mantequilla,Dia,snacks_dulces,519.0,5.3,28.3,59.9,en:gluten,0
+8480017836489,Galletas digestive,Dia,snacks_dulces,464.2,6.0,17.0,70.0,en:gluten,23900000003
+8480017092991,Galletas digestive de avena,Dia,snacks_dulces,477.0,7.5,21.0,61.0,en:gluten|es:avena,24950000035
+8480017313393,Galletas rellenas de caramelo salado,Galleteca de Dia,snacks_dulces,493.0,5.0,22.9,65.8,en:eggs|en:gluten|en:milk|en:soybeans,8
+8436042462001,Galletas saladas,Biscuits Galicia,snacks_dulces,438.0,10.0,13.0,68.0,,2
+8480017291790,Ganchitos sabor Queso,Dia,snacks_dulces,518.0,5.9,26.0,65.0,en:milk,1
+8480017144690,Garbanzo pedrosillano,Dia,legumbres,333.0,19.0,6.9,36.0,,1
+8480017012326,Garbanzos cocidos extra,Dia,legumbres,95.0,5.4,1.9,12.0,en:sulphur-dioxide-and-sulphites,24900000009
+8480017031235,Garbanzos con verduras,Dia,legumbres,86.0,5.4,2.1,9.5,en:sulphur-dioxide-and-sulphites,1
+8436534681620,Gazpacho,Sanflavino,platos_preparados,44.5,0.6,3.7,2.2,,0
+8480017432315,Gazpacho,Dia,platos_preparados,42.0,0.8,2.3,3.6,,24950000018
+8437002736033,Gazpacho andaluz,Solfrío,platos_preparados,69.0,0.6,5.4,4.0,en:gluten,1
+8480017829559,Gazpacho pack 3 unidades,Dia,platos_preparados,42.0,0.8,2.3,3.6,,23900000005
+8480017201195,Gazpacho suave,Dia,platos_preparados,41.0,0.8,2.3,3.5,,24950000015
+8480017207722,Gelatina alto contenido en proteinas,Dia Lactea,snacks_dulces,40.0,10.0,0.0,0.0,,24900000016
+8480017092656,Gofres,Dia,snacks_dulces,468.0,6.0,25.2,53.3,en:eggs|en:gluten|en:soybeans,19900000001
+5000289930048,Gordon's sin alcohol,Gordon's,bebidas,27.0,0.0,0.0,4.8,,2
+8480017181343,Gouda Vital Bio,Dia,yogures,336.0,23.0,27.0,0.0,,1
+8480017026941,Gouda en lonchas,Dia,yogures,336.0,23.0,27.0,0.3,,19900000009
+8411414013272,Gourmet Wafer Mix,Florbú,snacks_dulces,515.0,5.0,29.0,57.0,en:gluten|en:milk,22900000014
+8480017009500,Grande Pain de mie,Dia,pan,249.0,9.8,2.7,45.3,en:gluten,19950000001
+8425991411949,Granizado de café,Mercader,snacks_dulces,44.0,0.5,0.0,11.0,,3
+8423104000080,Granizado sabor mojito,Lemon Ice Family,snacks_dulces,64.0,0.0,0.0,16.0,,0
+8480017150974,Grissinis,Dia,pan,424.0,13.0,8.7,72.0,,21900000005
+8410282205345,Guindas al licor,La Estepeña,snacks_dulces,359.0,2.5,12.6,58.8,en:soybeans|en:sulphur-dioxide-and-sulphites,1
+8480017465863,Guisante muy fino,Dia,legumbres,94.0,5.8,0.6,14.0,,19900000001
+8480017013910,Guisantes,Dia,legumbres,97.0,6.3,0.4,14.4,,1
+8480017089182,Habas babys ultracongeladod,Dia,verdura,76.0,5.1,0.7,9.5,,1
+8480017023728,Havarti light,Dia,yogures,261.0,29.0,16.0,0.2,en:milk,19900000010
+8712000310011,"Heineken Lager Beer 0,0",Heineken,bebidas,21.0,0.0,0.0,4.8,en:gluten,24900000014
+8480017079336,Helado de agua,Dia,snacks_dulces,85.0,0.1,0.1,21.0,,2
+8480017278692,High protein natural,Dia,yogures,53.0,9.3,0.1,3.6,en:milk,24900000015
+8428986002009,Higos secos,La Dama de la Vera,frutos_secos_semillas,279.2,3.2,0.6,63.3,,1
+8480017157027,Hogaza de centeno,Dia,pan,309.0,10.5,5.9,49.8,,24950000015
+8480017151759,Horchata,Dia,bebidas,98.0,1.0,3.6,15.0,en:milk,1
+8425991411901,Horchata natural granizada sin gluten,Mercader,lacteos,89.0,0.5,3.4,14.0,,5
+8480017403810,Hot Dog,Dia,pan,287.0,8.8,4.6,51.0,en:gluten|en:milk|en:soybeans,21950000004
+8480017151513,Ice Tea Té Verde,Dia,bebidas,16.1,0.0,0.0,3.8,,1
+8480017505699,Ice tea,Dia,bebidas,20.0,0.0,0.0,4.7,,21900000002
+8435065300550,Infusión relajante,Casa Femafa,bebidas,340.5,18.5,2.0,52.1,,0
+8480017401618,Jamon serrano 200 gr,Dia,carne,222.0,31.8,10.1,1.1,,0
+8480017077165,Jamón serrano,Dia,carne,222.0,31.8,10.1,1.1,,20900000004
+8480017114167,Judia plana,Hortoventas,legumbres,32.2,1.9,0.2,4.1,,1
+8480017003164,Judia verde redonda,Dia,legumbres,21.0,0.8,0.5,2.7,,1
+8480017013903,Judia verde redonda,Dia,legumbres,39.0,1.9,0.1,6.1,,0
+8437010147555,Judias verdes,Adrián Marruecos,legumbres,32.2,1.9,0.2,4.1,,1
+8410133129318,Judiones Granja,La Asturiana,legumbres,113.0,6.5,0.5,16.5,en:sulphur-dioxide-and-sulphites,3
+8436032701806,Judías verdes planas,Vega Tajo,legumbres,32.2,1.9,0.2,4.1,,0
+8480017171979,Judías verdes planas troceadas congeladas &quot;Dia&quot;,Dia,legumbres,39.0,1.9,0.1,6.1,,1
+8480017006936,Jus d'Ananas à base de concentré,Dia,bebidas,50.0,0.4,0.1,11.8,,6
+8480017432292,Jus d'orange,Dia,bebidas,40.0,0.7,0.5,8.7,,18900000001
+8410408050231,KAS NARANJA,Kas,bebidas,17.0,0.0,0.0,4.1,,21900000001
+8480017048530,Ketchup,"Dia, Dia - Distribuidora Internacional de Alimentación S.A.",aceites_salsas,107.0,1.1,0.1,24.4,,24900000012
+8480017077141,Ketchup,Dia,aceites_salsas,93.0,0.0,0.0,21.1,,0
+8480017496089,Ketchup,Dia,aceites_salsas,96.0,1.3,0.5,22.0,,21900000004
+8712566166480,Ketchup envase 430 g,"Hellmann's,Unilever",aceites_salsas,100.0,1.0,0.5,23.0,,24950000027
+8480017747716,Ketchup light,Salseo,aceites_salsas,50.0,1.5,0.5,10.1,,22900000011
+8422837114088,Kiwi,Kiwiberico,fruta,60.5,0.9,0.6,11.0,en:kiwi,1
+8434165466111,Krit original,Cuétara,snacks_dulces,499.0,6.0,25.0,61.0,en:gluten|en:sulphur-dioxide-and-sulphites,24950000039
+8410118042465,Kétchup original,Prima,aceites_salsas,82.0,1.4,0.0,19.0,,22900000002
+8480017002426,L. Casei Natural,dia,yogures,65.0,2.7,1.4,9.8,en:milk,22900000002
+8410173072025,Lasaña Fácil,"El Pavo,Gallina Blanca",pasta_arroz,360.0,12.0,1.4,73.0,en:gluten,24950000032
+8480017210388,Lasaña boloñesa,Dia,platos_preparados,138.0,5.1,7.6,12.0,en:gluten|en:milk|en:mustard|en:sulphur-dioxide-and-sulphites,2
+8480017233905,Lasaña boloñesa,Día,platos_preparados,169.0,7.2,9.2,14.0,en:eggs|en:gluten|en:milk,21900000004
+8480017512093,Lazos,Dia,pasta_arroz,350.0,12.0,1.7,70.0,,19900000001
+3270190026082,Le Pavé Ocre,Carrefour,yogures,327.0,20.0,27.0,1.0,en:milk,23950000005
+8480017142092,Leche Semidesnatada esterilizada,Día,lacteos,46.0,3.2,1.6,4.8,en:milk,2
+8480017060068,Leche condensada,Dia,lacteos,322.0,7.8,8.0,55.3,en:milk,20900000001
+8480017577979,Leche condensada,Dia,lacteos,322.0,7.4,8.0,55.0,,20900000004
+8410100002309,Leche condensada sirve fácil,Nestlé,lacteos,330.0,7.3,8.5,55.5,en:milk,20900000001
+8410148505930,Leche de nuez,Borges,lacteos,71.0,1.1,3.3,8.8,en:nuts,24950000014
+8480017006073,Leche desnatada,Dia,lacteos,34.0,3.1,0.3,4.8,en:milk,24900000011
+8480017142115,Leche desnatada sin lactosa,Dia,lacteos,34.0,3.3,0.2,4.8,en:milk,24900000008
+8480017006080,Leche entera,Dia,lacteos,63.0,3.0,3.6,4.6,en:milk,24950000046
+8480017240804,Leche fresca entera,Dia,lacteos,62.0,3.0,3.6,4.5,en:milk,24900000010
+8480017240811,Leche fresca semidesnatada,Dia Láctea,lacteos,44.0,3.0,1.5,4.6,en:milk,13
+8480017064110,Leche semidesnatada sin lactosa,Dia Láctea,lacteos,45.0,3.2,1.5,4.7,en:milk,24900000020
+8480017506894,Leche y fruta (sin grasas),Dia,lacteos,30.0,0.4,0.0,7.0,en:milk,21900000003
+8410133110514,Lenteja pardina EXTRA,La Asturiana,legumbres,320.0,24.5,1.2,48.1,,3
+8413000065764,Lentejas Riojana,"Litoral,Nestlé",legumbres,101.0,5.6,4.5,7.8,,24950000019
+8480017588098,Lentejas cocidas,Dia,legumbres,87.0,6.6,0.0,13.0,,24900000012
+8480017279330,Lentejas con chorizo,Día,carne,90.0,5.1,3.2,8.9,,24900000009
+8480017102195,Lentejas con verduras,Dia,legumbres,95.0,6.0,1.8,11.7,,23900000007
+8480017177629,Limones,El Limonar de Santomera,fruta,17.6,0.8,0.0,3.6,,0
+8428020267746,Limón exprimido,"Solimón,Derivados Cítricos",bebidas,12.8,0.4,0.1,2.5,en:sulphur-dioxide-and-sulphites,24950000023
+8425991411925,Limón granizado sin gluten,Mercader,snacks_dulces,68.0,0.0,0.0,17.0,,3
+8423316164587,Linguine con langostinos en salsa Teriyaki,NÓS,platos_preparados,138.0,6.5,3.6,19.0,en:crustaceans|en:fish|en:gluten|en:molluscs|en:sesame-seeds|en:soybeans,1
+3245413812322,Liégeois Sabor a vainilla sobre fondo de caramelo,Carrefour,lacteos,150.0,2.5,6.2,21.0,en:milk,21900000005
+8480017012111,Liégeois café,Dia,lacteos,142.0,3.0,6.0,19.0,en:milk,6
+8480017071293,Lomo Embuchado,Dia,carne,201.0,34.0,6.5,1.5,,19900000004
+8480017110541,Línea chocolate,Dia,snacks_dulces,387.0,6.5,8.5,65.2,,1
+8480017262028,Líquido Piña,Dia Láctea,yogures,30.0,3.0,0.1,4.2,,1
+8480017256423,Macarrones integrales,Día,pasta_arroz,342.0,12.0,2.0,65.0,,24900000011
+8480017038715,Magdalenas cuadradas,Dia,snacks_dulces,443.0,4.8,22.1,56.0,,19900000001
+8480017443694,Magdalenas redondas,Dia,snacks_dulces,401.0,5.0,18.0,54.0,en:eggs|en:gluten|en:soybeans,20950000001
+8480017086167,Maiz gigante sabor BBQ,Dia,pasta_arroz,449.0,5.6,15.3,69.9,,20900000001
+3270190020288,Mantequilla gastronómica sin sal,"Carrefour Classic, CMI (Carrefour Marchandises Internationales), Carrefour, Groupe Carrefour",lacteos,743.0,0.7,82.0,0.6,en:milk,24990000072
+8480017106346,Marcelo caramelo,Dia,snacks_dulces,346.0,3.5,3.5,75.0,en:gluten|en:sulphur-dioxide-and-sulphites,1
+8719200234857,Margarina flora 400 g,"Flora,Flora Food Group",aceites_salsas,531.0,0.5,59.0,0.5,,24950000055
+8480017555755,Margarina vitaminada,Dia,aceites_salsas,543.0,0.3,60.0,0.5,en:milk,22900000005
+8480017555762,Margarina vitaminada con sal,Dia,aceites_salsas,544.0,0.4,60.0,0.5,en:milk|fr:palme,22950000004
+8480017156969,Marron glace,"Delicious Dia, Dia",snacks_dulces,272.0,1.0,0.5,64.8,en:nuts|en:sulphur-dioxide-and-sulphites,1
+8480017480958,Mascarpone (42% MG) - 250 g - Dia,Dia,yogures,411.0,3.6,42.0,4.6,en:milk,8
+8480017304773,Mayo Sriracha,Día,aceites_salsas,416.0,0.8,40.7,11.4,en:eggs|en:mustard,24900000016
+8480017537201,Mayonesa,Dia,aceites_salsas,608.0,0.8,66.0,2.7,en:eggs,24900000017
+8480017099068,Mayonesa light,Dia,aceites_salsas,261.0,0.4,25.7,6.6,,23900000003
+8480017070500,Mazapan de soto (Dia),Dia,snacks_dulces,426.0,12.6,24.0,40.0,en:nuts,1
+8480017475923,Maíz dulce,Dia,verdura,71.0,2.7,1.4,10.5,,24900000020
+8430236271097,Maíz dulce fresco en mazorca,Surinver,pasta_arroz,116.5,3.3,2.1,20.6,,2
+8480017146755,Maíz pequeño frito sabor barbacoa,Dia,snacks_dulces,438.0,7.5,11.7,71.8,,20900000002
+2500452004758,Medallón De Cadera Vacuno,Selección Día,carne,97.0,22.0,1.1,0.0,,8
+8480017038739,Medias noches,Dia,snacks_dulces,354.0,11.4,12.1,48.6,,1
+8480017094742,Mejillones al natural,Dia,pescado_marisco,102.0,15.9,3.2,2.5,,20900000003
+8480017165275,Mejillones en Escabeche,Día,pescado_marisco,233.0,12.8,19.3,2.1,en:molluscs,1
+8480017002709,Melocotones en almíbar,Dia,fruta,75.0,0.5,0.1,17.2,,19900000002
+8480017661982,Menestra,Dia,verdura,26.0,1.7,0.0,3.6,,2
+8480017013897,Menestra de verduras ultracongelada,Dia,platos_preparados,87.0,4.7,2.5,9.7,,1
+8480017516763,Menestra especial,Dia,platos_preparados,47.2,2.6,0.4,8.3,en:sulphur-dioxide-and-sulphites,1
+8410092017916,Menestra tradicional,Findus,verdura,42.8,2.2,1.0,4.8,,1
+8480017282927,Merluza Empanada,Día,pescado_marisco,207.0,10.4,9.6,18.9,en:crustaceans|en:eggs|en:fish|en:gluten|en:milk|en:peanuts|en:soybeans|en:sulphur-dioxide-and-sulphites,24900000009
+8480017279040,Mezcla De Frutas Deshidratadas,Día,frutos_secos_semillas,423.0,2.4,15.0,67.0,,12
+8480017204875,Mezcla de frutas en almíbar,Dia,fruta,58.0,0.3,0.1,14.0,,1
+7622210989673,Mikado king,"Lu, Mikado",snacks_dulces,516.0,6.2,27.0,61.0,en:gluten|en:milk|en:soybeans,20900000002
+8480017085054,Mini Cracker Light,Dia,snacks_dulces,420.0,11.0,10.7,70.0,en:gluten|en:soybeans,0
+8480017759054,Mini cracker salvado,Dia,snacks_dulces,416.7,9.7,11.0,66.7,en:gluten|en:soybeans,1
+8480017129512,Mini galletas saladas crackers,Dia,snacks_dulces,525.0,7.1,27.0,63.0,en:gluten|en:milk|en:sulphur-dioxide-and-sulphites,22950000001
+8480017093516,Mix de encurtidos,Dia,verdura,27.0,1.3,0.3,4.7,en:sulphur-dioxide-and-sulphites,3
+8424219021298,Mixta cerdo+vacuno,Roler,carne,207.0,17.0,14.0,3.3,en:soybeans,1
+8480017299253,Mollete de Antequera Mediano,Dia,pan,241.0,7.4,0.9,49.1,en:gluten,4
+8480017370372,Morango,Dia,yogures,73.0,2.8,0.7,13.8,,1
+8410066071067,Mostaza,"Orlando,Heinz",aceites_salsas,83.0,3.6,3.6,7.7,en:mustard|en:sulphur-dioxide-and-sulphites,24950000021
+8410118041574,Mostaza,Prima,aceites_salsas,86.0,3.3,4.7,7.6,en:mustard,22950000003
+8480017469236,Mousse chocolate con leche,Dia,lacteos,159.0,4.8,6.0,21.2,en:milk|en:nuts|en:soybeans,22900000003
+8480017054920,Mousse nueces,Dia,yogures,243.0,5.8,23.0,3.0,,2
+8480017130969,Mozzarella,Dia,yogures,299.0,24.5,21.4,2.2,en:milk,24950000016
+8480017227201,Mozzarella di bufala campana,Dia,yogures,247.0,14.0,21.0,0.5,en:milk,2
+8480017026798,Muesli bio,Dia,cereales_desayuno,374.0,10.8,8.8,57.5,en:gluten|en:nuts,18950000002
+8480017174666,Muesli crunchy,Dia,cereales_desayuno,466.7,9.9,18.6,61.0,,24950000015
+8480017372017,Muesli frutas,Dia,cereales_desayuno,352.0,8.5,5.9,61.5,en:banana|en:gluten|en:nuts,24950000028
+8480017288288,Nachos Tex-Mex,Dia,snacks_dulces,498.0,6.8,24.0,61.0,en:milk,3
+8410014307682,Napolitanas,Cuétara,snacks_dulces,489.0,6.0,21.0,68.0,en:gluten|en:sulphur-dioxide-and-sulphites,3
+8480017073433,Napolitanas,Dia,snacks_dulces,427.0,7.4,21.5,48.9,en:gluten,21900000003
+8480017438683,Naranja,Dia,bebidas,32.0,0.0,0.0,7.7,,2
+8480017274052,Naranja,Dia,bebidas,20.0,0.1,0.0,5.0,,22900000004
+3270190192794,Naranja sin pulpa,"Carrefour, Groupe Carrefour",bebidas,38.0,0.7,0.5,8.7,,24950000034
+8480017114679,Naranjas,José Gimeno,fruta,48.0,1.1,0.0,11.8,,20900000002
+8480017635686,Nata Spray,Dia,lacteos,306.0,2.4,28.0,11.0,en:milk,21900000006
+8480017095671,Nata para cocinar,Dia,lacteos,187.0,2.3,18.0,3.7,en:milk,24900000011
+8480017546081,Nata para cocinar,Dia,lacteos,189.0,2.5,18.0,4.0,en:milk,20900000001
+8480017095664,Nata para montar,Dia,yogures,334.0,2.2,34.9,2.8,,22950000004
+8480017054340,Natillas con galleta,Dia,lacteos,134.0,2.6,3.0,24.0,en:gluten|en:milk,22900000001
+8480017167934,Natillas de chocolate con bizcocho,DÍA,lacteos,126.4,3.4,4.5,26.0,en:eggs|en:gluten|en:milk|en:soybeans,1
+8480017149022,Natural,Dia,lacteos,128.0,3.2,4.5,18.5,en:gluten|en:milk|en:soybeans,1
+8412600009345,Natural 100%,Bimbo,pan,255.2,9.3,3.1,48.3,en:gluten,24950000017
+3387390321357,Nature Céréales,"Nestlé, Fitness",cereales_desayuno,368.0,9.4,1.8,75.0,en:gluten,22900000001
+7480045637103,Naturmundo,Naturmundo,snacks_dulces,517.0,13.0,33.0,39.0,,0
+8480017103253,Nectar Poire,Dia,bebidas,52.0,0.2,0.1,12.0,,1
+8480017103239,Nectar de melocoton,Dia,bebidas,53.0,0.3,0.1,12.3,,1
+7613287956118,Nesquik 0%,Nestlé,bebidas,49.0,4.0,0.5,7.1,,22950000001
+8480017167729,Noodles sabor verduras,Dia,pasta_arroz,463.0,8.6,20.0,60.0,en:celery|en:gluten,4
+8480017519009,Noz moscada moída,Dia,aceites_salsas,504.0,5.3,36.3,28.5,,2
+8480017162663,Nueces,Dia,frutos_secos_semillas,674.0,19.9,62.4,3.8,en:nuts,24950000026
+8480017253491,Nuggets de pollo y queso,al punto,carne,244.0,11.2,12.7,20.6,en:crustaceans|en:eggs|en:gluten|en:milk|en:soybeans,1
+8480017149091,Néctar Plátano,Dia,bebidas,49.0,0.2,0.1,11.8,,2
+8480017266422,Néctar de naranja light,Dia,bebidas,24.0,0.3,0.1,5.4,,20950000002
+8480017060549,Néctar light piña,Dia,bebidas,25.0,0.2,0.0,5.5,,18900000002
+8480017115225,Néctar mango,Dia,bebidas,52.0,0.2,0.0,12.8,,3
+8435065310405,Orégano seco molido,Casa Femafa,aceites_salsas,498.0,11.0,10.3,68.9,,0
+8426617009816,Ositos de oro,Haribo,snacks_dulces,333.0,0.0,0.5,77.0,en:kiwi,0
+7622210981141,PHILADELPHIA con finas hierbas / com ervas finas,PHILADELPHIA,yogures,139.4,7.2,10.0,5.3,en:milk,24950000047
+8480017075291,Paleta curada,Dia,carne,237.0,23.9,15.3,1.0,,0
+8480017055439,Palitos,Dia,snacks_dulces,374.0,9.0,3.3,76.0,en:eggs|en:gluten,2
+8480017624031,Palitos De Surimi,Dia,pescado_marisco,97.0,8.3,2.8,9.7,en:fish|en:molluscs,21900000005
+8413164009888,Palitos de cereales con olivas y sésamo,Grefusa,pan,491.0,9.7,25.0,54.0,en:gluten|en:sesame-seeds|es:avena|es:avena,24950000014
+8480017438416,Palitos horno,Dia,snacks_dulces,150.0,2.2,4.1,20.0,,21900000004
+8480017825704,Palmeras de hojaldre al cacao,Dia,snacks_dulces,535.0,4.9,31.0,58.0,en:gluten|en:soybeans,2
+8480017020307,Palomitas,Dia,snacks_dulces,399.0,8.8,16.0,50.5,,22900000003
+8480017077547,Palomitas para microondas,Dia,snacks_dulces,435.0,8.1,16.0,62.1,,19900000001
+8480017077561,Palomitas sabor mantequilla,Dia,snacks_dulces,399.0,8.0,16.0,50.5,,23900000003
+8480017007155,Pan De Molde Multicereales,Dia,pan,263.0,9.5,5.2,42.5,en:gluten|en:sesame-seeds|en:soybeans,19950000002
+8427928117504,Pan Rallado,Onena,pan,382.0,10.0,1.7,80.0,,4
+8480017507839,Pan Rallado con ajo y perejil,DIA%,pan,375.3,10.0,1.7,80.0,en:gluten,1
+8436000037456,Pan de dátil con nueces,De Juan,snacks_dulces,350.0,3.9,7.5,62.0,en:nuts,20900000001
+8480017233103,Pan de molde 100% integral,Dia,pan,243.0,11.0,3.9,38.0,en:gluten,24950000033
+8480017743978,Pan de molde 100% integral sin corteza,Dia,pan,248.0,9.0,4.2,41.2,en:gluten,24950000033
+8480017779557,Pan de molde blanco familiar,Dia,pan,268.0,8.5,2.4,52.0,en:gluten,24950000026
+8480017486660,Pan de molde blanco sin corteza,El Molino de Dia,pan,250.0,8.3,3.3,49.0,en:gluten,24950000027
+8480017033840,Pan de molde estilo rústico integral,Dia,pan,263.0,11.4,3.6,43.2,en:gluten,22900000006
+8480017292742,Pan de molde high protein,MOLINO EL DÍO,pan,267.9,20.1,9.2,22.4,en:gluten|en:soybeans|es:avena|es:avena,24990000061
+8412600022825,Pan de molde integral,Bimbo,pan,250.0,9.5,2.4,44.1,en:gluten|en:soybeans,20900000001
+8480017154132,Pan de molde integral 15 cereales y semillas,Dia,pan,295.0,10.5,6.6,45.8,en:gluten|en:sesame-seeds|en:soybeans,24900000012
+8480017232793,Pan de molde integral familiar,"El Molino de DIA,Dia",pan,243.0,11.0,3.9,38.0,en:gluten,24950000064
+8412600100325,Pan de molde sin corteza,Bimbo,pan,258.1,9.3,2.6,41.0,en:gluten,24950000061
+8436008300255,Pan de molde sin gluten complet,Proceli,pan,297.0,1.8,10.0,47.0,en:eggs,1
+8480017011749,Pan de pipas,Dia,pan,494.0,10.0,30.0,42.0,en:gluten,20900000001
+8480017167705,Pan de torrijas,,pan,246.0,9.9,1.7,46.0,en:gluten,13
+8480017153647,Pan tostado,Dia,pan,394.0,13.0,5.0,72.0,,20900000002
+8480017087270,"Pan tostado con ajo, perejil y AOVE",Dia,pan,487.0,8.3,23.0,60.0,en:gluten,23900000007
+8480017053879,Pan tostado integral,Dia,pan,383.0,17.0,5.6,59.0,en:gluten,24900000008
+8480017565884,Pan tostado integral con sésamo,Dia,pan,386.0,14.0,6.7,63.0,en:gluten|en:sesame-seeds,20900000005
+8480017011411,Panecillo 100% integral,Dia,pan,414.0,11.0,12.0,61.0,,24900000012
+8480017087287,Panecillos tostados con tomate y orégano,El Molino de Dia,pan,481.0,8.1,23.0,59.0,en:gluten,19900000011
+8480017458711,Parmesan,Dia,yogures,298.0,22.5,18.0,11.5,,19900000001
+8480017605252,Parrillada de verduras con gambas,Dia,platos_preparados,107.0,4.7,7.4,4.7,en:celery|en:crustaceans|en:milk,20900000002
+0848001760524,Parrillada de verduras con pollo,DIA,platos_preparados,107.0,5.6,7.0,4.9,,1
+8480017092908,Pastas bolachas,Dia,snacks_dulces,482.0,6.0,20.0,68.0,en:gluten,2
+8480017432551,Pastas de té,Dia,snacks_dulces,479.0,5.0,23.0,63.0,,1
+8480017069429,Patatas Fritas Onduladas,Dia,snacks_dulces,547.0,6.0,34.0,52.0,,19900000003
+8437009074480,Patatas a lo pobre,Campo Rico,verdura,94.0,1.1,4.7,11.1,,1
+8480017112224,Patatas fritas,Dia,snacks_dulces,122.0,2.4,3.2,19.8,,3
+8410199002006,Patatas fritas al punto de sal Sin Gluten bolsa 170 g,Lay's,snacks_dulces,522.6,6.7,31.8,50.1,,19950000001
+8480017006394,Patatas fritas lisas &quot;Dia&quot; en aceite de oliva,Dia,snacks_dulces,524.1,7.1,31.1,52.2,,0
+8410573100137,Patatas fritas lisas &quot;Marinas&quot; Con aceite de oliva,Vicente Vidal,snacks_dulces,566.2,7.3,38.2,46.3,,1
+3162089610017,Patatas fritas lisas al punto de sal,Dia,snacks_dulces,543.0,5.9,34.7,49.4,,20900000006
+8480017284815,Patatas fritas sabor caramelo salado,Día,snacks_dulces,504.0,6.4,28.0,54.0,,1
+8480017017901,Patatas fritas sabor jamon,Dia,snacks_dulces,524.0,7.8,32.0,48.0,en:gluten|en:milk|en:soybeans,18900000003
+8410573105910,Patatas fritas sabor mantequilla,Jumpers,snacks_dulces,551.0,6.0,35.0,51.0,,1
+8480017075550,Paté de Hígado de Cerdo,Dia,carne,256.0,11.5,20.6,5.9,,3
+8480017579379,Paté de cerdo ibérico,Dia,carne,372.0,10.4,36.3,0.8,,1
+3269617108234,Paté de ciervo,Belesa,carne,320.0,14.0,26.0,2.7,en:mustard,1
+8480017281647,Paté de hígado de cerdo intenso,Dia,carne,262.0,12.2,22.4,2.2,,8
+8480017399984,Paté finas hierbas,Dia,pasta_arroz,308.0,13.2,28.0,0.6,,5
+8410843148579,Pechuga de pavo +proteina,Elpozo,platos_preparados,95.0,22.0,0.5,0.5,,24950000025
+8480017245915,Pechuga de pavo sándwich,Dia,carne,86.0,14.0,2.2,2.5,,1
+8480017070548,Peladillas,Dia,snacks_dulces,439.5,6.5,13.5,73.0,en:gluten|en:nuts,0
+8480017224729,Pepinillos,Dia,verdura,14.0,1.0,0.5,0.5,en:sulphur-dioxide-and-sulphites,23900000019
+8480017076892,Pepinillos agridulces,Dia,verdura,38.0,1.4,0.2,7.6,en:mustard,21900000005
+8480017307255,Pepinillos laminados,Dia,verdura,38.0,0.3,0.1,9.0,,2
+8427603060507,Pepino,Perichán,verdura,15.6,0.6,0.1,2.5,,3
+8436032704821,Pepinos,Vega Tajo,verdura,15.6,0.6,0.1,2.5,,1
+8480017428875,Perejil,Dia,aceites_salsas,43.0,3.7,0.6,3.5,,3
+8437002206109,Perejil fresco,Jeloma,aceites_salsas,43.0,3.7,0.6,3.5,,0
+8435065301205,Perejil seco molido,Casa Femafa,aceites_salsas,43.0,3.7,0.6,3.5,,0
+8480017173157,Petingas em Azeite,Dia,pescado_marisco,280.0,22.4,21.2,0.0,en:fish,1
+8411145201870,Picos Integrales,Quely,pan,444.0,10.0,16.0,62.0,en:gluten,23900000007
+8436543951103,Picotas,Campo y Tierra del Jerte,fruta,55.7,0.8,0.2,13.0,,0
+8480017371843,Pillows,Dia,cereales_desayuno,430.0,8.2,12.8,68.0,en:gluten|en:milk|en:nuts|en:soybeans|fr:avoine,22900000004
+8480017259158,Pimentos de Piquillo,"D.o.p de Lodosa, D.o.p de Lodosa delicias de Dia",verdura,45.0,1.4,0.5,8.8,,14
+8412883017013,Pimentón de La Vera picante,El Rey de la Vera,aceites_salsas,44.3,1.9,0.3,7.7,,3
+8480017028907,Pimientos Rojos Asados en Tiras,Dia,verdura,33.0,1.3,0.7,6.5,,0
+24050357,Pimientos del Piquillo con Ajo,El Cultivador,verdura,39.0,1.1,0.7,6.6,,22900000004
+8480017465986,Pimientos del Piquillo en tiras con ajo,Dia,verdura,39.0,1.6,0.5,7.5,,24900000020
+8436007950789,Pimientos rojos,diamir,verdura,32.0,0.9,0.8,4.4,,7
+2974902003200,Pimientos rojos &quot;VegaTajo&quot;,Vega Tajo,verdura,31.8,1.2,0.6,4.5,,0
+8480017465955,Pimientos rojos enteros,Dia,verdura,19.0,0.5,0.2,3.8,,1
+8436032702414,Pimientos verdes tipo italiano,Vega Tajo,verdura,26.4,0.8,0.3,4.6,,0
+8480017511768,Pipas de calabaza,Dia,frutos_secos_semillas,575.7,21.6,45.9,16.3,,1
+8480017107121,Pipas gigante con sal,Dia,frutos_secos_semillas,569.0,19.3,49.8,6.3,,22900000004
+8480017014047,Pipas gigantes aguasal,Dia,frutos_secos_semillas,618.0,31.0,52.0,3.5,,24900000008
+8480017263940,Pipas gigantes sin sal,Dia,frutos_secos_semillas,649.0,31.4,55.5,2.8,,22900000002
+8480017167903,Pipasde calabaza,Dia,frutos_secos_semillas,144.0,5.4,11.5,4.1,,20900000004
+8480017187253,Pistachos Tostados,Dia,frutos_secos_semillas,615.0,21.6,51.5,12.1,en:nuts,21900000004
+8480017176332,Pistachos tostados,Dia,frutos_secos_semillas,615.0,21.6,51.0,12.0,en:nuts,20950000009
+8480017241634,Pistachos tostados sin sal,Dia,frutos_secos_semillas,594.0,23.0,47.0,15.0,en:nuts,23900000007
+8480017049117,Pisto con aceite de oliva,Dia,aceites_salsas,71.0,1.2,3.0,9.8,,24900000022
+8437001960361,Pisto tradicional,Campo Rico,aceites_salsas,72.8,1.6,5.6,4.0,,5
+8480017564443,Pizza 4 quesos,Dia,platos_preparados,307.0,13.0,12.0,37.0,en:eggs|en:gluten|en:milk,21900000002
+8480017304797,Pizza Jamón y Queso,Dia,platos_preparados,224.2,12.0,7.5,26.0,en:gluten|en:milk,20900000001
+8480024739711,Piña en rodajas,Alteza,fruta,63.0,0.4,0.0,14.0,,3
+8410069000224,Plumas sin gluten,Gallo,pasta_arroz,358.0,7.3,1.5,78.0,,1
+2411468011541,Plátano de Canarias I.G.P.,Bonnysa,fruta,90.5,1.1,0.2,19.7,,1
+8480017107282,Pollo Salchichas,Dia,carne,200.0,14.0,16.0,0.2,,1
+8480017535818,Pomelos,Lisan,fruta,39.8,0.2,0.2,8.0,,1
+8410705014400,Porras Churros XXL,Maheso,platos_preparados,326.0,6.1,16.0,37.0,en:gluten,21900000002
+8480017252029,Postre de coco con mango-piña,Vegedia,bebidas,91.0,0.4,4.3,12.4,,3
+8480017063489,Postre de soja con chocolate,Dia,lacteos,109.0,3.4,2.1,18.0,en:soybeans,20950000004
+8480017152404,Postre de soja con frutas del bosque,Dia,lacteos,75.3,3.0,1.7,12.0,en:soybeans,18900000005
+8719200202320,ProActiv original,ProActiv,aceites_salsas,358.0,0.5,40.0,0.5,,21995000049
+8480017138996,Provolone con orégano,Dia,yogures,334.0,25.0,26.0,0.0,en:milk,20900000002
+8413030900585,Puerros,Tabuenca,verdura,52.0,2.2,0.3,11.2,,1
+8480017202598,Pétalos de Chocolate con Caramelo y Sal,Dia,snacks_dulces,557.0,7.1,36.5,48.9,en:milk|en:soybeans,2
+8480017015242,Quesitos,Dia,yogures,189.0,11.6,14.1,3.9,en:milk,21900000009
+8480017766892,Queso Creme para Untar Light,Dia Láctea,yogures,137.0,9.6,8.2,6.3,en:milk,18900000001
+8480017081773,Queso Creme para Untar Original,Dia Láctea,yogures,226.0,4.3,22.0,2.7,en:milk,18900000001
+8480017057082,Queso Fresco,Dia,yogures,184.0,11.0,14.0,3.6,en:milk,23900000007
+8480017211200,Queso Fresco,Dia,yogures,184.0,11.0,14.0,3.5,en:milk,20900000001
+8480017730626,Queso Fresco 0% m.g.,Dia,yogures,60.0,10.4,0.3,3.9,en:milk,23900000004
+8480017268242,Queso Fresco Burgos Original,Dia Láctea,yogures,184.0,11.0,14.0,3.6,en:milk,20950000002
+8480017175892,Queso Fresco Sin Lactosa,Dia Láctea,yogures,180.0,10.0,14.0,3.6,en:milk,1
+8480017058584,Queso Fundido Light*,Dia Láctea,yogures,156.0,11.2,10.7,3.6,,23900000013
+8480017545077,Queso Havarti en lonchas,Dia,yogures,434.0,23.0,38.0,0.1,,19900000001
+8480017519795,Queso Semicurado,Dia,yogures,411.0,25.0,34.5,0.0,en:milk,1
+8480017226914,Queso curado italiano,Dia,yogures,387.0,31.0,29.0,0.5,en:eggs|en:milk,7
+8480017045195,Queso de mezcla semicurado,"Dia,El Cencerro",yogures,380.0,22.0,32.0,1.0,en:milk,12
+8480017086242,Queso de mezcla viejo,Dia,yogures,438.0,25.0,37.5,8.0,en:eggs|en:milk,2
+8480017174826,Queso de oveja curado en aceite,Dia,yogures,440.0,24.0,38.0,0.5,en:eggs|en:milk,1
+8480017226785,Queso de untar natural,Dia,yogures,252.0,4.5,25.0,3.0,en:milk,24950000022
+8480017227249,Queso especial pasta en polvo,Dia,yogures,276.0,14.0,14.0,21.0,,23900000004
+8432094001830,Queso extremeño de cabra al pimenton de la Vera,Airones,yogures,341.2,19.3,28.0,3.1,en:milk,2
+8436591110286,Queso fresco batido,Granja Ronda,yogures,50.0,8.9,0.5,3.4,en:milk,24900000011
+8480017056566,Queso fresco vaca,Dia,yogures,190.0,13.3,14.0,2.3,en:milk,23900000018
+8480017151889,Queso fundido light,Dia,yogures,172.0,18.4,8.6,5.2,,20900000001
+8480017006646,Queso fundido sándwich,Dia,yogures,12.4,0.8,0.8,0.5,en:milk,22900000006
+8480017630902,Queso mini tierno cabra,Dia,yogures,390.0,21.0,33.0,2.0,en:milk,2
+8480017045461,Queso mozzarella fresca,Dia,yogures,232.0,18.2,17.5,0.5,en:milk,23900000005
+8480017138989,Queso rallado grana padano,Selección munDia,yogures,398.0,33.0,29.0,0.0,en:eggs|en:milk,21900000006
+8480017226440,Queso semicurado,Dia,yogures,423.0,24.6,35.2,0.8,en:milk,1
+8480017519818,Queso tierno,Dia,yogures,377.0,20.0,32.0,1.9,en:milk,20900000001
+8480017602534,Queso tierno,Dia,yogures,367.0,21.0,31.0,1.0,en:milk,22900000005
+8480017000699,Queso tierno light,Dia,yogures,295.0,25.0,21.0,1.4,en:milk,22900000004
+8480017174567,Quinoa,"Dia, Vital Dia",pasta_arroz,369.0,14.4,5.5,62.0,,21900000001
+8480017313744,Quinoa,Dia,pasta_arroz,368.0,11.0,3.0,72.0,,9
+2000000100276,Quinoa Real,Trevijano,pasta_arroz,360.0,13.0,2.8,66.0,,0
+3560070398287,Raclette,"Carrefour, Simpl",yogures,340.0,22.0,28.0,0.0,en:milk,19900000001
+8410408070307,Refresco amargo sin alcohol,kas,bebidas,19.0,0.0,0.0,4.8,,20900000006
+8480017438676,Refresco de naranja,Dia,bebidas,33.0,0.1,0.0,8.1,,2
+8480017107350,Regalices,Dia,snacks_dulces,356.0,2.3,3.8,78.0,en:gluten,2
+8480017106438,Requins bonbons,Dia,snacks_dulces,335.0,6.3,0.2,77.0,,1
+8480017309693,Ricotta,Dia,yogures,143.0,8.5,11.0,2.5,,4
+8001860254222,Riso Arborio Risotto,Riso Scotti,pasta_arroz,351.0,6.9,1.3,77.0,,22900000006
+8410770100121,Risotto Toscana con Tomate y Albahaca,Trevijano,platos_preparados,359.0,9.0,4.7,67.0,en:nuts,1
+2000000100222,Risotto de Otoño con Shiitake y Boletus,Trevijano,pasta_arroz,347.0,6.9,1.0,76.0,,1
+8436007951816,Rodaja de piña en su jugo,Diamir,fruta,61.0,0.5,0.0,14.0,,1
+8480017654175,Rollitos de primavera,Dia,platos_preparados,122.0,3.6,1.0,23.6,en:celery|en:gluten,21900000003
+8480017730572,Roscon de reyes,Dia,snacks_dulces,372.0,5.5,14.3,46.8,,1
+3560070649204,Sablés,Carrefour,snacks_dulces,530.0,5.0,32.0,54.0,en:eggs|en:gluten|en:milk,24900000012
+3270190112266,Sablés corazón sabor avellana,Carrefour,snacks_dulces,513.0,4.8,26.0,63.0,en:eggs|en:gluten|en:milk|en:nuts,21900000004
+8480017178916,Saefinillsd en aceite picante,Dia,pescado_marisco,215.0,20.0,15.0,0.0,en:fish,2
+8480017088178,Salchicha Frankfurt,Dia,carne,219.0,2.5,15.0,10.0,,20950000001
+8480017026750,Salchichas cocidas súper,Dia,carne,213.0,11.0,17.0,4.0,,2
+8480017142771,Salchichón de pavo,Dia,carne,325.0,21.4,24.1,5.5,,1
+8480017248886,Salchichón ibérico extra en lonchas,Dia,platos_preparados,403.0,21.0,34.0,1.8,en:milk,10
+8480017187451,Salmorejo,Dia,platos_preparados,85.0,1.1,6.4,5.1,en:gluten,24950000014
+8480017077134,Salsa César,Dia,aceites_salsas,299.0,2.9,28.2,7.5,,3
+8480017729019,Salsa Mexicana,Dia,aceites_salsas,52.4,0.9,0.2,11.3,,1
+8413022000033,Salsa agridulce,Yang-Tse,aceites_salsas,128.0,0.2,0.2,31.2,en:sulphur-dioxide-and-sulphites,23900000012
+8480017791559,Salsa barbacoa,Día,aceites_salsas,142.0,0.8,0.2,42.3,,22900000002
+8480017039071,Salsa bechamel,Dia,aceites_salsas,159.0,3.1,11.5,10.4,en:gluten|en:milk,1
+8480017565860,Salsa de mostaza,Dia,aceites_salsas,102.0,4.2,4.1,10.8,en:mustard,24900000022
+8480017061911,Salsa de soja,Dia,aceites_salsas,49.0,4.0,0.1,8.0,en:gluten|en:soybeans,21900000001
+8436033825266,Salsa sin huevo y sin lactosa,Coosur,aceites_salsas,557.5,0.1,59.1,6.3,,2
+8480017751553,Salteado campestre,"Dia, Dia - Distribuidora Internacional de Alimentación S.A.",platos_preparados,79.0,1.4,4.8,6.4,,19950000002
+8480017235206,Salteado de gambas,dia,pescado_marisco,39.0,5.7,0.5,2.4,en:crustaceans,3
+8480017011251,Salteado de setas y champiñones congeladas Dia,Dia,verdura,17.0,1.5,0.0,1.8,en:sulphur-dioxide-and-sulphites,4
+8480017121394,Salteado de verduras con lomo,DIA,platos_preparados,84.0,6.3,2.0,9.2,,3
+8410074004811,Salteado tradicional,Findus,platos_preparados,32.0,1.6,0.3,4.5,,3
+8410092140553,Salto Campestre,Findus,platos_preparados,63.0,1.4,3.7,4.5,,3
+8413376014939,Santtum - Queso light,Santtum,yogures,285.0,23.0,21.0,1.0,en:milk,1
+8480017060846,Sardinas en salsa de tomate,"Dia, Mari Marinera, Mari Marinheira",pescado_marisco,140.0,19.2,6.7,0.8,en:fish,20900000016
+8480017134387,Sardinhas em azeite,Dia,pescado_marisco,203.0,24.0,11.0,2.0,en:fish,1
+8480017060822,Sardinhas em Óleo de Girassol,Dia,pescado_marisco,229.0,22.0,15.0,0.0,en:fish,5
+8480017439222,Sardinillas,Dia,pescado_marisco,280.0,22.4,21.2,0.0,,19900000003
+6477277127787,Sardinillas,Diamantes del mar,pescado_marisco,280.0,22.4,21.2,0.0,en:fish,1
+8480017058324,Sardinillas en salsa de tomate,Dia,pescado_marisco,207.0,15.4,14.7,0.9,en:fish,3
+8410500009885,Savia 100%vegetal,Danone,lacteos,50.0,4.2,1.9,2.3,en:soybeans,22900000001
+8410148061658,Semillas de girasol con cáscara tostadas aguasal,Borges,frutos_secos_semillas,478.5,16.0,41.6,7.6,,1
+8413164006009,Semillas de girasol con cáscara tostadas aguasal,Grefusa,frutos_secos_semillas,259.8,14.0,21.0,1.8,,3
+8480017139689,Setas shiitake,Dia,verdura,15.0,1.7,0.0,1.9,,1
+8480017257864,Snack Maniac Cortezas,Dia,carne,558.0,74.0,29.0,0.0,,21900000002
+8411939123456,Sobaos pasiegos,Vega Pas,snacks_dulces,457.0,6.0,26.2,29.4,,24900000008
+8410770022058,Sopa Juliana,Trevijano,platos_preparados,325.0,7.6,1.4,61.0,en:celery,23900000011
+8436032705378,Sopa de la abuela,Vega Tajo,verdura,29.9,1.2,0.3,4.4,en:celery,1
+8480017286529,Sopa de pollo,Dia,pasta_arroz,308.0,11.0,1.6,61.0,en:gluten,1
+8480017075758,Sorbete Sabor Frutas,"Dia, Dia - Distribuidora Internacional de Alimentación S.A.",snacks_dulces,76.0,0.0,0.0,19.0,,2
+8480017405647,Sorbete limón,Dia,snacks_dulces,149.0,1.2,2.4,30.2,,1
+8480017240057,Sorbetes de helado,Dia,snacks_dulces,65.4,0.4,0.6,15.0,,24900000010
+8480017090881,Spaghetti Semi Complet Bio,Dia,pasta_arroz,354.0,11.9,1.6,71.0,en:gluten,1
+8480017009685,Sticks de patata batata,Dia,snacks_dulces,461.0,1.5,17.4,73.6,en:gluten,1
+3560070582853,Stylesse CHOCOLATE NEGRO,Carrefour,cereales_desayuno,397.0,8.3,5.3,76.0,en:gluten,23900000005
+3560070582761,Stylesse Frutos Rojos,Carrefour,cereales_desayuno,376.0,8.7,1.6,79.0,en:gluten|en:milk,22950000003
+2402985010612,Surtido Vegetal,Vega Tajo,verdura,34.1,0.7,0.2,6.2,en:celery,1
+8480017084408,Surtido de barquillos,Dia,snacks_dulces,548.0,4.4,32.9,57.4,en:gluten|en:milk,19900000001
+8480017431356,Surtido de encurtidos Dia,Dia,verdura,60.7,0.8,4.9,1.8,,1
+8480017113566,Surtido de pralinés,Dia,snacks_dulces,539.0,4.0,31.0,61.0,,1
+3245412568749,TORTILLA CHIPS Natural,Carrefour,snacks_dulces,472.0,6.6,20.0,64.0,,24995000115
+0011210115644,Tabasco Rojo,"McIlhenny Company,Tabasco",aceites_salsas,16.0,1.0,0.7,1.6,,24950000021
+8000300371031,Tableta Milkybar,Nestlé,snacks_dulces,555.0,3.7,32.5,61.6,en:milk,24950000015
+8480017828675,Tableta de chocolate con leche y avellanas,Dia,snacks_dulces,557.0,8.3,35.0,51.0,en:milk|en:nuts|en:soybeans,2
+8480017139474,Tableta de chocolate negro 72% cacao Origen Ecuador,Dia,snacks_dulces,516.0,9.0,40.0,30.0,en:soybeans,0
+8480017718525,Tableta de chocolate negro 74% cacao,Dia,snacks_dulces,557.2,8.7,41.0,32.0,,1
+8480017139467,Tableta de chocolate negro 85% cacao Origen Santo Domingo,Dia,snacks_dulces,561.9,9.9,50.7,16.5,en:soybeans,1
+3281780876345,Tabulé oriental,Pierre Martinet,platos_preparados,184.0,4.1,8.4,22.0,en:gluten,22900000004
+8480017367020,Tagliatelle Carbonara,Dia,pasta_arroz,156.0,5.0,3.8,25.0,en:eggs|en:gluten|en:milk,21900000004
+8480017747297,Tallarines,Dia,pasta_arroz,355.0,12.0,1.8,71.0,en:gluten,18900000003
+3560070290819,Tartaletas Sabor albaricoque,Simpl,snacks_dulces,431.0,5.0,13.0,73.0,en:eggs|en:gluten|en:milk,22900000012
+8420321076812,Tenders american style pechuga de pollo sabor barbacoa y miel,"Fripozo,ElPozo",carne,210.0,14.0,8.0,20.0,en:celery|en:eggs|en:gluten|en:soybeans|en:sulphur-dioxide-and-sulphites,21900000004
+8480017015303,Tiras de maiz sabor bbq,Dia,snacks_dulces,538.0,6.1,32.0,54.4,,21900000001
+8410095007013,Tomate Frito,Helios,aceites_salsas,92.0,1.0,3.3,14.0,,24950000020
+7613033114304,Tomate frito,Solís,aceites_salsas,74.0,1.4,3.3,9.0,,19900000001
+8410066000074,Tomate frito,"Orlando,Heinz",aceites_salsas,73.0,1.1,3.5,9.3,,24950000052
+8480017106773,Tomate frito,Dia,aceites_salsas,73.0,1.3,3.3,8.7,,24900000019
+8480017166975,Tomate frito,Dia,aceites_salsas,67.0,1.8,3.3,6.5,,2
+8480017106780,Tomate frito &quot;Dia&quot;,Dia,aceites_salsas,84.8,1.8,3.8,9.8,,1
+8480017455000,Tomate frito casero,Dia,aceites_salsas,120.0,1.6,8.0,11.4,,24900000010
+8480017012210,Tomate frito pack 3 unidades,Dia,aceites_salsas,72.0,1.1,3.3,9.3,,24900000009
+8480017075314,Tomate frito pack 3 unidades,Dia,aceites_salsas,68.0,1.3,3.1,8.2,,24950000027
+8412395003283,Tomate natural rallado,Ferlo,aceites_salsas,21.8,0.7,0.2,4.3,,0
+8480017056160,Tomate pelado entero,Dia,verdura,19.0,0.9,0.0,3.4,,1
+8480017106872,Tomate pelado troceado,Dia,verdura,19.0,0.8,0.5,2.2,,20900000002
+8480017131058,Tomate triturado,"Vegecampo, Dia",aceites_salsas,18.0,0.9,0.0,2.9,,24900000020
+8480017157508,Tomate triturado con cebolla,Dia,verdura,24.0,1.1,0.0,4.0,,1
+8480017308238,Toni Tonico Original,Dia,bebidas,20.0,0.0,0.0,4.7,,2
+8480017121578,Torta de aceite de oliva,Dia,snacks_dulces,486.0,4.8,24.0,61.0,,5
+8480017692542,Torta de chocolate negro con almendras,Dia,snacks_dulces,557.0,9.8,37.0,42.0,en:nuts|en:soybeans,1
+8480017611208,Tortas de aceite,Dia,snacks_dulces,533.7,7.6,28.9,60.8,en:gluten|en:sesame-seeds,0
+3560070822997,Tortilla chips,"Carrefour, Produits Blancs",snacks_dulces,472.0,6.6,20.0,64.0,,24950000026
+8480017139801,Tortilla de patata fresca con cebolla,Dia,platos_preparados,174.0,6.2,11.9,9.2,en:eggs,19900000001
+8480017000354,Tortillas trigo,"al Punto,Dia",pan,316.0,8.0,7.4,53.0,en:gluten,24950000023
+8480017173751,Tostadas,Dia,pan,259.0,9.0,3.0,48.0,en:gluten,19900000001
+8480017011435,Tostas,Dia,pan,388.0,0.0,0.6,76.0,en:gluten,1
+8480017371904,Totters honey,Dia,cereales_desayuno,396.0,7.9,3.5,80.7,en:gluten,24900000021
+8480017106315,Tronquitos pica,Dia,snacks_dulces,364.0,2.0,3.1,82.0,,1
+8480017444035,Trucha ahumada,Dia,pescado_marisco,174.0,21.0,10.0,0.0,en:fish|en:fish,1
+8480017232182,Turrón crujiente clásico,Dia,snacks_dulces,518.0,5.7,27.7,60.5,en:milk|en:nuts,21900000003
+8480017009692,Turrón crujiente negro,Dia,snacks_dulces,521.0,7.3,32.0,48.0,en:nuts|en:soybeans,4
+8480017085931,Turrón de Alicante,Dia,snacks_dulces,544.0,15.2,32.7,46.3,,1
+8480017085948,Turrón de Jijona,DIA,snacks_dulces,569.1,19.0,39.5,34.4,en:eggs|en:nuts|es:miel|es:miel,18900000006
+8410771400015,Turrón de cacahuete refinado,El Mago de los Turrones,snacks_dulces,513.0,14.0,25.0,56.0,en:peanuts,1
+8410223908496,Turrón de chocolate,El Almendro,snacks_dulces,556.0,9.0,34.0,52.0,en:gluten|en:milk|en:nuts|en:soybeans,2
+7622210307194,Turrón de chocolate clásico,"Suchard,Mondelez",snacks_dulces,521.0,7.6,28.0,58.0,en:milk|en:nuts|en:soybeans,23950000019
+8480017130020,Turrón de coco,Dia,snacks_dulces,494.0,4.0,28.0,53.0,,1
+8480017070531,Turrón de coco al cacao,Dia,snacks_dulces,467.9,2.6,28.3,50.7,en:soybeans,0
+8480017193247,Turrón de nata y nuez cubierto de chocolate,DIA,snacks_dulces,513.0,9.0,28.0,55.0,en:milk|en:nuts|en:soybeans|en:milk|en:milk|en:milk|en:milk,1
+8480017130013,Turrón de yema tostada,Dia,snacks_dulces,480.0,10.0,24.0,56.0,en:eggs|en:nuts,1
+8480017265951,Turrón de yema tostada con naranja,Dia,snacks_dulces,465.0,10.0,25.0,48.0,,0
+8480017096593,Turrón ron con pasas,Dia,snacks_dulces,553.0,6.0,36.0,51.0,en:milk|en:nuts|en:soybeans,1
+8410091066076,Té latte chai,Hornimans,bebidas,366.0,1.0,0.0,91.0,,19900000001
+8480017006684,Tónica,Dia,bebidas,27.0,0.0,0.0,6.4,,1
+8480017139320,Tónica pimienta rosa,Dia,bebidas,36.0,0.0,0.0,9.0,,0
+8480017087775,Uvas pasas moscatel sin semillas,Dia,frutos_secos_semillas,341.0,3.1,0.5,79.2,,0
+8480017038722,Valencianas,Dia,snacks_dulces,434.5,5.5,21.0,55.2,en:eggs|en:gluten|en:soybeans,21900000004
+8410109110524,Valor Chocolate negro 70% con naranja,Valor,snacks_dulces,491.0,10.0,35.0,34.0,en:soybeans,22900000002
+7613034665706,Vegetal garbanzos con espinacas,"Litoral,Nestlé",platos_preparados,69.0,3.9,1.9,7.7,,24950000022
+8480017501714,Ventresca atun claro,Dia,pescado_marisco,192.0,25.0,10.0,0.0,,3
+8480017183040,Vital María Fibra,Dia,snacks_dulces,447.0,7.0,15.0,67.0,en:gluten,20900000004
+8480017017437,Vital snacks multivitaminas,Dia,snacks_dulces,502.0,5.7,25.0,61.0,en:gluten|en:milk|en:soybeans,21900000004
+3245413922403,Vitality* Sésamo,Carrefour Sensation,snacks_dulces,488.0,10.0,21.0,61.0,en:gluten|en:milk|en:sesame-seeds|fr:avoine|fr:avoine,24990000091
+8410128169947,Vivesoy Avena,"Pascual, ViveSoy",lacteos,50.0,1.2,0.7,9.1,es:avena,22990000005
+8480017169235,Wafer relleno de nata,Dia,snacks_dulces,511.0,4.4,26.0,64.0,,20900000004
+8480017419965,Waffer recheio sabor baunilha,Dia,snacks_dulces,523.0,3.9,27.7,63.6,en:gluten|en:soybeans,1
+8480017085917,YOGUR AL ESTILO GRIEGO CON FRESA,Dia,yogures,129.0,2.8,7.5,11.9,en:milk,22900000015
+8480017075192,Yogur Desnatado Edulcorado Natural,dia,yogures,39.0,3.9,0.1,5.6,en:milk,24900000008
+8480017311962,Yogur High Protein Stracciatella,Día Láctea,yogures,44.2,9.6,0.5,2.5,en:milk,24900000013
+8480017210692,Yogur Líquido Piña Coco,Dia Láctea,yogures,64.0,2.4,1.0,10.5,en:milk,21900000003
+8480017195142,Yogur Melocotón y Maracuyá,Dia,yogures,101.0,3.2,2.7,16.0,,18900000002
+8480017236722,Yogur bifidus frutos del bosque,Dia,yogures,82.0,4.4,2.4,10.7,en:milk,18900000001
+8480017054227,Yogur bífidus natural,Dia,yogures,39.0,3.9,0.1,5.6,,20900000003
+8480017051165,Yogur con Fresa,Dia,yogures,92.0,3.5,1.6,15.8,,1
+8480017000705,Yogur con frutas fresa,Dia,yogures,92.0,2.6,2.6,14.0,en:milk,20900000001
+8480017000743,Yogur con melocotón desnatado,Dia,yogures,42.0,3.9,0.1,6.2,en:kiwi|en:milk,19900000006
+8480017056849,Yogur desnatado 0% con frutas,Día Láctea,yogures,43.0,4.3,0.1,5.5,en:milk,21950000006
+8480017075215,"Yogur desnatado limón, fresa y piña",Dia,yogures,39.0,3.9,0.1,5.6,en:milk,22950000003
+8480017152299,Yogur estilo Griego con Miel,Dia,yogures,167.0,3.1,9.0,18.4,en:milk,1
+8480017079770,Yogur griego natural azucarado,Dia,yogures,135.0,2.6,9.0,11.0,en:milk,23900000008
+8480017210708,Yogur líquido con fresa,Dia,yogures,70.0,2.7,1.0,11.8,en:milk,2
+8480017073198,Yogur natural,DIA,yogures,55.0,3.4,2.5,4.7,en:milk,21950000007
+8480017243409,Yogur natural,Dia,yogures,62.0,3.3,3.5,4.3,en:milk,24900000014
+8480017073204,Yogur natural azucarado,Dia,yogures,79.0,3.1,1.9,12.3,en:milk,20900000007
+8480017075185,Yogur natural desnatado 0%,Dia,yogures,39.0,3.9,0.1,5.6,en:milk,24900000010
+8480017243812,Yogur sabor Coco,Dia,yogures,80.0,3.0,2.0,12.4,en:milk,1
+8480017120533,Yogur sabor Plátano,Dia,yogures,80.0,3.0,2.0,12.4,en:milk,20900000001
+8480017027665,Yogur stracciatella,Dia,yogures,114.0,3.1,3.7,17.0,en:milk,19900000001
+8480017024886,Yogures Sabores,Dia,yogures,74.0,2.9,1.9,10.7,en:milk,22900000002
+8480017195135,Yogurt Frutas del bosque,Día,yogures,85.0,3.1,2.7,12.0,en:milk,2
+8480017165435,Zanahoria en tiras,DIA,verdura,49.0,1.9,0.2,8.6,en:sulphur-dioxide-and-sulphites|es:azufre|es:azufre,2
+8413030200036,Zanahorias,Tabuenca,verdura,40.2,0.6,0.2,7.6,,1
+8424808112819,Zanahorias,Muñozval,verdura,40.2,0.6,0.2,7.6,,1
+8480017121523,Zumo Fruta & Leche TROPICAL,Dia,lacteos,30.0,0.4,0.0,7.0,en:milk,20950000002
+8480017326690,Zumo Naranja Zanahoria,Dia,bebidas,37.0,0.4,0.0,8.5,,12
+8480017274069,Zumo de Melocotón,"Dia, Zumosfera",bebidas,20.0,0.1,0.0,5.0,,4
+8480017096531,"Zumo de Melocotón, Manzana y Uva",Día,bebidas,42.0,0.4,0.0,10.1,,20900000004
+8480017006912,Zumo de Naranja,Dia,bebidas,40.0,0.7,0.5,8.7,,2
+8480017432285,Zumo de manzana a partir de concentrado,Dia,bebidas,44.0,0.5,0.5,10.3,,11
+8480017506900,Zumo de naranja 100% con pulpa,Dia,bebidas,44.0,0.6,0.1,9.9,,22900000005
+8480017080387,Zumo de naranja 100% sin pulpa,Dia,bebidas,43.0,0.6,0.1,10.0,,23900000005
+8480017108494,Zumo de naranja exprimida refrigerado con pulpa &quot;Dia&quot;,Dia,bebidas,43.0,0.6,0.0,10.0,,0
+8480017101259,Zumo de piña sin azúcares añadidos,Dia,bebidas,27.0,0.2,0.1,6.3,,20900000001
+8480017096579,"Zumo de piña, manzana y uva",Dia,bebidas,50.0,0.6,0.0,11.8,,24900000012
+8480017096517,"Zumo melocotón, manzana y uva",Dia,bebidas,42.0,0.4,0.0,10.1,,5
+8480017102904,Zumo y leche,Dia,lacteos,28.0,0.3,0.0,6.6,en:milk,2
+8480017108050,Zumo y leche mediterráneo,Dia,lacteos,33.0,0.4,0.0,7.6,,18900000008
+8480017004802,galleta Tostada,Dia,snacks_dulces,431.0,7.6,9.7,76.0,en:gluten|en:milk|en:soybeans|en:sulphur-dioxide-and-sulphites,24900000010
+8410092106542,setas con ajo y perejil,Findus,verdura,35.0,2.1,0.4,4.6,,1
+8480017243416,yogur natural azucarado día láctea,dia,yogures,86.0,3.1,3.0,11.6,en:milk,1

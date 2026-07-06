@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<title>Plan de comidas · Kcalsculadora</title>
+<style>
+  /* Estética de Kcalsculadora (tema claro fijo): sand/ink/ember/moss/ochre,
+     bordes duros y sombras desplazadas sin blur. Siempre la misma plantilla. */
+  @page {
+    size: A4;
+    margin: 12mm 12mm 16mm 12mm;
+    @bottom-center {
+      content: "Kcalsculadora · plan generado con productos de Open Food Facts · página " counter(page);
+      font-family: "DejaVu Sans", Helvetica, Arial, sans-serif;
+      font-size: 7.5pt;
+      color: #8a7f70;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -weasy-hyphens: none; }
+  body {
+    font-family: "DejaVu Sans", Helvetica, Arial, sans-serif;
+    font-size: 9.5pt;
+    color: #3a3128;
+    background: #eae0cf;
+    background-image: radial-gradient(circle, rgba(58, 49, 40, 0.06) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+  .display { font-family: "DejaVu Serif", Georgia, serif; }
+
+  /* --- Cabecera --- */
+  .header {
+    border: 2.5px solid #3a3128;
+    background: #f8f0e1;
+    box-shadow: 4px 4px 0 0 #3a3128;
+    padding: 14px 18px;
+    margin-bottom: 16px;
+  }
+  .header-top { width: 100%; }
+  .header-top td { vertical-align: middle; }
+  .brand { font-size: 10pt; letter-spacing: 2px; text-transform: uppercase; color: #d25e34; font-weight: bold; }
+  .title { font-size: 22pt; font-weight: bold; margin-top: 2px; }
+  .meta { text-align: right; font-size: 8.5pt; color: #6d6154; line-height: 1.5; }
+  .meta b { color: #3a3128; }
+  .badge {
+    display: inline-block;
+    border: 2px solid #3a3128;
+    padding: 2px 8px;
+    font-size: 8pt;
+    font-weight: bold;
+    background: #eae0cf;
+    box-shadow: 2px 2px 0 0 #3a3128;
+  }
+  .badge.aproximado { background: #c89e58; }
+
+  /* --- Resumen de objetivos --- */
+  .stats { width: 100%; border-spacing: 8px 0; margin: 0 -8px 16px -8px; }
+  .stat {
+    border: 2px solid #3a3128;
+    background: #f8f0e1;
+    box-shadow: 3px 3px 0 0 #3a3128;
+    padding: 8px 10px;
+    width: 25%;
+  }
+  .stat .label { font-size: 7.5pt; text-transform: uppercase; letter-spacing: 1px; color: #6d6154; }
+  .stat .value { font-size: 15pt; font-weight: bold; margin-top: 1px; }
+  .stat .sub { font-size: 7.5pt; color: #6d6154; margin-top: 1px; }
+  .stat.kcal .value { color: #d25e34; }
+  .stat.prot .value { color: #608e6c; }
+  .stat.grasa .value { color: #c89e58; }
+  .stat.carbo .value { color: #5c8cac; }
+
+  /* --- Comidas --- */
+  .comida {
+    border: 2px solid #3a3128;
+    background: #f8f0e1;
+    box-shadow: 4px 4px 0 0 #3a3128;
+    margin-bottom: 14px;
+    page-break-inside: avoid;
+  }
+  .comida-header {
+    background: #3a3128;
+    color: #f8f0e1;
+    padding: 6px 12px;
+    width: 100%;
+  }
+  .comida-header td { vertical-align: middle; }
+  .comida-nombre { font-size: 12pt; font-weight: bold; }
+  .comida-kcal { text-align: right; font-size: 9pt; color: #eae0cf; }
+  .comida-kcal b { color: #e8926c; font-size: 11pt; }
+  table.productos { width: 100%; border-collapse: collapse; }
+  table.productos th {
+    text-align: left;
+    font-size: 7.5pt;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #6d6154;
+    padding: 6px 12px 4px 12px;
+    border-bottom: 1.5px solid #3a3128;
+  }
+  table.productos th.num, table.productos td.num { text-align: right; }
+  table.productos td {
+    padding: 5px 12px;
+    border-bottom: 1px dotted rgba(58, 49, 40, 0.35);
+    font-size: 9pt;
+  }
+  table.productos tr:last-child td { border-bottom: none; }
+  .producto-nombre { font-weight: bold; }
+  .producto-marca { color: #6d6154; font-size: 8pt; }
+  .totales td {
+    border-top: 1.5px solid #3a3128;
+    font-weight: bold;
+    background: #eae0cf;
+  }
+
+  /* --- Pie: desviación --- */
+  .desviacion {
+    border: 2px solid #3a3128;
+    background: #f8f0e1;
+    box-shadow: 3px 3px 0 0 #3a3128;
+    padding: 10px 14px;
+    font-size: 8.5pt;
+    color: #6d6154;
+  }
+  .desviacion b { color: #3a3128; }
+  .ok { color: #608e6c; font-weight: bold; }
+  .ko { color: #b85540; font-weight: bold; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <table class="header-top">
+      <tr>
+        <td>
+          <div class="brand">Kcalsculadora</div>
+          <div class="title display">Plan de comidas</div>
+        </td>
+        <td class="meta">
+          <b>{{ fecha }}</b><br />
+          Supermercado: <b>{{ supermercado }}</b> · Fase: <b>{{ objetivo }}</b><br />
+          {% if aproximado %}
+          <span class="badge aproximado">Plan aproximado</span>
+          {% else %}
+          <span class="badge">Dentro de objetivo</span>
+          {% endif %}
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <table class="stats">
+    <tr>
+      <td class="stat kcal">
+        <div class="label">Calorías</div>
+        <div class="value">{{ kcal_total | round | int }} kcal</div>
+        <div class="sub">objetivo {{ kcal_objetivo | round | int }} kcal</div>
+      </td>
+      <td class="stat prot">
+        <div class="label">Proteína</div>
+        <div class="value">{{ macros_totales.proteinas | round | int }} g</div>
+        <div class="sub">objetivo {{ macros_objetivo.proteinas | round | int }} g</div>
+      </td>
+      <td class="stat grasa">
+        <div class="label">Grasas</div>
+        <div class="value">{{ macros_totales.grasas | round | int }} g</div>
+        <div class="sub">objetivo {{ macros_objetivo.grasas | round | int }} g</div>
+      </td>
+      <td class="stat carbo">
+        <div class="label">Carbohidratos</div>
+        <div class="value">{{ macros_totales.carbohidratos | round | int }} g</div>
+        <div class="sub">objetivo {{ macros_objetivo.carbohidratos | round | int }} g</div>
+      </td>
+    </tr>
+  </table>
+
+  {% for comida in comidas %}
+  <div class="comida">
+    <table class="comida-header">
+      <tr>
+        <td class="comida-nombre display">{{ comida.nombre }}</td>
+        <td class="comida-kcal">
+          <b>{{ comida.kcal | round | int }} kcal</b> ·
+          P {{ comida.macros.proteinas | round | int }} g ·
+          G {{ comida.macros.grasas | round | int }} g ·
+          C {{ comida.macros.carbohidratos | round | int }} g
+        </td>
+      </tr>
+    </table>
+    <table class="productos">
+      <tr>
+        <th>Producto</th>
+        <th class="num">Cantidad</th>
+        <th class="num">Kcal</th>
+        <th class="num">Prot.</th>
+        <th class="num">Grasas</th>
+        <th class="num">Carbs</th>
+      </tr>
+      {% for p in comida.productos %}
+      <tr>
+        <td>
+          <span class="producto-nombre">{{ p.nombre }}</span>
+          {% if p.marca %}<span class="producto-marca"> · {{ p.marca }}</span>{% endif %}
+        </td>
+        <td class="num">{{ p.cantidad_g | round | int }} g</td>
+        <td class="num">{{ p.kcal | round | int }}</td>
+        <td class="num">{{ p.proteinas | round(1) }} g</td>
+        <td class="num">{{ p.grasas | round(1) }} g</td>
+        <td class="num">{{ p.carbohidratos | round(1) }} g</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+  {% endfor %}
+
+  <div class="desviacion">
+    <b>Transparencia:</b> desviación frente a tu objetivo —
+    kcal <span class="{{ 'ok' if desviacion.kcal_pct | abs <= tolerancia_kcal else 'ko' }}">{{ '%+.1f' | format(desviacion.kcal_pct * 100) }}%</span> ·
+    proteína <span class="{{ 'ok' if desviacion.proteinas_pct | abs <= tolerancia_macro else 'ko' }}">{{ '%+.1f' | format(desviacion.proteinas_pct * 100) }}%</span> ·
+    grasas <span class="{{ 'ok' if desviacion.grasas_pct | abs <= tolerancia_macro else 'ko' }}">{{ '%+.1f' | format(desviacion.grasas_pct * 100) }}%</span> ·
+    carbohidratos <span class="{{ 'ok' if desviacion.carbohidratos_pct | abs <= tolerancia_macro else 'ko' }}">{{ '%+.1f' | format(desviacion.carbohidratos_pct * 100) }}%</span>.
+    {% if aproximado %}
+    Se agotaron los reintentos de ajuste: este es el mejor plan encontrado, tómalo como aproximación.
+    {% endif %}
+    Valores nutricionales reales declarados por los fabricantes (Open Food Facts).
+    Generado el {{ fecha }} en {{ intentos_usados }} intento{{ 's' if intentos_usados != 1 }}.
+  </div>
+</body>
+</html>
