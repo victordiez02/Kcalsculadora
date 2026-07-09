@@ -2,11 +2,10 @@
 
 from __future__ import annotations
 
-from app import constants as C
 from app.graph.nodes import (
+    _elegir_producto,
     _filtrar_evitar,
     _pasa_salvaguarda_intolerancia,
-    _seleccionar_candidatos,
 )
 
 from .conftest import hacer_producto
@@ -43,18 +42,17 @@ def test_salvaguarda_confia_en_alergenos_declarados():
     assert _pasa_salvaguarda_intolerancia(yogur_soja, ["lactosa"])
 
 
-def test_seleccionar_candidatos_prioriza_favoritos_y_popularidad(entrada):
-    normal = hacer_producto(code="n", nombre="Queso fresco", popularidad=100)
+def test_elegir_producto_toma_el_mas_popular_que_pasa_filtros(entrada):
+    normal = hacer_producto(code="n", nombre="Yogur natural", popularidad=100)
     popular = hacer_producto(code="p", nombre="Yogur griego", popularidad=9999)
-    favorito = hacer_producto(code="f", nombre="Skyr", popularidad=1)
-    seleccion = _seleccionar_candidatos([normal, popular], entrada, [favorito])
-    assert [p.code for p in seleccion] == ["f", "p", "n"]
+    seleccion = _elegir_producto([normal, popular], entrada)
+    assert seleccion is not None and seleccion.code == "p"
 
 
-def test_seleccionar_candidatos_respeta_evitar_y_tope(entrada):
+def test_elegir_producto_respeta_evitar(entrada):
     entrada = entrada.model_copy(update={"evitar": ["queso"]})
-    productos = [hacer_producto(code=str(i), nombre=f"Yogur {i}") for i in range(50)]
-    productos.append(hacer_producto(code="q", nombre="Queso curado"))
-    seleccion = _seleccionar_candidatos(productos, entrada, [])
-    assert len(seleccion) == C.N_CANDIDATOS_POR_COMIDA
-    assert all("queso" not in p.nombre.lower() for p in seleccion)
+    queso = hacer_producto(code="q", nombre="Queso curado", popularidad=9999)
+    yogur = hacer_producto(code="y", nombre="Yogur natural", popularidad=1)
+    seleccion = _elegir_producto([queso, yogur], entrada)
+    assert seleccion is not None and seleccion.code == "y"
+    assert _elegir_producto([queso], entrada) is None

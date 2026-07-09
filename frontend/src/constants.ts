@@ -93,14 +93,19 @@ export const NUM_COMIDAS_OPCIONES = [
 
 export const VARIEDADES = [
   {
-    id: "sin_repetir",
-    label: "Máxima variedad",
-    hint: "sin repetir productos entre comidas",
+    id: "baja",
+    label: "Poca variedad",
+    hint: "2 menús distintos que se alternan · compra y cocina más fáciles",
   },
   {
-    id: "repetir_ok",
-    label: "Me da igual repetir",
-    hint: "prioriza cuadrar kcal y macros",
+    id: "media",
+    label: "Variedad media",
+    hint: "4 menús distintos repartidos en la semana",
+  },
+  {
+    id: "alta",
+    label: "Máxima variedad",
+    hint: "un menú diferente para cada día de la semana",
   },
 ] as const;
 

@@ -14,7 +14,31 @@ Objetivo = Literal["mant", "def", "vol"]
 Intolerancia = Literal[
     "gluten", "lactosa", "frutos_secos", "huevo", "pescado", "marisco", "soja", "sesamo"
 ]
-Variedad = Literal["sin_repetir", "repetir_ok"]
+# Cuántos menús diarios distintos tendrá la semana (ver C.VARIEDADES).
+Variedad = Literal["baja", "media", "alta"]
+# Categorías internas de alimento. Debe coincidir con C.CATEGORIAS (hay un
+# test que lo garantiza); se duplica como Literal para que el JSON schema del
+# LLM lleve el enum y el Chef no pueda inventar categorías.
+CategoriaAlimento = Literal[
+    "cereales_desayuno",
+    "yogures",
+    "quesos",
+    "lacteos",
+    "huevos",
+    "carne",
+    "embutidos",
+    "pescado_marisco",
+    "legumbres",
+    "pasta_arroz",
+    "pan",
+    "fruta",
+    "verdura",
+    "frutos_secos_semillas",
+    "aceites_salsas",
+    "platos_preparados",
+    "snacks_dulces",
+    "bebidas",
+]
 
 
 class Macros(BaseModel):
@@ -42,7 +66,7 @@ class DietInput(BaseModel):
     intolerancias: list[Intolerancia] = []
     evitar: list[str] = Field(default=[], description="Alimentos que no deben aparecer")
     favoritos: list[str] = Field(default=[], description="Alimentos a priorizar")
-    variedad: Variedad = "sin_repetir"
+    variedad: Variedad = "media"
 
     @field_validator("evitar", "favoritos")
     @classmethod
@@ -89,25 +113,46 @@ class RepartoLLM(BaseModel):
     comidas: list[RepartoComida]
 
 
-class ItemComposer(BaseModel):
-    """Un producto elegido por el Composer: solo código y gramos.
+class IngredienteChef(BaseModel):
+    """Un ingrediente genérico de un plato (salida del Chef).
 
-    Las kcal/macros NUNCA las escribe el LLM: se calculan en Python a
-    partir del dataset."""
+    La cantidad es solo orientativa: define las proporciones del plato y las
+    cotas del ajuste; los gramos finales los calcula el ajustador en Python,
+    nunca el LLM."""
 
-    code: str
-    cantidad_g: float
+    nombre: str = Field(..., description="Alimento genérico sin marca, ej. 'pechuga de pollo'")
+    categoria: CategoriaAlimento
+    cantidad_g: float = Field(..., gt=0, description="Cantidad orientativa en gramos")
 
 
-class ComidaComposer(BaseModel):
+class PlatoChef(BaseModel):
+    """Un plato con nombre para una comida del día (salida del Chef)."""
+
+    comida: str
+    nombre: str = Field(..., description="Nombre apetecible del plato")
+    ingredientes: list[IngredienteChef]
+
+
+class MenuChefLLM(BaseModel):
+    """Salida estructurada del Chef: un plato por comida."""
+
+    platos: list[PlatoChef]
+
+
+# ---- Resultado del Retriever: ingredientes mapeados a productos reales ----
+
+
+class IngredienteResuelto(BaseModel):
+    """Un ingrediente del Chef ya mapeado a un producto real del súper."""
+
+    ingrediente: IngredienteChef
+    producto: Producto
+
+
+class PlatoResuelto(BaseModel):
+    comida: str
     nombre: str
-    items: list[ItemComposer]
-
-
-class PlanComposerLLM(BaseModel):
-    """Salida estructurada del Composer."""
-
-    comidas: list[ComidaComposer]
+    ingredientes: list[IngredienteResuelto]
 
 
 # ---- Respuesta ----
@@ -116,6 +161,8 @@ class PlanComposerLLM(BaseModel):
 class ProductoPlan(BaseModel):
     """Un producto concreto dentro de una comida, con su cantidad."""
 
+    # Ingrediente genérico del plato al que corresponde ("arroz", "salmón").
+    ingrediente: str = ""
     nombre: str
     marca: str = ""
     cantidad_g: float
@@ -127,6 +174,8 @@ class ProductoPlan(BaseModel):
 
 class Comida(BaseModel):
     nombre: str
+    # Nombre del plato ("Salmón al horno con arroz y brócoli").
+    plato: str = ""
     productos: list[ProductoPlan]
     kcal: float
     macros: Macros
@@ -150,12 +199,41 @@ class MejorPlan(BaseModel):
     puntuacion: float
 
 
-class DietOutput(BaseModel):
+# ---- Plan semanal ----
+
+
+class MenuDia(BaseModel):
+    """Un menú diario concreto y los días de la semana que lo usan."""
+
+    dias: list[str]  # p. ej. ["Lunes", "Viernes"]
     comidas: list[Comida]
-    kcal_total: float
-    macros_totales: Macros
+    kcal: float
+    macros: Macros
     desviacion: Desviacion
+    # True si este menú quedó fuera de tolerancia tras agotar los intentos.
+    aproximado: bool
+
+
+class Semana(BaseModel):
+    """Plan semanal: menús distintos y su reparto en los 7 días.
+
+    `menus[0]` es siempre el del lunes."""
+
+    menus: list[MenuDia]
+    kcal_diarias: float  # media real por día de la semana
+    macros_diarios: Macros
     intentos_usados: int
-    # True si se agotaron los reintentos y el plan queda fuera de tolerancia.
+    aproximado: bool  # algún menú quedó fuera de tolerancia
+
+
+class DietOutput(BaseModel):
+    """Respuesta de /diet/generate. El plan completo va solo en el PDF; la
+    app muestra el resumen diario y el lunes como ejemplo."""
+
+    kcal_diarias: float
+    macros_diarios: Macros
+    menu_ejemplo: MenuDia  # el del lunes
+    menus_distintos: int
+    intentos_usados: int
     aproximado: bool
     pdf_base64: str | None = None

@@ -1,6 +1,7 @@
-"""Endpoint agregador: genera el plan de comidas completo en una llamada.
+"""Endpoint agregador: genera el plan semanal completo en una llamada.
 
-Solo orquesta: la lógica vive en app/graph (LangGraph) y app/pdf.
+Solo orquesta: la lógica vive en app/semana.py (que invoca el grafo de
+app/graph) y en app/pdf.
 """
 
 from __future__ import annotations
@@ -10,10 +11,10 @@ import logging
 
 from fastapi import APIRouter, HTTPException
 
-from ..graph.build import get_graph
 from ..graph.nodes import SinCandidatosError
 from ..pdf.generate import generar_pdf
-from ..schemas import DietInput, DietOutput, Macros
+from ..schemas import DietInput, DietOutput
+from ..semana import generar_semana
 
 router = APIRouter(tags=["diet"])
 logger = logging.getLogger(__name__)
@@ -21,35 +22,18 @@ logger = logging.getLogger(__name__)
 
 @router.post("/diet/generate", response_model=DietOutput)
 def generate(payload: DietInput) -> DietOutput:
-    """Genera un plan de comidas diario con productos reales del supermercado
-    elegido que cuadra con las kcal/macros objetivo, y su PDF descargable."""
+    """Genera un plan semanal de comidas con productos reales del supermercado
+    elegido que cuadra con las kcal/macros objetivo, y su PDF descargable.
+    El plan completo va en el PDF; la respuesta lleva el resumen diario y el
+    menú del lunes como ejemplo."""
     try:
-        estado = get_graph().invoke({"entrada": payload, "intentos": 0})
+        semana = generar_semana(payload)
     except SinCandidatosError as e:
         raise HTTPException(status_code=422, detail=str(e)) from e
 
-    plan = estado["plan"]
-    kcal_total = round(sum(c.kcal for c in plan), 1)
-    macros_totales = Macros(
-        proteinas=round(sum(c.macros.proteinas for c in plan), 1),
-        grasas=round(sum(c.macros.grasas for c in plan), 1),
-        carbohidratos=round(sum(c.macros.carbohidratos for c in plan), 1),
-    )
-    desviacion = estado["desviacion"]
-    intentos_usados = estado.get("intentos", 0)
-    aproximado = estado.get("aproximado", False)
-
     pdf_base64: str | None = None
     try:
-        pdf = generar_pdf(
-            entrada=payload,
-            comidas=plan,
-            kcal_total=kcal_total,
-            macros_totales=macros_totales,
-            desviacion=desviacion,
-            intentos_usados=intentos_usados,
-            aproximado=aproximado,
-        )
+        pdf = generar_pdf(entrada=payload, semana=semana)
         pdf_base64 = base64.b64encode(pdf).decode("ascii")
     except OSError:
         # WeasyPrint sin librerías nativas (p. ej. Windows sin Pango): se
@@ -57,11 +41,11 @@ def generate(payload: DietInput) -> DietOutput:
         logger.warning("WeasyPrint no disponible: se devuelve el plan sin PDF.", exc_info=True)
 
     return DietOutput(
-        comidas=plan,
-        kcal_total=kcal_total,
-        macros_totales=macros_totales,
-        desviacion=desviacion,
-        intentos_usados=intentos_usados,
-        aproximado=aproximado,
+        kcal_diarias=semana.kcal_diarias,
+        macros_diarios=semana.macros_diarios,
+        menu_ejemplo=semana.menus[0],
+        menus_distintos=len(semana.menus),
+        intentos_usados=semana.intentos_usados,
+        aproximado=semana.aproximado,
         pdf_base64=pdf_base64,
     )

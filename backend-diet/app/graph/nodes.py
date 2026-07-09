@@ -1,8 +1,10 @@
 """Nodos del grafo: un nodo = una función.
 
-Planner y Composer llaman al LLM con salida estructurada; Retriever y
-Validator son deterministas (RAG puro y aritmética). Los helpers `_` son
-funciones puras para poder testearlos sin LLM ni vector store.
+Planner y Chef llaman al LLM con salida estructurada; Retriever, Ajustador y
+Validator son deterministas (RAG puro y aritmética). El LLM decide QUÉ se
+come (reparto y platos); los gramos y las kcal/macros los calcula siempre
+Python a partir del dataset. Los helpers `_` son funciones puras para poder
+testearlos sin LLM ni vector store.
 """
 
 from __future__ import annotations
@@ -19,19 +21,24 @@ from ..schemas import (
     Comida,
     Desviacion,
     DietInput,
+    IngredienteChef,
+    IngredienteResuelto,
     Macros,
     MejorPlan,
-    PlanComposerLLM,
+    MenuChefLLM,
+    PlatoChef,
+    PlatoResuelto,
     Producto,
     ProductoPlan,
     RepartoComida,
     RepartoLLM,
 )
+from .cantidades import ajustar_cantidades
 from .state import DietState
 
 
 class SinCandidatosError(Exception):
-    """No hay productos suficientes para alguna comida con esos filtros."""
+    """No hay productos suficientes para montar algún plato con esos filtros."""
 
 
 @lru_cache(maxsize=1)
@@ -43,6 +50,12 @@ def _normalizar_texto(s: str) -> str:
     """minúsculas y sin tildes, para comparar con `evitar`/`favoritos`."""
     s = unicodedata.normalize("NFD", s.lower())
     return "".join(ch for ch in s if unicodedata.category(ch) != "Mn")
+
+
+def decidir_inicio(state: DietState) -> Literal["planner", "chef"]:
+    """El reparto solo depende de la entrada: al generar varios menús para la
+    semana, los siguientes reutilizan el del primero y entran por el Chef."""
+    return "chef" if state.get("reparto") else "planner"
 
 
 # ---------------------------------------------------------------- Planner
@@ -110,6 +123,89 @@ def planner(state: DietState) -> dict:
     return {"reparto": _normalizar_reparto(comidas, entrada), "feedback": ""}
 
 
+# ------------------------------------------------------------------- Chef
+
+
+CHEF_SYSTEM = (
+    "Eres un chef y nutricionista deportivo. Diseñas un menú diario con "
+    "PLATOS reales y apetecibles de cocina española/mediterránea sencilla, "
+    "cocinables en casa: cada comida es UN plato con nombre (p. ej. «Salmón "
+    "al horno con arroz y brócoli»), no una lista suelta de productos. Los "
+    "ingredientes son alimentos genéricos de supermercado (pechuga de pollo, "
+    "arroz, yogur natural…), sin marcas, cada uno con su categoría y una "
+    "cantidad orientativa en gramos. Las cantidades exactas se ajustan "
+    "después automáticamente: importa la PROPORCIÓN del plato, no la "
+    "precisión. Cada plato debe poder cubrir los macros de su comida: incluye "
+    "fuente de proteína y de carbohidrato cuando el objetivo lo pida. Usa "
+    f"entre {C.INGREDIENTES_POR_PLATO_MIN} y {C.INGREDIENTES_POR_PLATO_MAX} "
+    "ingredientes por plato, y EXACTAMENTE los nombres de comida indicados."
+)
+
+
+def _prompt_chef(state: DietState) -> str:
+    entrada = state["entrada"]
+    partes = ["Objetivo de cada comida:"]
+    for r in state["reparto"]:
+        partes.append(
+            f"- {r.nombre}: {r.kcal:.0f} kcal, P {r.proteinas:.0f} g, "
+            f"G {r.grasas:.0f} g, C {r.carbohidratos:.0f} g"
+        )
+    partes.append(
+        f"Fase del usuario: {entrada.objetivo} (mant=recomposición, def=definición, vol=volumen)."
+    )
+    if entrada.favoritos:
+        partes.append(
+            f"Al usuario le encantan: {', '.join(entrada.favoritos)}. Inclúyelos donde encajen."
+        )
+    if entrada.evitar:
+        partes.append(f"PROHIBIDO usar: {', '.join(entrada.evitar)}.")
+    if entrada.intolerancias:
+        labels = [C.INTOLERANCIAS[i]["label"] for i in entrada.intolerancias]
+        partes.append(
+            f"Intolerancias (no uses ingredientes que las contengan): {', '.join(labels)}."
+        )
+    partes.append("No repitas el ingrediente principal entre comidas del día.")
+    platos_usados = state.get("platos_usados", [])
+    if platos_usados:
+        partes.append(
+            "Estos platos ya se usaron en otros días de la semana, propón platos "
+            f"DIFERENTES: {', '.join(platos_usados)}."
+        )
+    no_encontrados = state.get("no_encontrados", [])
+    if no_encontrados:
+        partes.append(
+            f"Estos ingredientes NO están disponibles en {C.SUPERMERCADOS[entrada.supermercado]['label']}, "
+            f"no los uses: {', '.join(no_encontrados)}."
+        )
+    feedback = state.get("feedback", "")
+    if feedback:
+        partes.append(f"IMPORTANTE, feedback del intento anterior: {feedback}")
+    return "\n".join(partes)
+
+
+def _alinear_platos(salida: MenuChefLLM, nombres: list[str]) -> list[PlatoChef]:
+    """Un plato por comida, en el orden del reparto. Si el LLM omite una
+    comida queda un plato vacío: el edge tras el Retriever lo detecta y
+    reintenta el Chef."""
+    por_comida = {p.comida: p for p in salida.platos}
+    return [por_comida.get(n, PlatoChef(comida=n, nombre="", ingredientes=[])) for n in nombres]
+
+
+def chef(state: DietState) -> dict:
+    entrada = state["entrada"]
+    salida: MenuChefLLM = (
+        _llm()
+        .with_structured_output(MenuChefLLM, method="json_schema")
+        .invoke([("system", CHEF_SYSTEM), ("human", _prompt_chef(state))])
+    )
+    platos = _alinear_platos(salida, C.NOMBRES_COMIDAS[entrada.num_comidas])
+    return {
+        "platos_chef": platos,
+        "intentos": state.get("intentos", 0) + 1,
+        "feedback": "",
+    }
+
+
 # -------------------------------------------------------------- Retriever
 
 
@@ -138,167 +234,119 @@ def _filtrar_evitar(productos: list[Producto], evitar: list[str]) -> list[Produc
     ]
 
 
-def _seleccionar_candidatos(
-    resultados: list[Producto],
-    entrada: DietInput,
-    favoritos_encontrados: list[Producto],
-) -> list[Producto]:
-    """Dedupe + filtros finales + priorización (favoritos primero, luego
-    popularidad) + tope de candidatos."""
-    vistos: set[str] = set()
-    unicos: list[Producto] = []
-    for p in favoritos_encontrados + resultados:
-        if p.code not in vistos:
-            vistos.add(p.code)
-            unicos.append(p)
-    unicos = _filtrar_evitar(unicos, entrada.evitar)
-    unicos = [p for p in unicos if _pasa_salvaguarda_intolerancia(p, entrada.intolerancias)]
+def _elegir_producto(candidatos: list[Producto], entrada: DietInput) -> Producto | None:
+    """El producto real para un ingrediente: entre los candidatos (ya
+    ordenados por similitud) que pasan los filtros duros, el más popular."""
+    candidatos = _filtrar_evitar(candidatos, entrada.evitar)
+    candidatos = [p for p in candidatos if _pasa_salvaguarda_intolerancia(p, entrada.intolerancias)]
+    if not candidatos:
+        return None
+    return max(candidatos, key=lambda p: p.popularidad)
 
-    favoritos_codes = {p.code for p in favoritos_encontrados}
-    unicos.sort(key=lambda p: (p.code not in favoritos_codes, -p.popularidad))
-    return unicos[: C.N_CANDIDATOS_POR_COMIDA]
+
+def _resolver_ingrediente(ing: IngredienteChef, entrada: DietInput) -> Producto | None:
+    candidatos = buscar(
+        query=ing.nombre,
+        supermercado=entrada.supermercado,
+        categorias=[ing.categoria],
+        intolerancias=entrada.intolerancias,
+        n=C.N_RESULTADOS_POR_INGREDIENTE,
+    )
+    if not candidatos:
+        # La categoría del Chef puede no cuadrar con la del dataset: reintento
+        # sin filtro de categoría antes de darlo por no disponible.
+        candidatos = buscar(
+            query=ing.nombre,
+            supermercado=entrada.supermercado,
+            intolerancias=entrada.intolerancias,
+            n=C.N_RESULTADOS_POR_INGREDIENTE,
+        )
+    return _elegir_producto(candidatos, entrada)
 
 
 def retriever(state: DietState) -> dict:
+    """Mapea cada ingrediente genérico del Chef a un producto real del súper
+    (RAG puro, sin LLM). Los no disponibles se acumulan en `no_encontrados`
+    para que el Chef no vuelva a proponerlos."""
     entrada = state["entrada"]
-    candidatos: dict[str, list[Producto]] = {}
-    for reparto in state["reparto"]:
-        comida = reparto.nombre
-        categorias_comida = C.CATEGORIAS_POR_COMIDA[comida]
-
-        resultados: list[Producto] = []
-        for categoria in categorias_comida:
-            resultados += buscar(
-                query=f"{C.CATEGORIA_LABELS[categoria]} para {comida.lower()}",
-                supermercado=entrada.supermercado,
-                categorias=[categoria],
-                intolerancias=entrada.intolerancias,
-                n=C.N_RESULTADOS_POR_CATEGORIA,
-            )
-
-        favoritos_encontrados: list[Producto] = []
-        for favorito in entrada.favoritos:
-            favoritos_encontrados += [
-                p
-                for p in buscar(
-                    query=favorito,
-                    supermercado=entrada.supermercado,
-                    categorias=categorias_comida,
-                    intolerancias=entrada.intolerancias,
-                    n=4,
-                )
-                if _normalizar_texto(favorito) in _normalizar_texto(f"{p.nombre} {p.marca}")
-            ]
-
-        seleccion = _seleccionar_candidatos(resultados, entrada, favoritos_encontrados)
-        if len(seleccion) < C.PRODUCTOS_POR_COMIDA_MIN:
-            raise SinCandidatosError(
-                f"No hay productos suficientes en {entrada.supermercado} para «{comida}» "
-                "con esas restricciones. Prueba con menos alimentos a evitar u otro supermercado."
-            )
-        candidatos[comida] = seleccion
-    return {"candidatos": candidatos}
-
-
-# --------------------------------------------------------------- Composer
-
-
-COMPOSER_SYSTEM = (
-    "Eres un nutricionista que monta menús con productos REALES de "
-    "supermercado. Para cada comida eliges productos SOLO de su lista de "
-    "candidatos (por su código exacto) y una cantidad en gramos para cada "
-    "uno, de modo que las kcal y macros de la comida se acerquen lo máximo "
-    "posible a su objetivo. Las cantidades deben ser realistas (una lata de "
-    "atún ~80 g, un yogur ~125 g, pan 40-120 g, aceite 5-20 g…) y estar "
-    f"entre {C.CANTIDAD_MIN_G} y {C.CANTIDAD_MAX_G} g, en múltiplos de "
-    f"{C.REDONDEO_CANTIDAD_G}. Usa entre {C.PRODUCTOS_POR_COMIDA_MIN} y "
-    f"{C.PRODUCTOS_POR_COMIDA_MAX} productos por comida y monta comidas "
-    "coherentes (no mezcles p. ej. cereales de desayuno en la cena)."
-)
-
-
-def _redondear_cantidad(g: float) -> float:
-    g = max(C.CANTIDAD_MIN_G, min(C.CANTIDAD_MAX_G, g))
-    return round(g / C.REDONDEO_CANTIDAD_G) * C.REDONDEO_CANTIDAD_G
-
-
-def _construir_plan(salida: PlanComposerLLM, candidatos: dict[str, list[Producto]]) -> list[Comida]:
-    """Convierte la salida del LLM (codes + gramos) en comidas con kcal y
-    macros REALES calculados desde el dataset. Ignora códigos que no estén
-    entre los candidatos de esa comida (anti-alucinación)."""
-    comidas: list[Comida] = []
-    for nombre_comida, productos_comida in candidatos.items():
-        por_code = {p.code: p for p in productos_comida}
-        comida_llm = next((c for c in salida.comidas if c.nombre == nombre_comida), None)
-        productos_plan: list[ProductoPlan] = []
-        for item in comida_llm.items if comida_llm else []:
-            producto = por_code.get(item.code)
+    platos: list[PlatoResuelto] = []
+    no_encontrados = set(state.get("no_encontrados", []))
+    for plato in state["platos_chef"]:
+        resueltos: list[IngredienteResuelto] = []
+        codes_usados: set[str] = set()
+        for ing in plato.ingredientes:
+            producto = _resolver_ingrediente(ing, entrada)
             if producto is None:
-                continue
-            g = _redondear_cantidad(item.cantidad_g)
-            productos_plan.append(
-                ProductoPlan(
-                    nombre=producto.nombre,
-                    marca=producto.marca,
-                    cantidad_g=g,
-                    kcal=round(producto.kcal_100g * g / 100, 1),
-                    proteinas=round(producto.proteinas_100g * g / 100, 1),
-                    grasas=round(producto.grasas_100g * g / 100, 1),
-                    carbohidratos=round(producto.carbohidratos_100g * g / 100, 1),
-                )
-            )
-        comidas.append(
-            Comida(
-                nombre=nombre_comida,
-                productos=productos_plan,
-                kcal=round(sum(p.kcal for p in productos_plan), 1),
-                macros=Macros(
-                    proteinas=round(sum(p.proteinas for p in productos_plan), 1),
-                    grasas=round(sum(p.grasas for p in productos_plan), 1),
-                    carbohidratos=round(sum(p.carbohidratos for p in productos_plan), 1),
-                ),
-            )
+                no_encontrados.add(ing.nombre)
+            elif producto.code not in codes_usados:
+                # Dos ingredientes pueden resolver al mismo producto; con uno
+                # basta, el ajustador compensa la cantidad.
+                codes_usados.add(producto.code)
+                resueltos.append(IngredienteResuelto(ingrediente=ing, producto=producto))
+        platos.append(
+            PlatoResuelto(comida=plato.comida, nombre=plato.nombre, ingredientes=resueltos)
         )
-    return comidas
+    return {"platos": platos, "no_encontrados": sorted(no_encontrados)}
 
 
-def _prompt_composer(state: DietState) -> str:
-    entrada = state["entrada"]
-    partes: list[str] = []
-    for reparto in state["reparto"]:
-        partes.append(
-            f"\n## {reparto.nombre} — objetivo: {reparto.kcal:.0f} kcal, "
-            f"P {reparto.proteinas:.0f} g, G {reparto.grasas:.0f} g, "
-            f"C {reparto.carbohidratos:.0f} g\nCandidatos (code | producto | por 100 g):"
+def decidir_tras_retriever(state: DietState) -> Literal["ajustador", "chef"]:
+    """Si algún plato se quedó sin ingredientes suficientes (no existen en el
+    súper), se pide otro plato al Chef mientras queden intentos."""
+    incompleto = any(len(p.ingredientes) < C.INGREDIENTES_POR_PLATO_MIN for p in state["platos"])
+    if incompleto and state.get("intentos", 0) < C.MAX_INTENTOS:
+        return "chef"
+    return "ajustador"
+
+
+# -------------------------------------------------------------- Ajustador
+
+
+def _construir_comida(plato: PlatoResuelto, gramos: list[float]) -> Comida:
+    """Comida final con kcal/macros REALES calculados desde el dataset."""
+    productos = [
+        ProductoPlan(
+            ingrediente=r.ingrediente.nombre,
+            nombre=r.producto.nombre,
+            marca=r.producto.marca,
+            cantidad_g=g,
+            kcal=round(r.producto.kcal_100g * g / 100, 1),
+            proteinas=round(r.producto.proteinas_100g * g / 100, 1),
+            grasas=round(r.producto.grasas_100g * g / 100, 1),
+            carbohidratos=round(r.producto.carbohidratos_100g * g / 100, 1),
         )
-        for p in state["candidatos"][reparto.nombre]:
-            marca = f" ({p.marca})" if p.marca else ""
-            partes.append(
-                f"- {p.code} | {p.nombre}{marca} | {p.kcal_100g} kcal, "
-                f"P {p.proteinas_100g}, G {p.grasas_100g}, C {p.carbohidratos_100g}"
-            )
-    if entrada.favoritos:
-        partes.append(
-            f"\nAlimentos favoritos del usuario (priorízalos): {', '.join(entrada.favoritos)}."
-        )
-    if entrada.variedad == "sin_repetir":
-        partes.append("No repitas el mismo producto en más de una comida.")
-    else:
-        partes.append("Puedes repetir productos entre comidas si cuadra mejor.")
-    feedback = state.get("feedback", "")
-    if feedback:
-        partes.append(f"\nIMPORTANTE, feedback del intento anterior: {feedback}")
-    return "\n".join(partes)
-
-
-def composer(state: DietState) -> dict:
-    salida: PlanComposerLLM = (
-        _llm()
-        .with_structured_output(PlanComposerLLM, method="json_schema")
-        .invoke([("system", COMPOSER_SYSTEM), ("human", _prompt_composer(state))])
+        for r, g in zip(plato.ingredientes, gramos, strict=True)
+    ]
+    return Comida(
+        nombre=plato.comida,
+        plato=plato.nombre,
+        productos=productos,
+        kcal=round(sum(p.kcal for p in productos), 1),
+        macros=Macros(
+            proteinas=round(sum(p.proteinas for p in productos), 1),
+            grasas=round(sum(p.grasas for p in productos), 1),
+            carbohidratos=round(sum(p.carbohidratos for p in productos), 1),
+        ),
     )
-    plan = _construir_plan(salida, state["candidatos"])
-    return {"plan": plan, "intentos": state.get("intentos", 0) + 1, "feedback": ""}
+
+
+def ajustador(state: DietState) -> dict:
+    """Nodo determinista: resuelve los gramos de cada plato por mínimos
+    cuadrados para cuadrar el reparto del Planner (ver cantidades.py)."""
+    reparto = {r.nombre: r for r in state["reparto"]}
+    plan: list[Comida] = []
+    for plato in state["platos"]:
+        if not plato.ingredientes:
+            raise SinCandidatosError(
+                f"No se pudo montar un plato para «{plato.comida}» con esas restricciones. "
+                "Prueba con menos alimentos a evitar u otro supermercado."
+            )
+        gramos = ajustar_cantidades(
+            productos=[r.producto for r in plato.ingredientes],
+            orientativas_g=[r.ingrediente.cantidad_g for r in plato.ingredientes],
+            objetivo=reparto[plato.comida],
+        )
+        plan.append(_construir_comida(plato, gramos))
+    return {"plan": plan}
 
 
 # -------------------------------------------------------------- Validator
@@ -366,7 +414,8 @@ def _feedback_desviacion(d: Desviacion, entrada: DietInput) -> str:
     return (
         "El plan anterior quedó fuera de tolerancia: "
         + "; ".join(mensajes)
-        + ". Ajusta cantidades o cambia productos para corregirlo."
+        + ". Cambia ingredientes o platos para corregirlo (las cantidades se ajustan solas: "
+        "si falta un macro, añade un ingrediente rico en él)."
     )
 
 
@@ -393,7 +442,7 @@ def validator(state: DietState) -> dict:
     return salida
 
 
-def decidir_tras_validar(state: DietState) -> Literal["fin", "composer", "planner"]:
+def decidir_tras_validar(state: DietState) -> Literal["fin", "chef", "planner"]:
     """Edge condicional tras el Validator."""
     desviacion = state["desviacion"]
     if desviacion is not None and desviacion.dentro_tolerancia:
@@ -402,4 +451,4 @@ def decidir_tras_validar(state: DietState) -> Literal["fin", "composer", "planne
         return "fin"
     if desviacion is not None and abs(desviacion.kcal_pct) > C.UMBRAL_REPLANIFICAR_PCT:
         return "planner"
-    return "composer"
+    return "chef"

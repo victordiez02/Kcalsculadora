@@ -76,8 +76,8 @@ def test_routing_dentro_de_tolerancia_termina():
     assert decidir_tras_validar(_estado(_desv(dentro=True))) == "fin"
 
 
-def test_routing_desvio_moderado_vuelve_a_composer():
-    assert decidir_tras_validar(_estado(_desv(kcal=0.08))) == "composer"
+def test_routing_desvio_moderado_vuelve_al_chef():
+    assert decidir_tras_validar(_estado(_desv(kcal=0.08))) == "chef"
 
 
 def test_routing_desvio_grande_vuelve_a_planner():

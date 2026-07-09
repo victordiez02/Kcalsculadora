@@ -16,7 +16,7 @@ from .routers.diet import router as router_diet
 app = FastAPI(
     title="Kcalsculadora Diet API",
     description=(
-        "Genera un plan de comidas diario con productos reales de supermercado "
+        "Genera un plan semanal de comidas con productos reales de supermercado "
         "a partir de las kcal/macros objetivo calculadas por la API principal. "
         "Único endpoint agregador: POST /diet/generate."
     ),
@@ -57,7 +57,9 @@ def config() -> dict:
         "supermercados": [{"id": sid, "label": s["label"]} for sid, s in C.SUPERMERCADOS.items()],
         "intolerancias": [{"id": iid, "label": i["label"]} for iid, i in C.INTOLERANCIAS.items()],
         "num_comidas": {"min": C.NUM_COMIDAS_MIN, "max": C.NUM_COMIDAS_MAX},
-        "variedades": [{"id": vid, "label": label} for vid, label in C.VARIEDADES.items()],
+        "variedades": [
+            {"id": vid, "label": v["label"], "menus": v["menus"]} for vid, v in C.VARIEDADES.items()
+        ],
         "tolerancias": {"kcal_pct": C.TOLERANCIA_KCAL_PCT, "macro_pct": C.TOLERANCIA_MACRO_PCT},
     }
 

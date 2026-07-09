@@ -45,15 +45,16 @@ const PREFS_INICIALES: Prefs = {
   intolerancias: [],
   evitar: [],
   favoritos: [],
-  variedad: "sin_repetir",
+  variedad: "media",
 };
 
 const MENSAJES_CARGA = [
   "Repartiendo tus kcal y macros entre las comidas…",
+  "Diseñando los platos de cada menú…",
   "Buscando productos reales en el supermercado…",
-  "Eligiendo cantidades para cuadrar tus macros…",
-  "Validando que el plan cumpla tu objetivo…",
-  "Dando los últimos retoques…",
+  "Cuadrando las cantidades con tus macros…",
+  "Componiendo los menús de la semana…",
+  "Montando tu PDF…",
 ];
 
 export function DietWizard({
@@ -206,7 +207,7 @@ export function DietWizard({
       {
         icono: RefreshCcw,
         titulo: "¿Cuánta variedad quieres?",
-        descripcion: "Repetir productos hace más fácil clavar los números.",
+        descripcion: "Decide cuántos menús distintos tendrá tu semana.",
         valido: true,
         contenido: (
           <div className="grid gap-2.5">
@@ -349,7 +350,7 @@ export function DietWizard({
               </Button>
               {esUltimo ? (
                 <Button className="flex-1" size="sm" onClick={generar} type="button">
-                  <Sparkles size={16} /> Generar plan de comidas
+                  <Sparkles size={16} /> Generar plan semanal
                 </Button>
               ) : (
                 <Button
@@ -399,7 +400,7 @@ function PantallaCarga() {
         </motion.p>
       </AnimatePresence>
       <div className="mt-4 font-mono text-[10px] uppercase tracking-wider text-ink/40">
-        suele tardar 20–60 segundos
+        suele tardar 1–3 minutos según la variedad
       </div>
     </div>
   );

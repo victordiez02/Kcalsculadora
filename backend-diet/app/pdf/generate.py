@@ -14,7 +14,7 @@ from pathlib import Path
 from jinja2 import Environment, FileSystemLoader, StrictUndefined
 
 from .. import constants as C
-from ..schemas import Comida, Desviacion, DietInput, Macros
+from ..schemas import DietInput, Semana
 
 _env = Environment(
     loader=FileSystemLoader(Path(__file__).parent),
@@ -40,15 +40,7 @@ MESES = [
 OBJETIVO_LABELS = {"def": "Definición", "vol": "Volumen", "mant": "Recomposición"}
 
 
-def _contexto(
-    entrada: DietInput,
-    comidas: list[Comida],
-    kcal_total: float,
-    macros_totales: Macros,
-    desviacion: Desviacion,
-    intentos_usados: int,
-    aproximado: bool,
-) -> dict:
+def _contexto(entrada: DietInput, semana: Semana) -> dict:
     hoy = date.today()
     return {
         "fecha": f"{hoy.day} de {MESES[hoy.month - 1]} de {hoy.year}",
@@ -56,12 +48,7 @@ def _contexto(
         "objetivo": OBJETIVO_LABELS[entrada.objetivo],
         "kcal_objetivo": entrada.kcal_objetivo,
         "macros_objetivo": entrada.macros_objetivo,
-        "kcal_total": kcal_total,
-        "macros_totales": macros_totales,
-        "comidas": comidas,
-        "desviacion": desviacion,
-        "aproximado": aproximado,
-        "intentos_usados": intentos_usados,
+        "semana": semana,
         "tolerancia_kcal": C.TOLERANCIA_KCAL_PCT,
         "tolerancia_macro": C.TOLERANCIA_MACRO_PCT,
     }

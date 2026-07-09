@@ -41,12 +41,13 @@ NOMBRES_COMIDAS: Final = {
 }
 
 # --- Tolerancias del Validator ---
-TOLERANCIA_KCAL_PCT: Final = 0.03
-TOLERANCIA_MACRO_PCT: Final = 0.07
+# Se aplican por menú diario: a las kcal totales Y a cada macro por separado.
+TOLERANCIA_KCAL_PCT: Final = 0.02
+TOLERANCIA_MACRO_PCT: Final = 0.05
 # Nº máximo de intentos de composición antes de devolver el mejor resultado.
 MAX_INTENTOS: Final = 3
 # Si la desviación de kcal supera este umbral, se vuelve al Planner en vez
-# de reintentar solo el Composer.
+# de reintentar solo el Chef.
 UMBRAL_REPLANIFICAR_PCT: Final = 0.20
 
 KCAL_POR_G: Final = {"proteinas": 4, "grasas": 9, "carbohidratos": 4}
@@ -63,10 +64,14 @@ INTOLERANCIAS: Final = {
     "sesamo": {"label": "Sésamo", "allergen_tags": ["en:sesame-seeds"]},
 }
 
-# --- Variedad del plan ---
+# --- Plan semanal ---
+DIAS_SEMANA: Final = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
+# La variedad elegida decide cuántos menús diarios DISTINTOS se generan; los
+# 7 días de la semana se cubren repitiéndolos en ciclo (día d -> menú d % n).
 VARIEDADES: Final = {
-    "sin_repetir": "No repetir productos entre comidas",
-    "repetir_ok": "Se pueden repetir productos si cuadra mejor",
+    "baja": {"label": "Poca variedad", "menus": 2},
+    "media": {"label": "Variedad media", "menus": 4},
+    "alta": {"label": "Máxima variedad", "menus": 7},
 }
 
 # --- Categorías internas de alimento ---
@@ -145,36 +150,10 @@ CATEGORIA_LABELS: Final = {
     "bebidas": "Bebidas",
 }
 
-# Qué categorías tienen sentido en cada comida (guía del Retriever).
-CATEGORIAS_POR_COMIDA: Final = {
-    "Desayuno": [
-        "cereales_desayuno",
-        "yogures",
-        "lacteos",
-        "pan",
-        "fruta",
-        "huevos",
-        "frutos_secos_semillas",
-    ],
-    "Almuerzo": ["fruta", "yogures", "pan", "frutos_secos_semillas", "embutidos"],
-    "Comida": [
-        "carne",
-        "pescado_marisco",
-        "legumbres",
-        "pasta_arroz",
-        "verdura",
-        "aceites_salsas",
-        "huevos",
-    ],
-    "Merienda": ["fruta", "yogures", "pan", "frutos_secos_semillas", "quesos"],
-    "Cena": ["pescado_marisco", "carne", "huevos", "verdura", "legumbres", "quesos", "pan"],
-}
-
 # --- Retrieval ---
-# Nº de productos candidatos que se pasan al Composer por cada comida.
-N_CANDIDATOS_POR_COMIDA: Final = 20
-# Nº de resultados pedidos al vector store por categoría antes de filtrar.
-N_RESULTADOS_POR_CATEGORIA: Final = 8
+# Nº de resultados pedidos al vector store por ingrediente antes de filtrar;
+# entre los que sobreviven a los filtros se elige el más popular.
+N_RESULTADOS_POR_INGREDIENTE: Final = 8
 
 # Salvaguarda de intolerancias: OFF tiene productos sin alérgenos declarados.
 # En estas categorías "de riesgo", si el producto no declara alérgenos solo se
@@ -192,14 +171,26 @@ MARCADORES_SIN_INTOLERANCIA: Final = {
     "frutos_secos": [],
 }
 
-# --- Composer ---
+# --- Chef ---
+# Nº de ingredientes por plato que se le pide al Chef. Un plato que llegue al
+# ajustador con menos de INGREDIENTES_POR_PLATO_MIN resueltos dispara un
+# reintento del Chef (los ingredientes propuestos no existen en el súper).
+INGREDIENTES_POR_PLATO_MIN: Final = 2
+INGREDIENTES_POR_PLATO_MAX: Final = 6
+
+# --- Ajustador de cantidades (determinista, sin LLM) ---
 # Cantidades permitidas por producto (gramos) y redondeo.
 CANTIDAD_MIN_G: Final = 10
 CANTIDAD_MAX_G: Final = 500
 REDONDEO_CANTIDAD_G: Final = 5
-# Nº de productos por comida que se le pide al Composer.
-PRODUCTOS_POR_COMIDA_MIN: Final = 2
-PRODUCTOS_POR_COMIDA_MAX: Final = 4
+# Cotas del ajuste alrededor de la cantidad orientativa del Chef: los gramos
+# finales quedan en [orientativa * MIN, orientativa * MAX] para que el plato
+# siga siendo realista (no convertir 10 g de aceite en 200 g).
+AJUSTE_FACTOR_MIN: Final = 0.4
+AJUSTE_FACTOR_MAX: Final = 2.5
+# Suelo del divisor al normalizar el error relativo (evita dividir por ~0
+# cuando algún objetivo de macro de una comida es 0).
+AJUSTE_DIVISOR_MINIMO: Final = 1.0
 
 # --- Puntuación del mejor intento (Validator) ---
 # La desviación de kcal pesa más que la de cada macro individual.

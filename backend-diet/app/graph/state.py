@@ -4,7 +4,15 @@ from __future__ import annotations
 
 from typing import TypedDict
 
-from ..schemas import Comida, Desviacion, DietInput, MejorPlan, Producto, RepartoComida
+from ..schemas import (
+    Comida,
+    Desviacion,
+    DietInput,
+    MejorPlan,
+    PlatoChef,
+    PlatoResuelto,
+    RepartoComida,
+)
 
 
 class DietState(TypedDict, total=False):
@@ -13,8 +21,11 @@ class DietState(TypedDict, total=False):
 
     # trabajo interno
     reparto: list[RepartoComida]  # Planner: objetivo kcal/macros por comida
-    candidatos: dict[str, list[Producto]]  # Retriever: candidatos por comida
-    plan: list[Comida]  # Composer: comidas con productos y totales reales
+    platos_usados: list[str]  # platos de menús anteriores de la semana (no repetir)
+    platos_chef: list[PlatoChef]  # Chef: un plato por comida, ingredientes genéricos
+    platos: list[PlatoResuelto]  # Retriever: ingredientes -> productos reales
+    no_encontrados: list[str]  # ingredientes sin producto en el súper (acumulado)
+    plan: list[Comida]  # Ajustador: comidas con gramos y macros reales
     desviacion: Desviacion | None  # Validator
     feedback: str  # feedback explícito para el reintento
     intentos: int

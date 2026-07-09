@@ -73,7 +73,8 @@ export type Intolerancia =
   | "marisco"
   | "soja"
   | "sesamo";
-export type Variedad = "sin_repetir" | "repetir_ok";
+/** Cuántos menús diarios distintos tendrá la semana. */
+export type Variedad = "baja" | "media" | "alta";
 
 export interface DietInput {
   kcal_objetivo: number;
@@ -88,6 +89,8 @@ export interface DietInput {
 }
 
 export interface ProductoPlan {
+  /** Ingrediente genérico del plato ("arroz", "salmón"). */
+  ingrediente: string;
   nombre: string;
   marca: string;
   cantidad_g: number;
@@ -99,24 +102,29 @@ export interface ProductoPlan {
 
 export interface ComidaPlan {
   nombre: string;
+  /** Nombre del plato ("Salmón al horno con arroz y brócoli"). */
+  plato: string;
   productos: ProductoPlan[];
   kcal: number;
   macros: Macros;
 }
 
-export interface Desviacion {
-  kcal_pct: number;
-  proteinas_pct: number;
-  grasas_pct: number;
-  carbohidratos_pct: number;
-  dentro_tolerancia: boolean;
+export interface MenuDia {
+  /** Días de la semana que usan este menú, p. ej. ["Lunes", "Viernes"]. */
+  dias: string[];
+  comidas: ComidaPlan[];
+  kcal: number;
+  macros: Macros;
+  aproximado: boolean;
 }
 
 export interface DietOutput {
-  comidas: ComidaPlan[];
-  kcal_total: number;
-  macros_totales: Macros;
-  desviacion: Desviacion;
+  /** Medias reales por día de la semana. */
+  kcal_diarias: number;
+  macros_diarios: Macros;
+  /** El menú del lunes, como ejemplo; el plan completo va en el PDF. */
+  menu_ejemplo: MenuDia;
+  menus_distintos: number;
   intentos_usados: number;
   aproximado: boolean;
   pdf_base64: string | null;
